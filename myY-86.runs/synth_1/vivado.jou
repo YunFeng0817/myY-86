@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Wed Dec 20 23:08:56 2017
+# Process ID: 1440
+# Current directory: E:/vivado project/myY-86/myY-86.runs/synth_1
+# Command line: vivado.exe -log rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rom.tcl
+# Log file: E:/vivado project/myY-86/myY-86.runs/synth_1/rom.vds
+# Journal file: E:/vivado project/myY-86/myY-86.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source rom.tcl -notrace
