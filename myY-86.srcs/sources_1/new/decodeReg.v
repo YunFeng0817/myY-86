@@ -1,12 +1,11 @@
 `timescale 1ns / 1ps
-`include"const_defination.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2017/12/20 22:43:06
+// Create Date: 2017/12/21 16:51:36
 // Design Name: 
-// Module Name: rom
+// Module Name: decodeReg
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -21,21 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module rom(
-    input wire enable,
-    input wire[`digitsBus] addr,
-    output reg[`MaxIntroduction] intd
+module decodeReg(
+    input wire clk, 
+    input wire[`digitsBus] pc,
+    input[`MaxIntroduction] intd,
+    input wire rst,
+    output reg[`digitsBus]  pc_d,
+    output reg[`MaxIntroduction] intd_d
     );
-    reg [`digitsBus] rom[63:0];
-    always@(*)
+    always@(posedge clk)
     begin
-        if(enable==1)
+        if(rst==1)
         begin
-            intd<=rom[addr];
+            pc_d<=`readZero;
+            intd_d<=`intdZero;
         end
-        else
+        else 
         begin
-            intd<=0;
+            pc_d<=pc;
+            intd_d<=intd;
         end
     end
 endmodule

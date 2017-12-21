@@ -63,3 +63,4 @@
 `define MaxIntroduction 79:0
 `define digitsBus 63:0
 `define readZero 64'b0
+`define intdZero 80'b0
