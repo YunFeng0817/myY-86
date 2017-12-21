@@ -61,3 +61,5 @@
 
 /* 位数的约定 */
 `define MaxIntroduction 80
+`define digits 64
+`define readZero 64'b0
