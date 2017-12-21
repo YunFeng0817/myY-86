@@ -70,7 +70,6 @@ module decode(
                         re2<=0;
                         reg1_read_src<=0;
                         reg2_read_src<=0;
-                        valc<=0;
                         dstE<=0;
                         dstM<=0;
                     end
@@ -79,8 +78,7 @@ module decode(
                         re1<=0;
                         re2<=0;
                         reg1_read_src<=0;
-                        reg2_read_src<=0;;
-                        valc<=0;
+                        reg2_read_src<=0;
                         dstE<=0;
                         dstM<=0;
                     end
@@ -91,10 +89,84 @@ module decode(
                         reg1_read_src<=reg1;
                         reg2_read_src<=reg2;
                         dstE<=reg2;
-                        valc<=0;
                         dstM<=0;
                     end
-                endcase
+                `irmovq:
+                    begin
+                        re1<=0;
+                        re2<=1;
+                        reg1_read_src<=0;
+                        reg2_read_src<=reg2;
+                        dstE<=reg2;
+                        dstM<=0;
+                    end
+                `rmmovq:
+                    begin
+                        re1<=1;
+                        re2<=1;
+                        reg1_read_src<=reg1;
+                        reg2_read_src<=reg2;
+                        dstE<=reg2;
+                        dstM<=0;
+                    end
+                `mrmovq:
+                    begin
+                        re1<=1;
+                        re2<=1;
+                        reg1_read_src<=reg1;
+                        reg2_read_src<=reg2;
+                        dstE<=reg2;
+                        dstM<=0;                        
+                    end
+                `addq:
+                    begin
+                        re1<=1;
+                        re2<=1;
+                        reg1_read_src<=reg1;
+                        reg2_read_src<=reg2;
+                        dstE<=reg2;
+                        dstM<=0;                        
+                    end
+                `jmp:
+                    begin
+                        re1<=0;
+                        re2<=0;
+                        reg1_read_src<=0;
+                        reg2_read_src<=0;
+                        dstE<=0;
+                        dstM<=valc;                        
+                    end
+                `call:
+                    begin
+                        re1<=0;
+                        re2<=0;
+                        reg1_read_src<=0;
+                        reg2_read_src<=0;
+                        dstE<=0;
+                        dstM<=valc;    
+                    end
+                `ret:
+                    begin
+                        re1<=0;
+                        re2<=0;
+                        reg1_read_src<=0;
+                        reg2_read_src<=0;
+                        dstE<=0;
+                        dstM<=0;                        
+                    end
+                `pushq:
+                    begin
+                        re1<=1;
+                        re2<=0;
+                        reg1_read_src<=reg1;
+                        reg2_read_src<=0;
+                        dstE<=0;
+                        dstM<=`rsp;   //此处的值不确定                        
+                    end
+                default:
+                    begin
+                    end
+            endcase
         end
     end
     
