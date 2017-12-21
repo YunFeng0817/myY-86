@@ -15,7 +15,7 @@ set_property ip_output_repo {e:/vivado project/myY-86/myY-86.cache/ip} [current_
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   {E:/vivado project/myY-86/myY-86.srcs/sources_1/new/const_defination.v}
-  {E:/vivado project/myY-86/myY-86.srcs/sources_1/new/intd_fetch.v}
+  {E:/vivado project/myY-86/myY-86.srcs/sources_1/new/regFile.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -26,9 +26,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 
-synth_design -top intd_fetch -part xc7a15tcsg324-3
+synth_design -top regFile -part xc7a15tcsg324-3
 
 
-write_checkpoint -force -noxdef intd_fetch.dcp
+write_checkpoint -force -noxdef regFile.dcp
 
-catch { report_utilization -file intd_fetch_utilization_synth.rpt -pb intd_fetch_utilization_synth.pb }
+catch { report_utilization -file regFile_utilization_synth.rpt -pb regFile_utilization_synth.pb }
