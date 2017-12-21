@@ -25,7 +25,7 @@ module regFile(
     input wire rst,
     input wire clk,
     input wire[3:0] waddr,  //写入的地址
-    input wire[63:0] wdata,  //写的数据
+    input wire[`digitsBus] wdata,  //写的数据
     input wire we, //写使能信号
     input wire re1,re2,   //读数据的两个使能信号
     input wire[3:0] raddr1,raddr2,  //读的地址

@@ -60,6 +60,6 @@
 `define r14 4'he
 
 /* 位数的约定 */
-`define MaxIntroduction 80
-`define digits 64
+`define MaxIntroduction 79:0
+`define digitsBus 63:0
 `define readZero 64'b0

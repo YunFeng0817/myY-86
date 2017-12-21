@@ -24,7 +24,7 @@
 module intd_fetch(
     input wire clk,
     input wire rst,
-    output reg[`MaxIntroduction-1:0] pc,
+    output reg[`MaxIntroduction] pc,
     output reg enable
     );
     always@(posedge clk)
