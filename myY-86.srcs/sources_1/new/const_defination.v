@@ -64,3 +64,12 @@
 `define digitsBus 63:0
 `define readZero 64'b0
 `define intdZero 80'b0
+`define icodeBus 3:0
+`define ifunBus 3:0
+`define dstEBus 3:0
+`define dstMBus 63:0
+`define icodeRange 79:76
+`define ifunRange 75:72
+`define reg1Range 71:68
+`define reg2Range 67:64
+`define valcRange 63:0 
