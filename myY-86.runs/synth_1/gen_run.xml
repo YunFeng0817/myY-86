@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a15tcsg324-3" LaunchTime="1513782534">
-  <File Type="RDS-PROPCONSTRS" Name="rom_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="rom.tcl"/>
-  <File Type="RDS-RDS" Name="rom.vds"/>
-  <File Type="RDS-UTIL" Name="rom_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="rom_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="rom.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="rom_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="rom_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a15tcsg324-3" LaunchTime="1513785702">
+  <File Type="RDS-PROPCONSTRS" Name="intd_fetch_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="intd_fetch.tcl"/>
+  <File Type="RDS-RDS" Name="intd_fetch.vds"/>
+  <File Type="RDS-UTIL" Name="intd_fetch_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="intd_fetch_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="intd_fetch.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="intd_fetch_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="intd_fetch_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/rom.v">
+    <File Path="$PSRCDIR/sources_1/new/const_defination.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/const_definination.v">
+    <File Path="$PSRCDIR/sources_1/new/intd_fetch.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/rom.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -27,8 +34,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="rom"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="intd_fetch"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
