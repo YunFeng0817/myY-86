@@ -76,3 +76,10 @@
 `define reg2Range 67:64
 `define valcRange 63:0 
 `define cndBus 2:0
+
+/************处理器的操作类型*************/
+`define ADD 0
+`define SUB 1
+`define AND 2
+`define XOR 3
+`define NO 4
