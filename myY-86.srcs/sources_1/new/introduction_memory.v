@@ -28,7 +28,7 @@ module introduction_memory(
     output reg[`MaxIntroduction] intd
     );
     
-    reg[`MaxIntroduction] intds[80:0];
+    reg[7:0] intds[800:0];   //一行一个字节，有800个字节
     
     always@(*)
     begin
@@ -38,7 +38,7 @@ module introduction_memory(
         end
         else if(enable==1)
         begin
-            intd<=intds[pc];
+            intd<={intds[pc],intds[pc+1],intds[pc+2],intds[pc+3],intds[pc+4],intds[pc+5],intds[pc+6],intds[pc+7],intds[pc+8],intds[pc+9]};
         end
         else
         begin
