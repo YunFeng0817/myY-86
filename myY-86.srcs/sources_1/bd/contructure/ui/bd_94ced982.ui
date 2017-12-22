@@ -1,0 +1,22 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace inst decode_0 -pg 1 -lvl 3 -y -250 -defaultsOSRD
+preplace inst intd_fetch_0 -pg 1 -lvl 1 -y -220 -defaultsOSRD
+preplace inst regFile_0 -pg 1 -lvl 3 -y 0 -defaultsOSRD
+preplace inst decodeReg_0 -pg 1 -lvl 2 -y -230 -defaultsOSRD
+preplace inst data_memory_0 -pg 1 -lvl 2 -y -10 -defaultsOSRD
+preplace inst introduction_memory_0 -pg 1 -lvl 1 -y 0 -defaultsOSRD
+preplace netloc intd_fetch_0_pc 1 0 2 -410 -290 -50
+preplace netloc decodeReg_0_pc_d 1 2 1 N
+preplace netloc decode_0_reg2_read_src 1 2 2 280 -420 660
+preplace netloc decode_0_re1 1 2 2 300 -410 640
+preplace netloc decode_0_reg1_read_src 1 2 2 290 -390 650
+preplace netloc decode_0_re2 1 2 2 310 -380 630
+preplace netloc decodeReg_0_intd_d 1 2 1 N
+preplace netloc introduction_memory_0_intd 1 1 1 -50
+preplace netloc intd_fetch_0_enable 1 0 2 -420 -300 -60
+levelinfo -pg 1 -440 -190 140 470 680 -top -670 -bot 300
+",
+}
+0

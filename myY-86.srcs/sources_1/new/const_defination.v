@@ -73,3 +73,4 @@
 `define reg1Range 71:68
 `define reg2Range 67:64
 `define valcRange 63:0 
+`define cndBus 2:0

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xc7a15tcsg324-3" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.1" bd:top="contructure" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>contructure</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="contructure_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>contructure_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>intd_fetch_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="intd_fetch" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_intd_fetch_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">intd_fetch</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>regFile_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="regFile" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_regFile_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">regFile</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>decodeReg_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="decodeReg" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_decodeReg_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">decodeReg</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>introduction_memory_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="introduction_memory" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_introduction_memory_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">introduction_memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>decode_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="decode" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_decode_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">decode</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>data_memory_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="data_memory" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_data_memory_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">data_memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>intd_fetch_0_pc</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="intd_fetch_0" spirit:portRef="pc"/>
+        <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="pc"/>
+        <spirit:internalPortReference spirit:componentRef="introduction_memory_0" spirit:portRef="pc"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>intd_fetch_0_enable</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="intd_fetch_0" spirit:portRef="enable"/>
+        <spirit:internalPortReference spirit:componentRef="introduction_memory_0" spirit:portRef="enable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>introduction_memory_0_intd</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="introduction_memory_0" spirit:portRef="intd"/>
+        <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="intd"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>decodeReg_0_pc_d</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="pc_d"/>
+        <spirit:internalPortReference spirit:componentRef="decode_0" spirit:portRef="pc"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>decodeReg_0_intd_d</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="intd_d"/>
+        <spirit:internalPortReference spirit:componentRef="decode_0" spirit:portRef="intd"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>decode_0_re1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="decode_0" spirit:portRef="re1"/>
+        <spirit:internalPortReference spirit:componentRef="regFile_0" spirit:portRef="re1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>decode_0_re2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="decode_0" spirit:portRef="re2"/>
+        <spirit:internalPortReference spirit:componentRef="regFile_0" spirit:portRef="re2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>decode_0_reg1_read_src</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="decode_0" spirit:portRef="reg1_read_src"/>
+        <spirit:internalPortReference spirit:componentRef="regFile_0" spirit:portRef="raddr1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>decode_0_reg2_read_src</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="decode_0" spirit:portRef="reg2_read_src"/>
+        <spirit:internalPortReference spirit:componentRef="regFile_0" spirit:portRef="raddr2"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

@@ -25,7 +25,7 @@ module intd_fetch(
     input wire clk,
     input wire rst,
     output reg[`MaxIntroduction] pc,
-    output reg enable
+    output reg enable  //指令存储器的使能信号
     );
     always@(posedge clk)
     begin
