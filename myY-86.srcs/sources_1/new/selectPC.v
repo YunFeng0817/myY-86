@@ -22,7 +22,6 @@
 
 
 module selectPC(
-    input wire clk,
     input wire rst,
     input wire[`digitsBus] predPC,
     //条件预测出错，需要修改pc的值
