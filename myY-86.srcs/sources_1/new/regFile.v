@@ -24,73 +24,60 @@
 module regFile(
     input wire rst,
     input wire clk,
-    input wire[3:0] waddr,  //写入的地址
-    input wire[`digitsBus] wdata,  //写的数据
-    input wire we, //写使能信号
+    input wire[3:0] dstE,dstM,  //写入的地址
+    input wire[`digitsBus] M,E,  //写的数据
     input wire re1,re2,   //读数据的两个使能信号
-    input wire[3:0] raddr1,raddr2,  //读的地址
-    output reg[63:0] rdata1,rdata2  //读到的数据
+    input wire[3:0] srcA,srcB,  //读的地址
+    output reg[63:0] d_rvalA,d_rvalB  //读到的数据
     );
     
     reg[63:0] regs[15:0];
     
-    //写入数据
+    //E阶段 得到的结果写入寄存器
     always@(posedge clk)
     begin
         if(rst==0)
         begin
-            if(we==1)
+            if(dstM!=`NONE)
             begin
-                regs[waddr]=wdata;
+                regs[dstM]=M;
             end
         end
     end
     
-    //读出寄存器1的数据
+    //M阶段 得到的结果写回寄存器
+    always@(posedge clk)
+    begin
+        if(rst==0)
+        begin
+            if(dstE!=`NONE)
+            begin
+                regs[dstE]=E;
+            end
+        end
+    end   
+    
+    //读取数据,组合逻辑
     always@(*)
     begin
         if(rst==0)
         begin
-            rdata1<=`readZero;
-        end
-        else if(re1==1)
-        begin
-            if((we==1) && (raddr1==waddr))
+            if(srcA!=`NONE)
             begin
-                rdata1<=wdata;
+                d_rvalA<=regs[srcA];
             end
-            else
-            begin
-                rdata1<=regs[raddr1];
-            end
-        end
-        else
-        begin
-            rdata1<=`readZero;
-        end
+        end 
     end
     
-    //读出寄存器2的数据
+    
     always@(*)
+    begin
+        if(rst==0)
         begin
-            if(rst==0)
+            if(srcB!=`NONE)
             begin
-                rdata2<=`readZero;
+                d_rvalB<=regs[srcB];
             end
-            else if(re2==1)
-            begin
-                if((we==1) && (raddr2==waddr))
-                begin
-                    rdata2<=wdata;
-                end
-                else
-                begin
-                    rdata2<=regs[raddr1];
-                end
-            end
-            else
-            begin
-                rdata2<=`readZero;
-            end
-        end
+        end 
+    end    
 endmodule
