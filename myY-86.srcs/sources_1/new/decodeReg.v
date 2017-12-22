@@ -23,23 +23,41 @@
 
 module decodeReg(
     input wire clk, 
-    input wire[`digitsBus] pc,
-    input[`MaxIntroduction] intd,
+    input wire[`icodeBus] icode,
+    input wire[`ifunBus] ifun,
+    input wire[`icodeBus] reg1_read_src,reg2_read_src,
+    input wire[`digitsBus] valC,
+    input wire[`digitsBus] valP,
     input wire rst,
-    output reg[`digitsBus]  pc_d,
-    output reg[`MaxIntroduction] intd_d
+    
+    //这是decode 阶段的寄存器，输入与输出一样，只是起缓存作用
+    output reg[`icodeBus] D_icode,
+    output reg[`ifunBus] D_ifun,
+    output reg[`digitsBus] D_reg1_read_src,D_reg2_read_src,
+    output reg[`digitsBus] D_valC,
+    output reg[`digitsBus]  D_valP
     );
     always@(posedge clk)
     begin
         if(rst==1)
         begin
-            pc_d<=`readZero;
-            intd_d<=`intdZero;
+            D_icode<=0;
+            D_ifun<=0;
+            D_valP<=`readZero;
+            D_reg1_read_src<=0;
+            D_reg2_read_src<=0;
+            D_valP<=0;
+            D_valC<=0;
         end
         else 
         begin
-            pc_d<=pc;
-            intd_d<=intd;
+            D_icode<=icode;
+            D_ifun<=ifun;
+            D_valP<=valP;
+            D_reg1_read_src<=reg1_read_src;
+            D_reg2_read_src<=reg2_read_src;
+            D_valP<=valP;
+            D_valC<=valC;
         end
     end
 endmodule

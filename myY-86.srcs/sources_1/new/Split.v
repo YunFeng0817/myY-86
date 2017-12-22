@@ -20,7 +20,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module dSplit(
+module Split(
     input wire rst,
     input wire clk,
     input wire[`digitsBus] pc,

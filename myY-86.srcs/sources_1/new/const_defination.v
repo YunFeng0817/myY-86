@@ -58,6 +58,7 @@
 `define r12 4'hc
 `define r13 4'hd
 `define r14 4'he
+`define NONE 4'hf
 
 /* 位数的约定 */
 `define MaxIntroduction 79:0
@@ -67,6 +68,7 @@
 `define icodeBus 3:0
 `define ifunBus 3:0
 `define dstEBus 3:0
+`define regBus 3:0
 `define dstMBus 63:0
 `define icodeRange 79:76
 `define ifunRange 75:72
