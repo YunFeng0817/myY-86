@@ -22,152 +22,78 @@
 
 
 module decode(
-    input wire rst,
-    input wire clk,
-    input wire[`digitsBus] pc,
-    input wire[`MaxIntroduction] intd,
-    //读寄存器的使能信号
-    output reg re1,re2,
-    //读寄存器的地址
-    output reg[3:0] reg1_read_src,reg2_read_src,
-    //解码出来的icode,ifun,dstE,dstM,valc 的值
-    output reg[`icodeBus] icode,
-    output reg[`ifunBus] ifun,
-    output reg [`digitsBus] valc,
-    output reg[`dstEBus] dstE,
-    output reg[`dstMBus] dstM
+    input wire[`digitsBus] d_rvalA,
+    input wire[`digitsBus] d_rvalB,
+    input wire[`icodeBus] icode,
+    input wire[`regBus] e_dstE,M_dstE,M_dstM,W_dstM,W_dstE,   //从E,M,W阶段传来的写回寄存器的地址
+    input wire[`digitsBus] e_valE,m_valM,M_valE,W_valM,W_valE, //从E,M,W阶段传来的写回寄存器的值
+    input wire[`regBus] srcA,srcB,
+    input wire[`digitsBus] valP, //由于valP和valA 不会同时被使用，所以要用于合并
+    output reg[`digitsBus] valA,valB
     );
     
-    reg [3:0] reg1;
-    reg [3:0] reg2;
-    
+    //Sel+fwdA 根据指令和srcA   选择从后面流程传送回来的值和从寄存器中读出的值送入E寄存器的valA中
     always@(*)
-    begin 
-        if(rst==1)
+    begin
+        case({icode,4'h0})
+            {`call,`jmp}:
+                begin
+                    valA<=valP;
+                end
+        endcase
+        if(srcA==e_dstE)
         begin
-            icode<=0;
-            ifun<=0;
-            re1<=0;
-            re2<=0;
-            reg1_read_src<=0;
-            reg2_read_src<=0;
-            valc<=0;
-            dstE<=0;
-            dstM<=0;
+            valA<=e_valE;
+        end
+        else if(srcA==M_dstM)
+        begin
+            valA<=m_valM;
+        end
+        else if(srcA==M_dstE)
+        begin
+            valA<=M_valE;
+        end
+        else if(srcA==W_dstM)
+        begin
+            valA<=W_valM;
+        end
+        else if(srcA==W_dstE)
+        begin
+            valA<=W_valE;
         end
         else
         begin
-            icode<=intd[`icodeRange];
-            ifun<=intd[`ifunRange];
-            reg1<=intd[`reg1Range];
-            reg2<=intd[`reg2Range];
-            valc<=intd[`valcRange];
-            
-            case({icode,4'h0})
-                `halt:
-                    begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
-                        dstE<=0;
-                        dstM<=0;
-                    end
-                `nop:
-                    begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
-                        dstE<=0;
-                        dstM<=0;
-                    end
-                `rrmovq:
-                    begin
-                        re1<=1;
-                        re2<=1;
-                        reg1_read_src<=reg1;
-                        reg2_read_src<=reg2;
-                        dstE<=reg2;
-                        dstM<=0;
-                    end
-                `irmovq:
-                    begin
-                        re1<=0;
-                        re2<=1;
-                        reg1_read_src<=0;
-                        reg2_read_src<=reg2;
-                        dstE<=reg2;
-                        dstM<=0;
-                    end
-                `rmmovq:
-                    begin
-                        re1<=1;
-                        re2<=1;
-                        reg1_read_src<=reg1;
-                        reg2_read_src<=reg2;
-                        dstE<=reg2;
-                        dstM<=0;
-                    end
-                `mrmovq:
-                    begin
-                        re1<=1;
-                        re2<=1;
-                        reg1_read_src<=reg1;
-                        reg2_read_src<=reg2;
-                        dstE<=reg2;
-                        dstM<=0;                        
-                    end
-                `addq:
-                    begin
-                        re1<=1;
-                        re2<=1;
-                        reg1_read_src<=reg1;
-                        reg2_read_src<=reg2;
-                        dstE<=reg2;
-                        dstM<=0;                        
-                    end
-                `jmp:
-                    begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
-                        dstE<=0;
-                        dstM<=valc;                        
-                    end
-                `call:
-                    begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
-                        dstE<=0;
-                        dstM<=valc;    
-                    end
-                `ret:
-                    begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
-                        dstE<=0;
-                        dstM<=0;                        
-                    end
-                `pushq:
-                    begin
-                        re1<=1;
-                        re2<=0;
-                        reg1_read_src<=reg1;
-                        reg2_read_src<=0;
-                        dstE<=0;
-                        dstM<=`rsp;   //此处的值不确定                        
-                    end
-                default:
-                    begin
-                    end
-            endcase
+            valA<=d_rvalA;
         end
     end
+    
+    //fwdB 根据指令和srcB的值  选择传送值和从寄存器中读出的valB值送入E寄存器的valA中
+    always@(*)
+        begin
+            if(srcB==e_dstE)
+            begin
+                valB<=e_valE;
+            end
+            else if(srcB==M_dstM)
+            begin
+                valB<=m_valM;
+            end
+            else if(srcB==M_dstE)
+            begin
+                valB<=M_valE;
+            end
+            else if(srcB==W_dstM)
+            begin
+                valB<=W_valM;
+            end
+            else if(srcB==W_dstE)
+            begin
+                valB<=W_valE;
+            end
+            else
+            begin
+                valB<=d_rvalB;
+            end
+        end
     
 endmodule
