@@ -22,7 +22,6 @@
 
 
 module memOperation(
-    input wire clk,
     input wire rst,
     input wire[`digitsBus] valE,valA,
     input wire[`icodeBus] icode,
@@ -30,7 +29,7 @@ module memOperation(
     output reg enabler,enablew   //¿ØÖÆ¶ÁÐ´²Ù×÷
     );
     
-    always@(posedge clk)
+    always@(*)
     begin
         case({icode,4'h0})
             {`rmmovq,`pushq, `call,`mrmovq}:

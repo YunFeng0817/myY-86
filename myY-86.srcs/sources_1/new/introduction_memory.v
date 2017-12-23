@@ -24,7 +24,6 @@
 module introduction_memory(
     input wire rst,
     input wire[`digitsBus] pc,
-    input wire enable,
     output reg[`MaxIntroduction] intd
     );
     
@@ -36,14 +35,10 @@ module introduction_memory(
         begin
             intd<=0;
         end
-        else if(enable==1)
+        else
         begin
             intd<={intds[pc],intds[pc+1],intds[pc+2],intds[pc+3],intds[pc+4],intds[pc+5],intds[pc+6],intds[pc+7],intds[pc+8],intds[pc+9]};
         end
-        else
-        begin
-            intd<=0;
-        end    
     end
     
 endmodule

@@ -1,87 +1,101 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace inst decode_0 -pg 1 -lvl 6 -y -490 -defaultsOSRD
+preplace port rst -pg 1 -y -500 -defaultsOSRD
+preplace port clk -pg 1 -y -300 -defaultsOSRD
+preplace portBus W_stat -pg 1 -y 40 -defaultsOSRD
+preplace portBus W_stat_1 -pg 1 -y -240 -defaultsOSRD
+preplace portBus stat -pg 1 -y -180 -defaultsOSRD
+preplace portBus m_stat -pg 1 -y 60 -defaultsOSRD
+preplace inst decode_0 -pg 1 -lvl 6 -y -529 -defaultsOSRD
 preplace inst cond_0 -pg 1 -lvl 9 -y -140 -defaultsOSRD
 preplace inst WREG_0 -pg 1 -lvl 12 -y -190 -defaultsOSRD
 preplace inst regFile_0 -pg 1 -lvl 6 -y 140 -defaultsOSRD
 preplace inst memOperation_0 -pg 1 -lvl 11 -y -190 -defaultsOSRD
-preplace inst setRegIO_0 -pg 1 -lvl 6 -y -110 -defaultsOSRD
-preplace inst EReg_0 -pg 1 -lvl 7 -y -160 -defaultsOSRD
-preplace inst ALU_0 -pg 1 -lvl 9 -y -470 -defaultsOSRD
-preplace inst ALU_A_0 -pg 1 -lvl 8 -y -210 -defaultsOSRD
+preplace inst setRegIO_0 -pg 1 -lvl 6 -y -119 -defaultsOSRD
 preplace inst decodeReg_0 -pg 1 -lvl 5 -y -260 -defaultsOSRD
+preplace inst EReg_0 -pg 1 -lvl 7 -y -160 -defaultsOSRD
+preplace inst ALU_0 -pg 1 -lvl 9 -y -560 -defaultsOSRD
+preplace inst ALU_A_0 -pg 1 -lvl 8 -y -270 -defaultsOSRD
 preplace inst selectPC_0 -pg 1 -lvl 2 -y -270 -defaultsOSRD
-preplace inst CCREG_0 -pg 1 -lvl 9 -y 30 -defaultsOSRD
+preplace inst CCREG_0 -pg 1 -lvl 9 -y 50 -defaultsOSRD
 preplace inst data_memory_0 -pg 1 -lvl 11 -y 50 -defaultsOSRD
-preplace inst alufun_0 -pg 1 -lvl 9 -y -340 -defaultsOSRD
+preplace inst alufun_0 -pg 1 -lvl 9 -y -430 -defaultsOSRD
 preplace inst predPC_0 -pg 1 -lvl 1 -y -280 -defaultsOSRD
 preplace inst MREG_0 -pg 1 -lvl 10 -y -220 -defaultsOSRD
 preplace inst ALU_B_0 -pg 1 -lvl 8 -y -60 -defaultsOSRD
 preplace inst addPC_0 -pg 1 -lvl 3 -y -120 -defaultsOSRD
 preplace inst predictPC_0 -pg 1 -lvl 2 -y -40 -defaultsOSRD
-preplace inst Split_0 -pg 1 -lvl 4 -y -70 -defaultsOSRD
 preplace inst introduction_memory_0 -pg 1 -lvl 4 -y -340 -defaultsOSRD
-preplace netloc ALU_0_valE 1 5 5 1630 -700 NJ -700 NJ -700 NJ -700 3140
-preplace netloc EReg_0_E_valC 1 7 1 2380
-preplace netloc setRegIO_0_d_dstE 1 6 1 N
-preplace netloc decodeReg_0_D_valC 1 5 2 NJ -230 2010J
-preplace netloc decodeReg_0_D_valP 1 5 1 1550
-preplace netloc addPC_0_valPC 1 1 4 30 -110 370J -200 690 -200 1080
-preplace netloc MREG_0_M_dstM 1 5 7 1640 -280 2030J -290 NJ -290 2710J -260 3120J -350 3470J -320 3860J
-preplace netloc cond_0_e_dstE 1 5 5 1600 -10 NJ -10 2370J 50 2680J 180 3130
-preplace netloc EReg_0_E_icode 1 7 3 2400 -320 2740 140 3110J
-preplace netloc WREG_0_W_valM 1 1 12 30 -160 350J -210 NJ -210 1070J -140 1540J 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 4200
-preplace netloc data_memory_0_valM 1 5 7 1670 -20 NJ -20 2400J 40 2710J 170 3140J -50 NJ -50 3870
-preplace netloc MREG_0_M_valE 1 10 1 3490
-preplace netloc MREG_0_M_icode 1 1 11 -10 60 NJ 60 NJ 60 1110J 20 NJ 20 NJ 20 NJ 20 2730J 150 3120J -90 3500J -280 3840
-preplace netloc EReg_0_E_dstE 1 7 2 N -140 2720J
-preplace netloc CCREG_0_sf 1 8 2 2760 120 3080
-preplace netloc regFile_0_d_rvalA 1 5 2 1640 -720 2000
-preplace netloc Split_0_reg2_read_src 1 4 1 1060
-preplace netloc selectPC_0_pc 1 2 2 360 -340 NJ
-preplace netloc predictPC_0_pc 1 0 3 -310 -120 NJ -120 350
-preplace netloc WREG_0_W_dstM 1 5 8 1620 0 NJ 0 2380J 10 2720J 200 NJ 200 NJ 200 NJ 200 4170
-preplace netloc regFile_0_d_rvalB 1 5 2 1670 -690 1990
-preplace netloc decodeReg_0_D_reg1_read_src 1 5 1 1530
-preplace netloc Split_0_need_valc 1 2 3 390 80 NJ 80 1060
-preplace netloc Split_0_icode 1 1 4 20 -150 340J -230 NJ -230 1030
-preplace netloc CCREG_0_zf 1 8 2 2770 130 3100
-preplace netloc ALU_A_0_ALUA 1 8 1 2680
-preplace netloc MREG_0_M_stat 1 10 2 3490J -290 3870
-preplace netloc MREG_0_M_dstE 1 5 7 1580 -730 NJ -730 NJ -730 NJ -730 NJ -730 3480 -300 3850J
-preplace netloc memOperation_0_enabler 1 10 2 3530 -80 3820
-preplace netloc ALU_0_cc 1 8 2 2750 -550 3110
-preplace netloc WREG_0_W_valE 1 5 8 1610 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 4210
-preplace netloc decode_0_valA 1 6 1 2040
-preplace netloc setRegIO_0_d_srcA 1 5 2 1650 -210 1980
-preplace netloc WREG_0_W_icode 1 1 12 10 90 NJ 90 NJ 90 1120J 10 NJ 10 2030J 30 NJ 30 2700J 190 NJ 190 NJ 190 NJ 190 4190
-preplace netloc WREG_0_W_dstE 1 5 8 1590 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 4180
-preplace netloc setRegIO_0_d_dstM 1 6 1 N
-preplace netloc decode_0_valB 1 6 1 2020
-preplace netloc setRegIO_0_d_srcB 1 5 2 1660 -190 1970
-preplace netloc memOperation_0_dstM 1 10 2 3520 -90 3830
-preplace netloc alufun_0_fun 1 8 2 2760 -540 3080
-preplace netloc decodeReg_0_D_icode 1 5 2 1570 -200 N
-preplace netloc Split_0_valc 1 1 4 40 50 NJ 50 NJ 50 1090
-preplace netloc EReg_0_E_dstM 1 7 3 2380J -130 2700J -240 3080J
-preplace netloc CCREG_0_of 1 8 2 2780 110 3090
-preplace netloc ALU_B_0_ALUB 1 8 1 2690
-preplace netloc EReg_0_E_ifun 1 7 2 2390 -340 2720
-preplace netloc decodeReg_0_D_ifun 1 5 2 1560J -250 2030
-preplace netloc decodeReg_0_D_reg2_read_src 1 5 1 1520
-preplace netloc memOperation_0_enablew 1 10 2 3510 -100 3810
-preplace netloc MREG_0_M_valA 1 1 10 0 70 NJ 70 NJ 70 1100J -30 NJ -30 NJ -30 2390J 60 2690J 160 3150J 100 3460
-preplace netloc EReg_0_E_valA 1 7 3 2370 -280 2700J -250 3130J
-preplace netloc Split_0_reg1_read_src 1 4 1 1040
-preplace netloc MREG_0_M_cnd 1 1 10 0 -410 NJ -410 NJ -410 NJ -410 1580J -290 2010J -300 NJ -300 2730J -270 3110J -360 3460
-preplace netloc cond_0_e_cnd 1 9 1 3120
-preplace netloc EReg_0_E_valB 1 7 1 2370
-preplace netloc Split_0_need_regids 1 2 3 380 40 NJ 40 1020
-preplace netloc Split_0_ifun 1 4 1 1050
-preplace netloc introduction_memory_0_intd 1 3 2 700 -270 1020
-preplace netloc predPC_0_pc 1 1 1 -20
-levelinfo -pg 1 -330 -160 190 540 860 1320 1820 2220 2540 2940 3310 3670 4020 4230 -top -1150 -bot 290
+preplace inst Split_0 -pg 1 -lvl 4 -y -70 -defaultsOSRD
+preplace netloc CCREG_0_zf 1 8 4 3130 -270 3520 -80 3930 -80 4320
+preplace netloc regFile_0_d_rvalA 1 5 2 1810 -740 2200
+preplace netloc EReg_0_E_icode 1 7 3 2680 -420 3080 -280 3490J
+preplace netloc Split_0_ifun 1 4 1 1210
+preplace netloc regFile_0_d_rvalB 1 5 2 1840 -730 2190
+preplace netloc Split_0_need_regids 1 2 3 400 -240 NJ -240 1150
+preplace netloc MREG_0_M_dstE 1 5 7 1750 -750 NJ -750 NJ -750 NJ -750 NJ -750 3870 -300 4290J
+preplace netloc m_stat_1 1 0 9 NJ 60 -20J 70 NJ 70 NJ 70 1260J 0 NJ 0 NJ 0 2630J 80 NJ
+preplace netloc WREG_0_W_valE 1 5 8 1780 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 4650
+preplace netloc rst_1 1 0 12 -330 -400 -10 -400 350 -350 750J -190 1260 -130 1710 -250 2270J -400 NJ -400 3060J -310 3520 -370 3920J -290 4320
+preplace netloc MREG_0_M_stat 1 10 2 NJ -280 4280
+preplace netloc cond_0_e_dstE 1 5 5 1790 -300 NJ -300 2640J -350 3010J -290 3460
+preplace netloc MREG_0_M_cnd 1 1 10 30 -380 360J -260 NJ -260 1170J -400 1740J -320 2230J -340 2620J -370 3050J -340 3460J -380 3860
+preplace netloc cond_0_e_cnd 1 9 1 3510
+preplace netloc data_memory_0_valM 1 5 7 1840 -290 2240J -380 NJ -380 3070J -350 3450J -390 NJ -390 4310
+preplace netloc CCREG_0_sf 1 8 2 3140 -260 3450
+preplace netloc decodeReg_0_D_valC 1 5 2 NJ -240 2240J
+preplace netloc ALU_B_0_ALUB 1 8 1 3030
+preplace netloc alufun_0_fun 1 8 2 3130 -630 3440
+preplace netloc MREG_0_M_dstM 1 5 7 1810 -310 2250J -320 2630J -360 3040J -330 3470J -360 3890J -320 4300J
+preplace netloc WREG_0_W_dstE 1 5 8 1800 -30 2290J 20 NJ 20 2990J -40 3540J -50 NJ -50 NJ -50 4630
+preplace netloc EReg_0_E_valA 1 7 3 2670 -200 3070J -240 3470J
+preplace netloc WREG_0_W_icode 1 1 12 0 -420 NJ -420 NJ -420 NJ -420 1760J -330 2210J -410 NJ -410 3110J -360 3440J -410 NJ -410 NJ -410 4650
+preplace netloc WREG_0_W_valM 1 1 12 10 -410 NJ -410 NJ -410 NJ -410 1700J 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 4640
+preplace netloc predictPC_0_pc 1 0 3 -320 -120 NJ -120 370
+preplace netloc EReg_0_E_valB 1 7 1 2620
+preplace netloc stat_1 1 0 5 NJ -180 -20J -160 370J -210 NJ -210 1230J
+preplace netloc Split_0_valc 1 1 4 30 60 NJ 60 NJ 60 1240
+preplace netloc EReg_0_E_valC 1 7 1 2630
+preplace netloc setRegIO_0_d_srcA 1 5 2 1820 -210 2170
+preplace netloc ALU_0_valE 1 5 5 1740 -770 NJ -770 NJ -770 NJ -770 3500
+preplace netloc setRegIO_0_d_srcB 1 5 2 1830 -220 2180
+preplace netloc decodeReg_0_D_ifun 1 5 2 1690J -270 2280
+preplace netloc addPC_0_valPC 1 1 4 20 -110 390J -230 740 -220 N
+preplace netloc predPC_0_pc 1 1 1 -10
+preplace netloc WREG_0_W_dstM 1 5 8 1770 -10 NJ -10 2680J 10 3080J -30 3530J -70 NJ -70 NJ -70 4620
+preplace netloc decodeReg_0_D_icode 1 5 2 1730 -230 2270J
+preplace netloc Split_0_icode 1 1 4 10 -150 360J -250 NJ -250 1190
+preplace netloc memOperation_0_enabler 1 10 2 3960 -100 4250
+preplace netloc Split_0_need_valc 1 2 3 410 -200 NJ -200 1140
+preplace netloc decodeReg_0_D_valP 1 5 1 1720
+preplace netloc Split_0_reg2_read_src 1 4 1 1220
+preplace netloc MREG_0_M_valA 1 1 10 -10 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 3490J 100 3880
+preplace netloc CCREG_0_of 1 8 2 3140 130 3440
+preplace netloc WREG_0_W_stat 1 12 1 NJ
+preplace netloc EReg_0_E_dstE 1 7 2 2700 -150 NJ
+preplace netloc memOperation_0_enablew 1 10 2 3940 -110 4240
+preplace netloc decodeReg_0_D_stat 1 5 2 NJ -200 2210
+preplace netloc decodeReg_0_D_reg2_read_src 1 5 1 1660
+preplace netloc memOperation_0_dstM 1 10 2 3950 -90 4260
+preplace netloc ALU_A_0_ALUA 1 8 1 2990
+preplace netloc decode_0_valA 1 6 1 2290
+preplace netloc W_stat_1 1 0 9 NJ 40 NJ 40 NJ 40 NJ 40 1250J 20 NJ 20 2250J 30 NJ 30 3020J
+preplace netloc MREG_0_M_valE 1 10 1 3900
+preplace netloc decode_0_valB 1 6 1 2260
+preplace netloc setRegIO_0_d_dstE 1 6 1 2290
+preplace netloc EReg_0_E_stat 1 7 3 2650 -340 3000J -300 3510J
+preplace netloc EReg_0_E_ifun 1 7 2 2660 -180 3090
+preplace netloc ALU_0_cc 1 8 2 3120 -640 3450
+preplace netloc EReg_0_E_dstM 1 7 3 2690J -190 3050J -250 3480J
+preplace netloc selectPC_0_pc 1 2 2 380 -330 NJ
+preplace netloc Split_0_reg1_read_src 1 4 1 1200
+preplace netloc introduction_memory_0_intd 1 3 2 750 50 1160
+preplace netloc setRegIO_0_d_dstM 1 6 1 2290
+preplace netloc decodeReg_0_D_reg1_read_src 1 5 1 1680
+preplace netloc MREG_0_M_icode 1 1 11 20 -430 NJ -430 NJ -430 NJ -430 1750J -280 2220J -430 NJ -430 3100J -320 3490J -350 3910J -270 4270
+preplace netloc clk_1 1 0 9 -320 -390 NJ -390 NJ -390 740J -270 1180 -390 1670 -260 2300 -390 NJ -390 3020
+levelinfo -pg 1 -350 -160 200 590 980 1460 2020 2470 2850 3300 3710 4100 4470 4670 -top -1150 -bot 290
 ",
 }
 0

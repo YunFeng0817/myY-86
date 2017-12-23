@@ -22,7 +22,6 @@
 
 module Split(
     input wire rst,
-    input wire clk,
     input wire[`MaxIntroduction] intd,
     //¶Á¼Ä´æÆ÷µÄµØÖ·
     output reg[3:0] reg1_read_src,reg2_read_src,
