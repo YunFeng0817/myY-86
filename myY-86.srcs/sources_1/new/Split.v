@@ -23,10 +23,7 @@
 module Split(
     input wire rst,
     input wire clk,
-    input wire[`digitsBus] pc,
     input wire[`MaxIntroduction] intd,
-    //读寄存器的使能信号
-    output reg re1,re2,
     //读寄存器的地址
     output reg[3:0] reg1_read_src,reg2_read_src,
     //解码出来的icode,ifun,valc 的值
@@ -47,10 +44,8 @@ module Split(
         begin
             icode<=0;
             ifun<=0;
-            re1<=0;
-            re2<=0;
-            reg1_read_src<=0;
-            reg2_read_src<=0;
+            reg1_read_src<=`NONE;
+            reg2_read_src<=`NONE;
             valc<=0;          
             need_valc<=0;
             need_regids<=0;
@@ -66,24 +61,18 @@ module Split(
             case({icode,4'h0})
                 `halt:
                     begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
+                        reg1_read_src<=`NONE;
+                        reg2_read_src<=`NONE;
                     end
                 `nop:
                     begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
+                        reg1_read_src<=`NONE;
+                        reg2_read_src<=`NONE;
                         need_valc<=0;
                         need_regids<=0;
                     end
                 `rrmovq:
                     begin
-                        re1<=1;
-                        re2<=1;
                         reg1_read_src<=reg1;
                         reg2_read_src<=reg2;
                         need_valc<=0;
@@ -91,17 +80,13 @@ module Split(
                     end
                 `irmovq:
                     begin
-                        re1<=0;
-                        re2<=1;
-                        reg1_read_src<=0;
+                        reg1_read_src<=`NONE;
                         reg2_read_src<=reg2;
                         need_valc<=1;
                         need_regids<=0;
                     end
                 `rmmovq:
                     begin
-                        re1<=1;
-                        re2<=1;
                         reg1_read_src<=reg1;
                         reg2_read_src<=reg2;
                         need_valc<=1;
@@ -109,8 +94,6 @@ module Split(
                     end
                 `mrmovq:
                     begin
-                        re1<=1;
-                        re2<=1;
                         reg1_read_src<=reg1;
                         reg2_read_src<=reg2;
                         need_valc<=1;
@@ -118,8 +101,6 @@ module Split(
                     end
                 `addq:
                     begin
-                        re1<=1;
-                        re2<=1;
                         reg1_read_src<=reg1;
                         reg2_read_src<=reg2;
                         need_valc<=0;
@@ -127,46 +108,36 @@ module Split(
                     end
                 `jmp:
                     begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
+                        reg1_read_src<=`NONE;
+                        reg2_read_src<=`NONE;
                         need_valc<=1;
                         need_regids<=0;                       
                     end
                 `call:
                     begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
+                        reg1_read_src<=`NONE;
+                        reg2_read_src<=`NONE;
                         need_valc<=1;
                         need_regids<=0;    
                     end
                 `ret:
                     begin
-                        re1<=0;
-                        re2<=0;
-                        reg1_read_src<=0;
-                        reg2_read_src<=0;
+                        reg1_read_src<=`NONE;
+                        reg2_read_src<=`NONE;
                         need_valc<=0;
                         need_regids<=0;                       
                     end
                 `pushq:
                     begin
-                        re1<=1;
-                        re2<=0;
                         reg1_read_src<=reg1;
-                        reg2_read_src<=0;
+                        reg2_read_src<=`NONE;
                         need_valc<=0;
                         need_regids<=1;                     
                     end
                 `popq:
                     begin
-                        re1<=1;
-                        re2<=0;
                         reg1_read_src<=reg1;
-                        reg2_read_src<=0;
+                        reg2_read_src<=`NONE;
                         need_valc<=0;
                         need_regids<=1;                         
                     end

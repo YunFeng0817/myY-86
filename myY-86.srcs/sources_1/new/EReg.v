@@ -27,7 +27,7 @@ module EReg(
     input wire[`icodeBus] icode,
     input wire[`ifunBus] ifun,
     input wire[`digitsBus] valC,valA,valB,    //valA 和valB从decode.v module 中传来
-    input wire[`regBus] dstE,dstM,srcA,srcB,
+    input wire[`regBus] dstE,dstM,
     output reg[`icodeBus] E_icode,
     output reg[`ifunBus] E_ifun,
     output reg[`digitsBus] E_valC,E_valA,E_valB,

@@ -26,7 +26,6 @@ module regFile(
     input wire clk,
     input wire[3:0] dstE,dstM,  //写入的地址
     input wire[`digitsBus] M,E,  //写的数据
-    input wire re1,re2,   //读数据的两个使能信号
     input wire[3:0] srcA,srcB,  //读的地址
     output reg[63:0] d_rvalA,d_rvalB  //读到的数据
     );

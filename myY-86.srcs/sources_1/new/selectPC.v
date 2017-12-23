@@ -24,13 +24,9 @@
 module selectPC(
     input wire rst,
     input wire[`digitsBus] predPC,
-    //条件预测出错，需要修改pc的值
-    input wire M_enable,
     input wire[`icodeBus] M_icode,
     input wire[`cndBus] M_Cnd,
     input wire[`digitsBus] M_valA,
-    //如果ret进入写回阶段，使能信号
-    input wire W_enable,
     input wire[`icodeBus] W_icode,
     input wire[`digitsBus] W_valM,
     output reg[`digitsBus] pc

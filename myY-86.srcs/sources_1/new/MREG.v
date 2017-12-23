@@ -26,12 +26,11 @@ module MREG(
     input wire clk,
     input wire[2:0]  stat,
     input wire[`icodeBus] icode,
-    input wire[`ifunBus] ifun,
     input wire cnd,
     input wire[`digitsBus] valE,valA,
     input wire[`regBus] dstE,dstM,
     output reg[2:0] M_stat,
-    output reg[`ifunBus] M_icode,M_ifun,
+    output reg[`ifunBus] M_icode,
     output reg M_cnd,
     output reg[`digitsBus] M_valE,M_valA,
     output reg[`regBus] M_dstE,M_dstM
@@ -43,7 +42,6 @@ module MREG(
         begin
             M_stat<=stat;
             M_icode<=icode;
-            M_ifun<=ifun;
             M_cnd<=cnd;
             M_valE<=valE;
             M_valA<=valA;
