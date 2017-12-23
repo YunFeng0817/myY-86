@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Checkpoint Version="6" Minor="0">
+	<BUILD_NUMBER Name="1846317"/>
+	<FULL_BUILD Name="SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017"/>
+	<PRODUCT Name="Vivado v2017.1 (64-bit)"/>
+	<Part Name="xc7a15tcsg324-3"/>
+	<Top Name="contructure_decode_0_2"/>
+	<RenamePrefix Name="contructure_decode_0_2_"/>
+	<DisableAutoIOBuffers Name="1"/>
+	<OutOfContext Name="1"/>
+	<BlockRunGenerated Name="1"/>

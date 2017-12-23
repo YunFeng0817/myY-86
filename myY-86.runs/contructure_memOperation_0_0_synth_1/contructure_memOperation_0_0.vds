@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Dec 23 19:56:11 2017
+# Process ID: 12184
+# Current directory: E:/vivado project/myY-86/myY-86.runs/contructure_memOperation_0_0_synth_1
+# Command line: vivado.exe -log contructure_memOperation_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source contructure_memOperation_0_0.tcl
+# Log file: E:/vivado project/myY-86/myY-86.runs/contructure_memOperation_0_0_synth_1/contructure_memOperation_0_0.vds
+# Journal file: E:/vivado project/myY-86/myY-86.runs/contructure_memOperation_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source contructure_memOperation_0_0.tcl -notrace
+Command: synth_design -top contructure_memOperation_0_0 -part xc7a15tcsg324-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5224 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 313.852 ; gain = 78.496
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'contructure_memOperation_0_0' [e:/vivado project/myY-86/myY-86.srcs/sources_1/bd/contructure/ip/contructure_memOperation_0_0/synth/contructure_memOperation_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'memOperation' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/memOperation.v:24]
+WARNING: [Synth 8-151] case item 32'b01000000101000001000000001010000 is unreachable [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/memOperation.v:35]
+WARNING: [Synth 8-151] case item 32'b00000000000000001011000010010000 is unreachable [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/memOperation.v:49]
+WARNING: [Synth 8-3848] Net dstM in module/entity memOperation does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/memOperation.v:28]
+INFO: [Synth 8-256] done synthesizing module 'memOperation' (1#1) [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/memOperation.v:24]
+INFO: [Synth 8-256] done synthesizing module 'contructure_memOperation_0_0' (2#1) [e:/vivado project/myY-86/myY-86.srcs/sources_1/bd/contructure/ip/contructure_memOperation_0_0/synth/contructure_memOperation_0_0.v:57]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[63]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[62]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[61]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[60]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[59]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[58]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[57]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[56]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[55]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[54]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[53]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[52]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[51]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[50]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[49]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[48]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[47]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[46]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[45]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[44]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[43]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[42]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[41]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[40]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[39]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[38]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[37]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[36]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[35]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[34]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[33]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[32]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[31]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[30]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[29]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[28]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[27]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[26]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[25]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[24]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[23]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[22]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[21]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[20]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[19]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[18]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[17]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[16]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[15]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[14]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[13]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[12]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[11]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[10]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[9]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[8]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[7]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[6]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[5]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[4]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[3]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[2]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[1]
+WARNING: [Synth 8-3331] design memOperation has unconnected port dstM[0]
+WARNING: [Synth 8-3331] design memOperation has unconnected port rst
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[63]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[62]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[61]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[60]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[59]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[58]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[57]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[56]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[55]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[54]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[53]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[52]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[51]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[50]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[49]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[48]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[47]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[46]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[45]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[44]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[43]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[42]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[41]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[40]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[39]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[38]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[37]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[36]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[35]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[34]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[33]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[32]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[31]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[30]
+WARNING: [Synth 8-3331] design memOperation has unconnected port valE[29]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 353.930 ; gain = 118.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 353.930 ; gain = 118.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a15tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 353.930 ; gain = 118.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 353.930 ; gain = 118.574
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a15tcsg324-3
+Part Resources:
+DSPs: 45 (col length:60)
+BRAMs: 50 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3330] design contructure_memOperation_0_0 has an empty top module
+INFO: [Synth 8-3917] design contructure_memOperation_0_0 has port enabler driven by constant 0
+INFO: [Synth 8-3917] design contructure_memOperation_0_0 has port enablew driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 441.262 ; gain = 205.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 441.262 ; gain = 205.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 398 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 445.555 ; gain = 210.199
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+13 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 544.086 ; gain = 308.730
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'E:/vivado project/myY-86/myY-86.runs/contructure_memOperation_0_0_synth_1/contructure_memOperation_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 918.102 ; gain = 374.016
+INFO: [Common 17-1381] The checkpoint 'E:/vivado project/myY-86/myY-86.runs/contructure_memOperation_0_0_synth_1/contructure_memOperation_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 918.102 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 23 19:57:20 2017...

@@ -1,0 +1,382 @@
+
+*** Running vivado
+    with args -log contructure_introduction_memory_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source contructure_introduction_memory_0_1.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source contructure_introduction_memory_0_1.tcl -notrace
+Command: synth_design -top contructure_introduction_memory_0_1 -part xc7a15tcsg324-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4736 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 314.453 ; gain = 78.391
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'contructure_introduction_memory_0_1' [e:/vivado project/myY-86/myY-86.srcs/sources_1/bd/contructure/ip/contructure_introduction_memory_0_1/synth/contructure_introduction_memory_0_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'introduction_memory' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:24]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+WARNING: [Synth 8-3848] Net intds in module/entity introduction_memory does not have driver. [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:30]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'introduction_memory' (1#1) [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/introduction_memory.v:24]
+INFO: [Synth 8-256] done synthesizing module 'contructure_introduction_memory_0_1' (2#1) [e:/vivado project/myY-86/myY-86.srcs/sources_1/bd/contructure/ip/contructure_introduction_memory_0_1/synth/contructure_introduction_memory_0_1.v:57]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 378.578 ; gain = 142.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 378.578 ; gain = 142.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a15tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 378.578 ; gain = 142.516
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a15tcsg324-3
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 507.086 ; gain = 271.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------------+------------+----------+
+|      |RTL Partition            |Replication |Instances |
++------+-------------------------+------------+----------+
+|1     |introduction_memory__GB0 |           1|     32107|
+|2     |introduction_memory__GB1 |           1|     12813|
+|3     |introduction_memory__GB2 |           1|     19219|
++------+-------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     80 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module introduction_memory 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     80 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 45 (col length:60)
+BRAMs: 50 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[63]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[62]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[61]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[60]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[59]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[58]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[57]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[56]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[55]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[54]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[53]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[52]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[51]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[50]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[49]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[48]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[47]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[46]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[45]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[44]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[43]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[42]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[41]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[40]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[39]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[38]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[37]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[36]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[35]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[34]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[33]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[32]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[31]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[30]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[29]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[28]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[27]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[26]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[25]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[24]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[23]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[22]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[21]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[20]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[19]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[18]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[17]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[16]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[15]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[14]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[13]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[12]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[11]
+WARNING: [Synth 8-3331] design contructure_introduction_memory_0_1 has unconnected port pc[10]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 855 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 511.020 ; gain = 274.957
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+11 Infos, 154 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 578.090 ; gain = 342.027
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'E:/vivado project/myY-86/myY-86.runs/contructure_introduction_memory_0_1_synth_1/contructure_introduction_memory_0_1.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 936.957 ; gain = 358.867
+INFO: [Common 17-1381] The checkpoint 'E:/vivado project/myY-86/myY-86.runs/contructure_introduction_memory_0_1_synth_1/contructure_introduction_memory_0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 936.957 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 23 19:58:57 2017...

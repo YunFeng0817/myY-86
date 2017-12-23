@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a15tcsg324-3" LaunchTime="1513857421">
-  <File Type="RDS-PROPCONSTRS" Name="regFile_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="regFile.tcl"/>
-  <File Type="RDS-RDS" Name="regFile.vds"/>
-  <File Type="RDS-UTIL" Name="regFile_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="regFile_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="regFile.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="regFile_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="regFile_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a15tcsg324-3" LaunchTime="1514030169">
+  <File Type="RDS-PROPCONSTRS" Name="contructure_wrapper_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="contructure_wrapper.tcl"/>
+  <File Type="RDS-RDS" Name="contructure_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="contructure_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="contructure_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="contructure_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="contructure_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="contructure_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/const_defination.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/predPC.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/selectPC.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/introduction_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/predictPC.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Split.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/decodeReg.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -24,17 +66,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/intd_fetch.v">
+    <File Path="$PSRCDIR/sources_1/new/addPC.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/rom.v">
+    <File Path="$PSRCDIR/sources_1/new/setRegIO.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -42,23 +82,97 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/decode.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/decodeReg.v">
+    <File Path="$PSRCDIR/sources_1/new/EReg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/introduction_memory.v">
+    <File Path="$PSRCDIR/sources_1/new/ALU_A.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ALU_B.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ALU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alufun.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MREG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CCREG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cond.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/WREG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/memOperation.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/data_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/contructure/contructure.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/contructure/hdl/contructure_wrapper.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -66,7 +180,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="regFile"/>
+      <Option Name="TopModule" Val="contructure_wrapper"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -80,4 +194,25 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_decodeReg_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_introduction_memory_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_WREG_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_data_memory_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_ALU_A_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_memOperation_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_predictPC_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_cond_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_selectPC_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_EReg_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_predPC_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_Split_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_regFile_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_CCREG_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_addPC_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_setRegIO_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_ALU_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_decode_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_ALU_B_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_alufun_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="contructure_MREG_0_0"/>
 </GenRun>

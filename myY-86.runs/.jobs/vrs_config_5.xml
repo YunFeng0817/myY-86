@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="contructure_WREG_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_WREG_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_memOperation_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_memOperation_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_data_memory_0_1_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_data_memory_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_cond_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_cond_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_EReg_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_EReg_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_predPC_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_predPC_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_selectPC_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_selectPC_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_introduction_memory_0_1_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_introduction_memory_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_predictPC_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_predictPC_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_Split_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_Split_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_decodeReg_0_1_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_decodeReg_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_regFile_0_1_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_regFile_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_addPC_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_addPC_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_setRegIO_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_setRegIO_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_decode_0_2_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_decode_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_ALU_A_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_ALU_A_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_ALU_B_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_ALU_B_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_ALU_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_ALU_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_alufun_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_alufun_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_MREG_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_MREG_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="contructure_CCREG_0_0_synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/contructure_CCREG_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="E:/vivado project/myY-86/myY-86.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="contructure_WREG_0_0_synth_1"/>
+		<Parent Id="contructure_memOperation_0_0_synth_1"/>
+		<Parent Id="contructure_data_memory_0_1_synth_1"/>
+		<Parent Id="contructure_cond_0_0_synth_1"/>
+		<Parent Id="contructure_EReg_0_0_synth_1"/>
+		<Parent Id="contructure_predPC_0_0_synth_1"/>
+		<Parent Id="contructure_selectPC_0_0_synth_1"/>
+		<Parent Id="contructure_introduction_memory_0_1_synth_1"/>
+		<Parent Id="contructure_predictPC_0_0_synth_1"/>
+		<Parent Id="contructure_Split_0_0_synth_1"/>
+		<Parent Id="contructure_decodeReg_0_1_synth_1"/>
+		<Parent Id="contructure_regFile_0_1_synth_1"/>
+		<Parent Id="contructure_addPC_0_0_synth_1"/>
+		<Parent Id="contructure_setRegIO_0_0_synth_1"/>
+		<Parent Id="contructure_decode_0_2_synth_1"/>
+		<Parent Id="contructure_ALU_A_0_0_synth_1"/>
+		<Parent Id="contructure_ALU_B_0_0_synth_1"/>
+		<Parent Id="contructure_ALU_0_0_synth_1"/>
+		<Parent Id="contructure_alufun_0_0_synth_1"/>
+		<Parent Id="contructure_MREG_0_0_synth_1"/>
+		<Parent Id="contructure_CCREG_0_0_synth_1"/>
+	</Run>
+</Runs>
+

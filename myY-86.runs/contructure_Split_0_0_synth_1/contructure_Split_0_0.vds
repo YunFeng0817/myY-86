@@ -1,0 +1,248 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Dec 23 19:58:46 2017
+# Process ID: 9564
+# Current directory: E:/vivado project/myY-86/myY-86.runs/contructure_Split_0_0_synth_1
+# Command line: vivado.exe -log contructure_Split_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source contructure_Split_0_0.tcl
+# Log file: E:/vivado project/myY-86/myY-86.runs/contructure_Split_0_0_synth_1/contructure_Split_0_0.vds
+# Journal file: E:/vivado project/myY-86/myY-86.runs/contructure_Split_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source contructure_Split_0_0.tcl -notrace
+Command: synth_design -top contructure_Split_0_0 -part xc7a15tcsg324-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10620 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 314.359 ; gain = 78.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'contructure_Split_0_0' [e:/vivado project/myY-86/myY-86.srcs/sources_1/bd/contructure/ip/contructure_Split_0_0/synth/contructure_Split_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'Split' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Split' (1#1) [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:23]
+INFO: [Synth 8-256] done synthesizing module 'contructure_Split_0_0' (2#1) [e:/vivado project/myY-86/myY-86.srcs/sources_1/bd/contructure/ip/contructure_Split_0_0/synth/contructure_Split_0_0.v:57]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 353.688 ; gain = 117.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 353.688 ; gain = 117.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a15tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 353.688 ; gain = 117.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "reg1_read_src" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "need_valc" won't be mapped to RAM because it is too sparse
+INFO: [Device 21-403] Loading part xc7a15tcsg324-3
+WARNING: [Synth 8-327] inferring latch for variable 'reg1_read_src_reg' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'reg2_read_src_reg' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'need_valc_reg' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'need_regids_reg' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'reg1_reg' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:56]
+WARNING: [Synth 8-327] inferring latch for variable 'reg2_reg' [E:/vivado project/myY-86/myY-86.srcs/sources_1/new/Split.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 353.688 ; gain = 117.918
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Split 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 45 (col length:60)
+BRAMs: 50 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "inst/reg1_read_src" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst/need_valc" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |    72|
+|3     |LUT3 |     1|
+|4     |LUT5 |     3|
+|5     |LUT6 |     8|
+|6     |LD   |     8|
+|7     |LDC  |     2|
+|8     |LDP  |     8|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   103|
+|2     |  inst   |Split  |    95|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 479.879 ; gain = 244.109
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 8 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  LD => LDCE (inverted pins: G): 8 instances
+  LDC => LDCE: 2 instances
+  LDP => LDPE: 8 instances
+
+16 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 564.859 ; gain = 329.090
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'E:/vivado project/myY-86/myY-86.runs/contructure_Split_0_0_synth_1/contructure_Split_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1017.578 ; gain = 452.719
+INFO: [Common 17-1381] The checkpoint 'E:/vivado project/myY-86/myY-86.runs/contructure_Split_0_0_synth_1/contructure_Split_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1018.613 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 23 19:59:53 2017...

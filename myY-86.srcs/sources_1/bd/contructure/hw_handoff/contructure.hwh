@@ -1,0 +1,1188 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 23 19:43:29 2017" VIVADOVERSION="2017.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a15t" NAME="contructure" PACKAGE="csg324" SPEEDGRADE="-3"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="predPC_0" PORT="clk"/>
+        <CONNECTION INSTANCE="regFile_0" PORT="clk"/>
+        <CONNECTION INSTANCE="CCREG_0" PORT="clk"/>
+        <CONNECTION INSTANCE="EReg_0" PORT="clk"/>
+        <CONNECTION INSTANCE="decodeReg_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="predPC_0" PORT="rst"/>
+        <CONNECTION INSTANCE="selectPC_0" PORT="rst"/>
+        <CONNECTION INSTANCE="addPC_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Split_0" PORT="rst"/>
+        <CONNECTION INSTANCE="regFile_0" PORT="rst"/>
+        <CONNECTION INSTANCE="MREG_0" PORT="rst"/>
+        <CONNECTION INSTANCE="memOperation_0" PORT="rst"/>
+        <CONNECTION INSTANCE="data_memory_0" PORT="rst"/>
+        <CONNECTION INSTANCE="WREG_0" PORT="rst"/>
+        <CONNECTION INSTANCE="introduction_memory_0" PORT="rst"/>
+        <CONNECTION INSTANCE="EReg_0" PORT="rst"/>
+        <CONNECTION INSTANCE="decodeReg_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="W_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_W_stat">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CCREG_0" PORT="W_stat"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="m_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_m_stat">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CCREG_0" PORT="m_stat"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="W_stat_1" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_stat">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="WREG_0" PORT="W_stat"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_stat">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="decodeReg_0" PORT="stat"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/ALU_0" HWVERSION="1.0" INSTANCE="ALU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU" VLNV="xilinx.com:module_ref:ALU:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_ALU_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="64" NAME="ALUB" RIGHT="0" SIGIS="undef" SIGNAME="ALU_B_0_ALUB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_B_0" PORT="ALUB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="ALUA" RIGHT="0" SIGIS="undef" SIGNAME="ALU_A_0_ALUA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_A_0" PORT="ALUA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="fun" RIGHT="0" SIGIS="undef" SIGNAME="alufun_0_fun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alufun_0" PORT="fun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="valE" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="valE"/>
+            <CONNECTION INSTANCE="decode_0" PORT="e_valE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="cc" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_cc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CCREG_0" PORT="cc"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ALU_A_0" HWVERSION="1.0" INSTANCE="ALU_A_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU_A" VLNV="xilinx.com:module_ref:ALU_A:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_ALU_A_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valC" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_valC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_valC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valA" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="ALUA" RIGHT="0" SIGIS="undef" SIGNAME="ALU_A_0_ALUA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="ALUA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ALU_B_0" HWVERSION="1.0" INSTANCE="ALU_B_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU_B" VLNV="xilinx.com:module_ref:ALU_B:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_ALU_B_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="ifun" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valB" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_valB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_valB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="ALUB" RIGHT="0" SIGIS="undef" SIGNAME="ALU_B_0_ALUB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="ALUB"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/CCREG_0" HWVERSION="1.0" INSTANCE="CCREG_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CCREG" VLNV="xilinx.com:module_ref:CCREG:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_CCREG_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="cc" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_cc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="cc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="W_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_W_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="W_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="m_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_m_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="m_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="zf" SIGIS="undef" SIGNAME="CCREG_0_zf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cond_0" PORT="zf"/>
+            <CONNECTION INSTANCE="MREG_0" PORT="clk"/>
+            <CONNECTION INSTANCE="data_memory_0" PORT="clk"/>
+            <CONNECTION INSTANCE="WREG_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="of" SIGIS="undef" SIGNAME="CCREG_0_of">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cond_0" PORT="of"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sf" SIGIS="undef" SIGNAME="CCREG_0_sf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cond_0" PORT="sf"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/EReg_0" HWVERSION="1.0" INSTANCE="EReg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="EReg" VLNV="xilinx.com:module_ref:EReg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_EReg_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="ifun" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valC" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_valC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_valC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valA" RIGHT="0" SIGIS="undef" SIGNAME="decode_0_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valB" RIGHT="0" SIGIS="undef" SIGNAME="decode_0_valB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="valB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstE" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstM" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="E_icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_B_0" PORT="icode"/>
+            <CONNECTION INSTANCE="ALU_A_0" PORT="icode"/>
+            <CONNECTION INSTANCE="alufun_0" PORT="icode"/>
+            <CONNECTION INSTANCE="cond_0" PORT="icode"/>
+            <CONNECTION INSTANCE="MREG_0" PORT="icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="E_ifun" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_B_0" PORT="ifun"/>
+            <CONNECTION INSTANCE="alufun_0" PORT="ifun"/>
+            <CONNECTION INSTANCE="cond_0" PORT="ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="E_valC" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_valC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_A_0" PORT="valC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="E_valA" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_A_0" PORT="valA"/>
+            <CONNECTION INSTANCE="MREG_0" PORT="valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="E_valB" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_valB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_B_0" PORT="valB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="E_stat" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="E_dstE" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cond_0" PORT="dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="E_dstM" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="dstM"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/MREG_0" HWVERSION="1.0" INSTANCE="MREG_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MREG" VLNV="xilinx.com:module_ref:MREG:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_MREG_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="CCREG_0_zf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CCREG_0" PORT="zf"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cnd" SIGIS="undef" SIGNAME="cond_0_e_cnd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cond_0" PORT="e_cnd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valE" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="valE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valA" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstE" RIGHT="0" SIGIS="undef" SIGNAME="cond_0_e_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cond_0" PORT="e_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstM" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M_stat" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M_icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="icode"/>
+            <CONNECTION INSTANCE="selectPC_0" PORT="M_icode"/>
+            <CONNECTION INSTANCE="memOperation_0" PORT="icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_cnd" SIGIS="undef" SIGNAME="MREG_0_M_cnd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selectPC_0" PORT="M_Cnd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="M_valE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memOperation_0" PORT="valE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="M_valA" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_memory_0" PORT="data"/>
+            <CONNECTION INSTANCE="selectPC_0" PORT="M_valA"/>
+            <CONNECTION INSTANCE="memOperation_0" PORT="valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M_dstE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="valE"/>
+            <CONNECTION INSTANCE="WREG_0" PORT="dstE"/>
+            <CONNECTION INSTANCE="decode_0" PORT="M_valE"/>
+            <CONNECTION INSTANCE="decode_0" PORT="M_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M_dstM" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="dstM"/>
+            <CONNECTION INSTANCE="decode_0" PORT="M_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Split_0" HWVERSION="1.0" INSTANCE="Split_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Split" VLNV="xilinx.com:module_ref:Split:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_Split_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="79" NAME="intd" RIGHT="0" SIGIS="undef" SIGNAME="introduction_memory_0_intd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="introduction_memory_0" PORT="intd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="reg1_read_src" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_reg1_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="reg1_read_src"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="reg2_read_src" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_reg2_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="reg2_read_src"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="predictPC_0" PORT="icode"/>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ifun" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="valc" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_valc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="predictPC_0" PORT="valC"/>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="valC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="need_valc" SIGIS="undef" SIGNAME="Split_0_need_valc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addPC_0" PORT="need_valc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="need_regids" SIGIS="undef" SIGNAME="Split_0_need_regids">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addPC_0" PORT="need_regids"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/WREG_0" HWVERSION="1.0" INSTANCE="WREG_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="WREG" VLNV="xilinx.com:module_ref:WREG:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_WREG_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="CCREG_0_zf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CCREG_0" PORT="zf"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valM" RIGHT="0" SIGIS="undef" SIGNAME="data_memory_0_valM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_memory_0" PORT="valM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstM" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="W_stat" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="W_stat_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="W_icode" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selectPC_0" PORT="W_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="W_valE" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="W_valE"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="E"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="W_valM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="W_valM"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="M"/>
+            <CONNECTION INSTANCE="selectPC_0" PORT="W_valM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="W_dstE" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="W_dstE"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="W_dstM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regFile_0" PORT="dstM"/>
+            <CONNECTION INSTANCE="decode_0" PORT="W_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/addPC_0" HWVERSION="1.0" INSTANCE="addPC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="addPC" VLNV="xilinx.com:module_ref:addPC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_addPC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="63" NAME="f_pc" RIGHT="0" SIGIS="undef" SIGNAME="selectPC_0_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selectPC_0" PORT="pc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="need_regids" SIGIS="undef" SIGNAME="Split_0_need_regids">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="need_regids"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="need_valc" SIGIS="undef" SIGNAME="Split_0_need_valc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="need_valc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="valPC" RIGHT="0" SIGIS="undef" SIGNAME="addPC_0_valPC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="predictPC_0" PORT="valP"/>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="valP"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/alufun_0" HWVERSION="1.0" INSTANCE="alufun_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="alufun" VLNV="xilinx.com:module_ref:alufun:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_alufun_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="ifun" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="fun" RIGHT="0" SIGIS="undef" SIGNAME="alufun_0_fun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="fun"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/cond_0" HWVERSION="1.0" INSTANCE="cond_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cond" VLNV="xilinx.com:module_ref:cond:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_cond_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="ifun" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="dstE" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sf" SIGIS="undef" SIGNAME="CCREG_0_sf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CCREG_0" PORT="sf"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="of" SIGIS="undef" SIGNAME="CCREG_0_of">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CCREG_0" PORT="of"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="zf" SIGIS="undef" SIGNAME="CCREG_0_zf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CCREG_0" PORT="zf"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="e_dstE" RIGHT="0" SIGIS="undef" SIGNAME="cond_0_e_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="dstE"/>
+            <CONNECTION INSTANCE="decode_0" PORT="e_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="e_cnd" SIGIS="undef" SIGNAME="cond_0_e_cnd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="cnd"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/data_memory_0" HWVERSION="1.0" INSTANCE="data_memory_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="data_memory" VLNV="xilinx.com:module_ref:data_memory:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_data_memory_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="CCREG_0_zf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CCREG_0" PORT="zf"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enabler" SIGIS="undef" SIGNAME="memOperation_0_enabler">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memOperation_0" PORT="enabler"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enablew" SIGIS="undef" SIGNAME="memOperation_0_enablew">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memOperation_0" PORT="enablew"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="dstM" RIGHT="0" SIGIS="undef" SIGNAME="memOperation_0_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memOperation_0" PORT="dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="valM" RIGHT="0" SIGIS="undef" SIGNAME="data_memory_0_valM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="valM"/>
+            <CONNECTION INSTANCE="decode_0" PORT="m_valM"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/decodeReg_0" HWVERSION="1.0" INSTANCE="decodeReg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="decodeReg" VLNV="xilinx.com:module_ref:decodeReg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_decodeReg_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="ifun" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="reg1_read_src" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_reg1_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="reg1_read_src"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="reg2_read_src" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_reg2_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="reg2_read_src"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valC" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_valc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="valc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valP" RIGHT="0" SIGIS="undef" SIGNAME="addPC_0_valPC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addPC_0" PORT="valPC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="D_icode" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="icode"/>
+            <CONNECTION INSTANCE="decode_0" PORT="icode"/>
+            <CONNECTION INSTANCE="EReg_0" PORT="icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="D_ifun" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_ifun">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="ifun"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_reg1_read_src" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_reg1_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="srcA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_reg2_read_src" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_reg2_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="srcB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_valC" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_valC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="valC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="D_valP" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_valP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="valP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="D_stat" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="stat"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/decode_0" HWVERSION="1.0" INSTANCE="decode_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="decode" VLNV="xilinx.com:module_ref:decode:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_decode_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="63" NAME="d_rvalA" RIGHT="0" SIGIS="undef" SIGNAME="regFile_0_d_rvalA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regFile_0" PORT="d_rvalA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="d_rvalB" RIGHT="0" SIGIS="undef" SIGNAME="regFile_0_d_rvalB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regFile_0" PORT="d_rvalB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="e_dstE" RIGHT="0" SIGIS="undef" SIGNAME="cond_0_e_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cond_0" PORT="e_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="M_dstE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="M_dstM" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="W_dstM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="W_dstE" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="e_valE" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="valE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="m_valM" RIGHT="0" SIGIS="undef" SIGNAME="data_memory_0_valM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_memory_0" PORT="valM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="M_valE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="W_valM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_valM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="W_valE" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_valE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="srcA" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_srcA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="srcB" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_srcB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valP" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_valP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_valP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="valA" RIGHT="0" SIGIS="undef" SIGNAME="decode_0_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="valB" RIGHT="0" SIGIS="undef" SIGNAME="decode_0_valB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="valB"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/introduction_memory_0" HWVERSION="1.0" INSTANCE="introduction_memory_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="introduction_memory" VLNV="xilinx.com:module_ref:introduction_memory:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_introduction_memory_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="pc" RIGHT="0" SIGIS="undef" SIGNAME="selectPC_0_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selectPC_0" PORT="pc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="79" NAME="intd" RIGHT="0" SIGIS="undef" SIGNAME="introduction_memory_0_intd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="intd"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/memOperation_0" HWVERSION="1.0" INSTANCE="memOperation_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="memOperation" VLNV="xilinx.com:module_ref:memOperation:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_memOperation_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_valE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valA" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="dstM" RIGHT="0" SIGIS="undef" SIGNAME="memOperation_0_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_memory_0" PORT="dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="enabler" SIGIS="undef" SIGNAME="memOperation_0_enabler">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_memory_0" PORT="enabler"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="enablew" SIGIS="undef" SIGNAME="memOperation_0_enablew">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_memory_0" PORT="enablew"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/predPC_0" HWVERSION="1.0" INSTANCE="predPC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="predPC" VLNV="xilinx.com:module_ref:predPC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_predPC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="predPC" RIGHT="0" SIGIS="undef" SIGNAME="predictPC_0_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="predictPC_0" PORT="pc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="pc" RIGHT="0" SIGIS="undef" SIGNAME="predPC_0_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selectPC_0" PORT="predPC"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/predictPC_0" HWVERSION="1.0" INSTANCE="predictPC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="predictPC" VLNV="xilinx.com:module_ref:predictPC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_predictPC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valC" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_valc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="valc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="valP" RIGHT="0" SIGIS="undef" SIGNAME="addPC_0_valPC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addPC_0" PORT="valPC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="pc" RIGHT="0" SIGIS="undef" SIGNAME="predictPC_0_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="predPC_0" PORT="predPC"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/regFile_0" HWVERSION="1.0" INSTANCE="regFile_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="regFile" VLNV="xilinx.com:module_ref:regFile:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_regFile_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstE" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dstM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="M" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_valM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="E" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_valE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="srcA" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_srcA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="srcB" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_srcB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="d_rvalA" RIGHT="0" SIGIS="undef" SIGNAME="regFile_0_d_rvalA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="d_rvalA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="d_rvalB" RIGHT="0" SIGIS="undef" SIGNAME="regFile_0_d_rvalB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decode_0" PORT="d_rvalB"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/selectPC_0" HWVERSION="1.0" INSTANCE="selectPC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="selectPC" VLNV="xilinx.com:module_ref:selectPC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_selectPC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="predPC" RIGHT="0" SIGIS="undef" SIGNAME="predPC_0_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="predPC_0" PORT="pc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="M_icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="M_Cnd" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_cnd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_cnd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="M_valA" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_valA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="W_icode" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="W_valM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_valM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="pc" RIGHT="0" SIGIS="undef" SIGNAME="selectPC_0_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addPC_0" PORT="f_pc"/>
+            <CONNECTION INSTANCE="introduction_memory_0" PORT="pc"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/setRegIO_0" HWVERSION="1.0" INSTANCE="setRegIO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="setRegIO" VLNV="xilinx.com:module_ref:setRegIO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_setRegIO_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="srcA" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_reg1_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_reg1_read_src"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="srcB" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_reg2_read_src">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_reg2_read_src"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="d_srcA" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regFile_0" PORT="srcA"/>
+            <CONNECTION INSTANCE="decode_0" PORT="srcA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="d_srcB" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regFile_0" PORT="srcB"/>
+            <CONNECTION INSTANCE="decode_0" PORT="srcB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="d_dstE" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_dstE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="dstE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="d_dstM" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="dstM"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
