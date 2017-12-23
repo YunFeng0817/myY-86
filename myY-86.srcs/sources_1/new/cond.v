@@ -23,7 +23,7 @@
 
 module cond(
     input wire[`icodeBus] icode,ifun,
-    input wire[`digitsBus] dstE,
+    input wire[`regBus] dstE,
     input wire sf,of,zf,
     output reg[`regBus] e_dstE,
     output reg e_cnd

@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-//Date        : Sat Dec 23 19:43:28 2017
+//Date        : Sat Dec 23 23:03:42 2017
 //Host        : CodeFlash running 64-bit major release  (build 9200)
 //Command     : generate_target contructure.bd
 //Design      : contructure
@@ -28,9 +28,9 @@ module contructure
   wire [63:0]ALU_0_valE;
   wire [63:0]ALU_A_0_ALUA;
   wire [63:0]ALU_B_0_ALUB;
-  wire CCREG_0_of;
-  wire CCREG_0_sf;
-  wire CCREG_0_zf;
+  wire CCreg_0_of;
+  wire CCreg_0_sf;
+  wire CCreg_0_zf;
   wire [3:0]EReg_0_E_dstE;
   wire [3:0]EReg_0_E_dstM;
   wire [3:0]EReg_0_E_icode;
@@ -59,7 +59,7 @@ module contructure
   wire [2:0]WREG_0_W_stat;
   wire [63:0]WREG_0_W_valE;
   wire [63:0]WREG_0_W_valM;
-  wire [2:0]\^W_stat_1 ;
+  wire [2:0]W_stat_2;
   wire [63:0]addPC_0_valPC;
   wire [2:0]alufun_0_fun;
   wire clk_1;
@@ -68,8 +68,8 @@ module contructure
   wire [63:0]data_memory_0_valM;
   wire [3:0]decodeReg_0_D_icode;
   wire [3:0]decodeReg_0_D_ifun;
-  wire [63:0]decodeReg_0_D_reg1_read_src;
-  wire [63:0]decodeReg_0_D_reg2_read_src;
+  wire [3:0]decodeReg_0_D_reg1_read_src;
+  wire [3:0]decodeReg_0_D_reg2_read_src;
   wire [2:0]decodeReg_0_D_stat;
   wire [63:0]decodeReg_0_D_valC;
   wire [63:0]decodeReg_0_D_valP;
@@ -93,7 +93,7 @@ module contructure
   wire [2:0]stat_1;
 
   assign W_stat_1[2:0] = WREG_0_W_stat;
-  assign \^W_stat_1 [2:0] = W_stat[2:0];
+  assign W_stat_2 = W_stat[2:0];
   assign clk_1 = clk;
   assign m_stat_1 = m_stat[2:0];
   assign rst_1 = rst;
@@ -114,14 +114,6 @@ module contructure
         .icode(EReg_0_E_icode),
         .ifun(EReg_0_E_ifun),
         .valB(EReg_0_E_valB));
-  contructure_CCREG_0_0 CCREG_0
-       (.W_stat(\^W_stat_1 ),
-        .cc(ALU_0_cc),
-        .clk(clk_1),
-        .m_stat(m_stat_1),
-        .of(CCREG_0_of),
-        .sf(CCREG_0_sf),
-        .zf(CCREG_0_zf));
   contructure_EReg_0_0 EReg_0
        (.E_dstE(EReg_0_E_dstE),
         .E_dstM(EReg_0_E_dstM),
@@ -149,7 +141,7 @@ module contructure
         .M_stat(MREG_0_M_stat),
         .M_valA(MREG_0_M_valA),
         .M_valE(MREG_0_M_valE),
-        .clk(CCREG_0_zf),
+        .clk(clk_1),
         .cnd(cond_0_e_cnd),
         .dstE(cond_0_e_dstE),
         .dstM(EReg_0_E_dstM),
@@ -175,13 +167,13 @@ module contructure
         .W_stat(WREG_0_W_stat),
         .W_valE(WREG_0_W_valE),
         .W_valM(WREG_0_W_valM),
-        .clk(CCREG_0_zf),
+        .clk(clk_1),
         .dstE(MREG_0_M_dstE),
         .dstM(MREG_0_M_dstM),
         .icode(MREG_0_M_icode),
         .rst(rst_1),
         .stat(MREG_0_M_stat),
-        .valE(MREG_0_M_dstE),
+        .valE(MREG_0_M_valE),
         .valM(data_memory_0_valM));
   contructure_addPC_0_0 addPC_0
        (.f_pc(selectPC_0_pc),
@@ -193,17 +185,25 @@ module contructure
        (.fun(alufun_0_fun),
         .icode(EReg_0_E_icode),
         .ifun(EReg_0_E_ifun));
-  contructure_cond_0_0 cond_0
+  contructure_CCreg_0_1 cc_reg_0
+       (.W_stat(W_stat_2),
+        .cc(ALU_0_cc),
+        .clk(clk_1),
+        .m_stat(m_stat_1),
+        .of(CCreg_0_of),
+        .sf(CCreg_0_sf),
+        .zf(CCreg_0_zf));
+  contructure_cond_0_0 condition_0
        (.dstE(EReg_0_E_dstE),
         .e_cnd(cond_0_e_cnd),
         .e_dstE(cond_0_e_dstE),
         .icode(EReg_0_E_icode),
         .ifun(EReg_0_E_ifun),
-        .of(CCREG_0_of),
-        .sf(CCREG_0_sf),
-        .zf(CCREG_0_zf));
+        .of(CCreg_0_of),
+        .sf(CCreg_0_sf),
+        .zf(CCreg_0_zf));
   contructure_data_memory_0_1 data_memory_0
-       (.clk(CCREG_0_zf),
+       (.clk(clk_1),
         .data(MREG_0_M_valA),
         .dstM(memOperation_0_dstM),
         .enabler(memOperation_0_enabler),
@@ -230,7 +230,7 @@ module contructure
   contructure_decode_0_2 decode_0
        (.M_dstE(MREG_0_M_dstE),
         .M_dstM(MREG_0_M_dstM),
-        .M_valE(MREG_0_M_dstE),
+        .M_valE(MREG_0_M_valE),
         .W_dstE(WREG_0_W_dstE),
         .W_dstM(WREG_0_W_dstM),
         .W_valE(WREG_0_W_valE),
@@ -294,6 +294,6 @@ module contructure
         .d_srcA(setRegIO_0_d_srcA),
         .d_srcB(setRegIO_0_d_srcB),
         .icode(decodeReg_0_D_icode),
-        .srcA(decodeReg_0_D_reg1_read_src[3:0]),
-        .srcB(decodeReg_0_D_reg2_read_src[3:0]));
+        .srcA(decodeReg_0_D_reg1_read_src),
+        .srcB(decodeReg_0_D_reg2_read_src));
 endmodule

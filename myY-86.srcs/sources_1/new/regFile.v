@@ -30,7 +30,7 @@ module regFile(
     output reg[63:0] d_rvalA,d_rvalB  //读到的数据
     );
     
-    reg[63:0] regs[15:0];
+    reg[63:0] regs[0:15];
     
     //E阶段 得到的结果写入寄存器
     always@(posedge clk)

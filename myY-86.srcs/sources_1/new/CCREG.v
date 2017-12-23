@@ -21,7 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CCREG(
+module CCreg(
     input clk,
     input wire[2:0] cc,
     input wire[2:0] W_stat,m_stat,

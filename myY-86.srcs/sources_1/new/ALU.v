@@ -22,7 +22,7 @@
 
 
 module ALU(
-    input wire [64:0] ALUB,
+    input wire [`digitsBus] ALUB,
     input wire[`digitsBus] ALUA,
     input wire[2:0] fun,
     output reg[`digitsBus] valE,
@@ -30,12 +30,14 @@ module ALU(
     );
     
     reg[64:0] temp;
+    reg[64:0] tempin;
     always@(*)
     begin
+    tempin<=ALUB;
         case(fun)
             `ADD:
                 begin
-                    temp=ALUA+ALUB;
+                    temp=ALUA+tempin;
                     valE=temp;
                     if(temp[64]==1)
                     begin
@@ -48,7 +50,7 @@ module ALU(
                 end
             `SUB:
                 begin
-                    temp=ALUB-ALUA;
+                    temp=tempin-ALUA;
                     valE=temp;
                     if(temp[64]==1)
                     begin

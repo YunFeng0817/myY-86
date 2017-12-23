@@ -34,7 +34,7 @@ module decodeReg(
     //这是decode 阶段的寄存器，输入与输出一样，只是起缓存作用
     output reg[`icodeBus] D_icode,
     output reg[`ifunBus] D_ifun,
-    output reg[`digitsBus] D_reg1_read_src,D_reg2_read_src,
+    output reg[`regBus] D_reg1_read_src,D_reg2_read_src,
     output reg[`digitsBus] D_valC,
     output reg[`digitsBus]  D_valP,
     output reg[2:0] D_stat
@@ -46,8 +46,8 @@ module decodeReg(
             D_icode<=0;
             D_ifun<=0;
             D_valP<=`readZero;
-            D_reg1_read_src<=0;
-            D_reg2_read_src<=0;
+            D_reg1_read_src<=`NONE;
+            D_reg2_read_src<=`NONE;
             D_valP<=0;
             D_valC<=0;
             D_stat<=0;

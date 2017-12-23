@@ -66,7 +66,7 @@ module contructure_cond_0_0 (
 
 input wire [3 : 0] icode;
 input wire [3 : 0] ifun;
-input wire [63 : 0] dstE;
+input wire [3 : 0] dstE;
 input wire sf;
 input wire of;
 input wire zf;
