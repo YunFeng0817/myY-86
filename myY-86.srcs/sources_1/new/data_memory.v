@@ -24,9 +24,10 @@
 module data_memory(
     input clk,
     input wire rst,
-    input wire enable,
+    input wire enabler,enablew,
     input wire[`digitsBus] dstM,
-    input wire [`digitsBus] data
+    input wire [`digitsBus] data,
+    output reg[`digitsBus ] valM
     );
     
     reg[`digitsBus] memory_data[80:0];
@@ -35,12 +36,33 @@ module data_memory(
     begin
         if(rst==1)
         begin end
-        else if(enable==1)
+        else if(enablew==1)
         begin
             memory_data[dstM]<=data;
         end
         else
         begin
+        end
+    end
+    
+    always@(*)
+    begin
+        if(rst==1)
+        begin end
+        else
+        begin
+            if(enabler==1&&enablew==1)
+            begin
+                valM<=data;
+            end
+            else if(enabler==1)
+            begin
+                valM<=memory_data[dstM];
+            end
+            else
+            begin
+                valM<=0;
+            end
         end
     end
 endmodule
