@@ -83,3 +83,6 @@
 `define AND 2
 `define XOR 3
 `define NO 4
+
+/************流水线状态值的宏*************/
+`define OK 0
