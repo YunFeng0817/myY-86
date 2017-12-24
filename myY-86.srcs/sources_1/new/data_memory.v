@@ -30,7 +30,7 @@ module data_memory(
     output reg[`digitsBus ] valM
     );
     
-    reg[`digitsBus] memory_data[80:0];
+    reg[`digitsBus] memory_data[`data_memory_size];
     
     always@(posedge clk)
     begin
@@ -56,9 +56,16 @@ module data_memory(
                 valM<=data;
             end
             else if(enabler==1)
-            begin
-                valM<=memory_data[dstM];
-            end
+			begin
+				if(dstM>`data_memory_length-1)
+				begin
+					valM<=0;
+				end
+				else
+				begin
+					valM<=memory_data[dstM];
+				end
+			end
             else
             begin
                 valM<=0;

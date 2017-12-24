@@ -112,3 +112,8 @@
 
 /************流水线状态值的宏*************/
 `define OK 0
+
+/************内存定义大小的宏*************/
+`define data_memory_size 69:0
+`define introduction_memory_size 59:0
+`define data_memory_length 70
