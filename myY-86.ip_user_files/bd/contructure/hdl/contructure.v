@@ -149,7 +149,7 @@ module contructure
         .M_stat(MREG_0_M_stat),
         .M_valA(MREG_0_M_valA),
         .M_valE(MREG_0_M_valE),
-        .clk(CCREG_0_zf),
+        .clk(clk_1),
         .cnd(cond_0_e_cnd),
         .dstE(cond_0_e_dstE),
         .dstM(EReg_0_E_dstM),
@@ -175,13 +175,13 @@ module contructure
         .W_stat(WREG_0_W_stat),
         .W_valE(WREG_0_W_valE),
         .W_valM(WREG_0_W_valM),
-        .clk(CCREG_0_zf),
+        .clk(clk_1),
         .dstE(MREG_0_M_dstE),
         .dstM(MREG_0_M_dstM),
         .icode(MREG_0_M_icode),
         .rst(rst_1),
         .stat(MREG_0_M_stat),
-        .valE(MREG_0_M_dstE),
+        .valE(MREG_0_M_valE),
         .valM(data_memory_0_valM));
   contructure_addPC_0_0 addPC_0
        (.f_pc(selectPC_0_pc),
@@ -203,7 +203,7 @@ module contructure
         .sf(CCREG_0_sf),
         .zf(CCREG_0_zf));
   contructure_data_memory_0_1 data_memory_0
-       (.clk(CCREG_0_zf),
+       (.clk(clk_1),
         .data(MREG_0_M_valA),
         .dstM(memOperation_0_dstM),
         .enabler(memOperation_0_enabler),
@@ -230,7 +230,7 @@ module contructure
   contructure_decode_0_2 decode_0
        (.M_dstE(MREG_0_M_dstE),
         .M_dstM(MREG_0_M_dstM),
-        .M_valE(MREG_0_M_dstE),
+        .M_valE(MREG_0_M_valE),
         .W_dstE(WREG_0_W_dstE),
         .W_dstM(WREG_0_W_dstM),
         .W_valE(WREG_0_W_valE),

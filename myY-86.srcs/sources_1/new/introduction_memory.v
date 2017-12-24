@@ -27,7 +27,7 @@ module introduction_memory(
     output reg[`MaxIntroduction] intd
     );
     
-    reg[7:0] intds[19:0];   //一行一个字节，有800个字节
+    reg[7:0] intds[59:0];   //一行一个字节，有800个字节
     initial $readmemh ( "E:/vivado project/myY-86/test.txt",intds );  
     
     always@(*)
@@ -38,7 +38,7 @@ module introduction_memory(
         end
         else
         begin
-            intd<={intds[pc][7:0],intds[pc+1][7:0],intds[pc+2][7:0],intds[pc+3][7:0],intds[pc+4][7:0],intds[pc+5][7:0],intds[pc+6][7:0],intds[pc+7][7:0],intds[pc+8][7:0],intds[pc+9][7:0]};
+            intd<=0;
         end
     end
     

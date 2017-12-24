@@ -3,24 +3,62 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: D:/vivado/Vivado/2017.1/bin/unwrapped/win64.o/xelab.exe -wto faed395e163b40ef9111ccf36136e1ad --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-2063] Module <contructure_ALU_0_0> not found while processing module instance <ALU_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:101]
-ERROR: [VRFC 10-2063] Module <contructure_ALU_A_0_0> not found while processing module instance <ALU_A_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:107]
-ERROR: [VRFC 10-2063] Module <contructure_ALU_B_0_0> not found while processing module instance <ALU_B_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:112]
-ERROR: [VRFC 10-2063] Module <contructure_CCreg_0_1> not found while processing module instance <cc_reg_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:117]
-ERROR: [VRFC 10-2063] Module <contructure_EReg_0_0> not found while processing module instance <EReg_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:125]
-ERROR: [VRFC 10-2063] Module <contructure_MREG_0_0> not found while processing module instance <MREG_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:144]
-ERROR: [VRFC 10-2063] Module <contructure_Split_0_0> not found while processing module instance <Split_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:161]
-ERROR: [VRFC 10-2063] Module <contructure_WREG_0_0> not found while processing module instance <WREG_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:171]
-ERROR: [VRFC 10-2063] Module <contructure_addPC_0_0> not found while processing module instance <addPC_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:186]
-ERROR: [VRFC 10-2063] Module <contructure_alufun_0_0> not found while processing module instance <alufun_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:192]
-ERROR: [VRFC 10-2063] Module <contructure_cond_0_0> not found while processing module instance <cond_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:196]
-ERROR: [VRFC 10-2063] Module <contructure_data_memory_0_1> not found while processing module instance <data_memory_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:205]
-ERROR: [VRFC 10-2063] Module <contructure_decodeReg_0_1> not found while processing module instance <decodeReg_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:213]
-ERROR: [VRFC 10-2063] Module <contructure_decode_0_2> not found while processing module instance <decode_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:230]
-ERROR: [VRFC 10-2063] Module <contructure_introduction_memory_0_1> not found while processing module instance <introduction_memory_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:249]
-ERROR: [VRFC 10-2063] Module <contructure_memOperation_0_0> not found while processing module instance <memOperation_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:253]
-ERROR: [VRFC 10-2063] Module <contructure_predPC_0_0> not found while processing module instance <predPC_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:261]
-ERROR: [VRFC 10-2063] Module <contructure_predictPC_0_0> not found while processing module instance <predictPC_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:266]
-ERROR: [VRFC 10-2063] Module <contructure_regFile_0_1> not found while processing module instance <regFile_0> [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:271]
-INFO: [#UNDEF] Sorry, too many errors..
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port W_stat [E:/vivado project/myY-86/myY-86.srcs/sim_1/new/test.v:45]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port W_stat_1 [E:/vivado project/myY-86/myY-86.srcs/sim_1/new/test.v:46]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 65 for port ALUB [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:103]
+WARNING: [VRFC 10-278] actual bit length 65 differs from formal bit length 64 for port ALUB [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_ALU_0_0/sim/contructure_ALU_0_0.v:71]
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 64 for port dstE [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:197]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 4 for port dstE [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_cond_0_0/sim/contructure_cond_0_0.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 4 for port D_reg1_read_src [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_decodeReg_0_1/sim/contructure_decodeReg_0_1.v:106]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 4 for port D_reg2_read_src [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_decodeReg_0_1/sim/contructure_decodeReg_0_1.v:107]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.contructure_ALU_0_0
+Compiling module xil_defaultlib.ALU_A
+Compiling module xil_defaultlib.contructure_ALU_A_0_0
+Compiling module xil_defaultlib.ALU_B
+Compiling module xil_defaultlib.contructure_ALU_B_0_0
+Compiling module xil_defaultlib.CCreg
+Compiling module xil_defaultlib.contructure_CCreg_0_1
+Compiling module xil_defaultlib.EReg
+Compiling module xil_defaultlib.contructure_EReg_0_0
+Compiling module xil_defaultlib.MREG
+Compiling module xil_defaultlib.contructure_MREG_0_0
+Compiling module xil_defaultlib.Split
+Compiling module xil_defaultlib.contructure_Split_0_0
+Compiling module xil_defaultlib.WREG
+Compiling module xil_defaultlib.contructure_WREG_0_0
+Compiling module xil_defaultlib.addPC
+Compiling module xil_defaultlib.contructure_addPC_0_0
+Compiling module xil_defaultlib.alufun
+Compiling module xil_defaultlib.contructure_alufun_0_0
+Compiling module xil_defaultlib.cond
+Compiling module xil_defaultlib.contructure_cond_0_0
+Compiling module xil_defaultlib.data_memory
+Compiling module xil_defaultlib.contructure_data_memory_0_1
+Compiling module xil_defaultlib.decodeReg
+Compiling module xil_defaultlib.contructure_decodeReg_0_1
+Compiling module xil_defaultlib.decode
+Compiling module xil_defaultlib.contructure_decode_0_2
+Compiling module xil_defaultlib.introduction_memory
+Compiling module xil_defaultlib.contructure_introduction_memory_...
+Compiling module xil_defaultlib.memOperation
+Compiling module xil_defaultlib.contructure_memOperation_0_0
+Compiling module xil_defaultlib.predPC
+Compiling module xil_defaultlib.contructure_predPC_0_0
+Compiling module xil_defaultlib.predictPC
+Compiling module xil_defaultlib.contructure_predictPC_0_0
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.contructure_regFile_0_1
+Compiling module xil_defaultlib.selectPC
+Compiling module xil_defaultlib.contructure_selectPC_0_0
+Compiling module xil_defaultlib.setRegIO
+Compiling module xil_defaultlib.contructure_setRegIO_0_0
+Compiling module xil_defaultlib.contructure
+Compiling module xil_defaultlib.contructure_wrapper
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav

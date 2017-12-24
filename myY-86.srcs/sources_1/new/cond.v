@@ -175,6 +175,10 @@ module cond(
                                     e_dstE<=`NONE;
                                 end
                             end
+						`rrmovq:
+							begin
+								e_dstE<=dstE;
+							end
                     endcase
                 end
             default:

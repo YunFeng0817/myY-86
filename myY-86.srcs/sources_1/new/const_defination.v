@@ -47,8 +47,7 @@
 
 `define Nop 4'h1
 
-`define Rrmovq 4'h1
-`define Cmovle 4'h2
+`define Rrmovq 4'h2
 
 `define Irmovq 4'h3
 
