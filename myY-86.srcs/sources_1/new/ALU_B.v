@@ -35,11 +35,35 @@ module ALU_B(
                 begin
                     ALUB<=0;
                 end
-            {`rmmovq,`mrmovq,`addq,`ret,`popq,`pushq,`call}:
+            `rmmovq:
                 begin
                     ALUB<=valB;
                 end
-            `irmovq:
+            `mrmovq:
+                begin
+                    ALUB<=valB;
+                end
+			`addq:
+                begin
+                    ALUB<=valB;
+                end
+            `ret:
+                begin
+                    ALUB<=valB;
+                end
+			`popq:
+                begin
+                    ALUB<=valB;
+                end
+            `pushq:
+                begin
+                    ALUB<=valB;
+                end
+			`call:
+                begin
+                    ALUB<=valB;
+                end
+			`irmovq:
                 begin
                     if(ifun==4'h0)
                     begin

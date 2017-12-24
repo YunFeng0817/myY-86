@@ -32,7 +32,7 @@ module memOperation(
     always@(*)
     begin
         case({icode,4'h0})
-            {`rmmovq,`pushq, `call,`mrmovq}:
+            `rmmovq:
                 begin
                     if({icode,4'h0}==`mrmovq)
                     begin
@@ -46,13 +46,61 @@ module memOperation(
                     end
                     dstM<=valE;
                 end
-            {`popq,`ret}:
+            `pushq:
+                begin
+                    if({icode,4'h0}==`mrmovq)
+                    begin
+                        enablew<=0;
+                        enabler<=1;
+                    end
+                    else
+                    begin
+                        enablew<=1;
+                        enabler<=0;
+                    end
+                    dstM<=valE;
+                end
+			`call:
+                begin
+                    if({icode,4'h0}==`mrmovq)
+                    begin
+                        enablew<=0;
+                        enabler<=1;
+                    end
+                    else
+                    begin
+                        enablew<=1;
+                        enabler<=0;
+                    end
+                    dstM<=valE;
+                end
+            `mrmovq:
+                begin
+                    if({icode,4'h0}==`mrmovq)
+                    begin
+                        enablew<=0;
+                        enabler<=1;
+                    end
+                    else
+                    begin
+                        enablew<=1;
+                        enabler<=0;
+                    end
+                    dstM<=valE;
+                end
+			`popq:
                 begin
                     dstM<=valA;
                     enablew<=0;
                     enabler<=1;
                 end
-            default:
+            `ret:
+                begin
+                    dstM<=valA;
+                    enablew<=0;
+                    enabler<=1;
+                end
+			default:
             begin
                 enablew<=0;
                 enabler<=0;

@@ -41,50 +41,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.src
 INFO: [VRFC 10-311] analyzing module data_memory
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.srcs/sources_1/new/CCREG.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CCreg
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_predPC_0_0/sim/contructure_predPC_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_predPC_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_selectPC_0_0/sim/contructure_selectPC_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_selectPC_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_introduction_memory_0_1/sim/contructure_introduction_memory_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_introduction_memory_0_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_predictPC_0_0/sim/contructure_predictPC_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_predictPC_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_Split_0_0/sim/contructure_Split_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_Split_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_decodeReg_0_1/sim/contructure_decodeReg_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_decodeReg_0_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_regFile_0_1/sim/contructure_regFile_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_regFile_0_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_addPC_0_0/sim/contructure_addPC_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_addPC_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_setRegIO_0_0/sim/contructure_setRegIO_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_setRegIO_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_decode_0_2/sim/contructure_decode_0_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_decode_0_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_EReg_0_0/sim/contructure_EReg_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_EReg_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_ALU_A_0_0/sim/contructure_ALU_A_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_ALU_A_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_ALU_B_0_0/sim/contructure_ALU_B_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_ALU_B_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_ALU_0_0/sim/contructure_ALU_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_ALU_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_alufun_0_0/sim/contructure_alufun_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_alufun_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_MREG_0_0/sim/contructure_MREG_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_MREG_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_cond_0_0/sim/contructure_cond_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_cond_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_WREG_0_0/sim/contructure_WREG_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_WREG_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_memOperation_0_0/sim/contructure_memOperation_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_memOperation_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_data_memory_0_1/sim/contructure_data_memory_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_data_memory_0_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module contructure
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_CCreg_0_1/sim/contructure_CCreg_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module contructure_CCreg_0_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.srcs/sources_1/imports/hdl/contructure_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module contructure_wrapper
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado project/myY-86/myY-86.srcs/sim_1/new/test.v" into library xil_defaultlib

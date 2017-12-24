@@ -8,26 +8,26 @@ preplace portBus W_stat_1 -pg 1 -y -240 -defaultsOSRD
 preplace portBus stat -pg 1 -y -180 -defaultsOSRD
 preplace portBus m_stat -pg 1 -y 60 -defaultsOSRD
 preplace inst decode_0 -pg 1 -lvl 6 -y -530 -defaultsOSRD
-preplace inst regFile_0 -pg 1 -lvl 6 -y 140 -defaultsOSRD
 preplace inst WREG_0 -pg 1 -lvl 12 -y -190 -defaultsOSRD
+preplace inst regFile_0 -pg 1 -lvl 6 -y 140 -defaultsOSRD
 preplace inst memOperation_0 -pg 1 -lvl 11 -y -190 -defaultsOSRD
 preplace inst setRegIO_0 -pg 1 -lvl 6 -y -140 -defaultsOSRD
 preplace inst ALU_0 -pg 1 -lvl 9 -y -620 -defaultsOSRD
-preplace inst decodeReg_0 -pg 1 -lvl 5 -y -20 -defaultsOSRD
-preplace inst EReg_0 -pg 1 -lvl 7 -y -160 -defaultsOSRD
 preplace inst ALU_A_0 -pg 1 -lvl 8 -y -270 -defaultsOSRD
+preplace inst EReg_0 -pg 1 -lvl 7 -y -160 -defaultsOSRD
+preplace inst decodeReg_0 -pg 1 -lvl 5 -y -20 -defaultsOSRD
 preplace inst cc_reg_0 -pg 1 -lvl 9 -y -20 -defaultsOSRD
 preplace inst condition_0 -pg 1 -lvl 9 -y -220 -defaultsOSRD
 preplace inst selectPC_0 -pg 1 -lvl 2 -y -270 -defaultsOSRD
-preplace inst predPC_0 -pg 1 -lvl 1 -y -280 -defaultsOSRD
 preplace inst data_memory_0 -pg 1 -lvl 11 -y 50 -defaultsOSRD
 preplace inst alufun_0 -pg 1 -lvl 9 -y -470 -defaultsOSRD
+preplace inst predPC_0 -pg 1 -lvl 1 -y -280 -defaultsOSRD
 preplace inst MREG_0 -pg 1 -lvl 10 -y -220 -defaultsOSRD
 preplace inst ALU_B_0 -pg 1 -lvl 8 -y -60 -defaultsOSRD
 preplace inst addPC_0 -pg 1 -lvl 3 -y -120 -defaultsOSRD
 preplace inst predictPC_0 -pg 1 -lvl 2 -y -40 -defaultsOSRD
-preplace inst introduction_memory_0 -pg 1 -lvl 4 -y -340 -defaultsOSRD
 preplace inst Split_0 -pg 1 -lvl 4 -y -70 -defaultsOSRD
+preplace inst introduction_memory_0 -pg 1 -lvl 4 -y -340 -defaultsOSRD
 preplace netloc regFile_0_d_rvalA 1 5 2 1840 -740 2220
 preplace netloc EReg_0_E_icode 1 7 3 2750 -420 3140 -320 3500J
 preplace netloc Split_0_ifun 1 4 1 1190

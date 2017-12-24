@@ -31,12 +31,28 @@ module setRegIO(
     /***************************确定d_srcA的取值*********************************/
     always@(*)
     begin
-        case({4'b0,icode})
-            {`rmmovq,`rrmovq,`addq,`pushq}:
+        case(icode)
+           `Rmmovq:
                 begin
                     d_srcA<=srcA;
                 end
-            {`popq,`ret}:
+            `Rrmovq:
+                begin
+                    d_srcA<=srcA;
+                end
+            `Addq:
+                begin
+                    d_srcA<=srcA;
+                end
+			`Pushq:
+                begin
+                    d_srcA<=srcA;
+                end
+            `Popq:
+                begin
+                    d_srcA<=srcA;
+                end
+			`Ret:
                 begin
                     d_srcA<=srcA;
                 end
@@ -50,8 +66,12 @@ module setRegIO(
     /***************************确定d_srcB的取值*********************************/
     always@(*)
     begin
-        case({4'b0,icode})
-            {`irmovq,`addq}:
+        case(icode)
+            `Irmovq:
+                begin
+                    d_srcB<=srcB;
+                end
+			`Addq:
                 begin
                     d_srcB<=srcB;
                 end
@@ -65,16 +85,36 @@ module setRegIO(
     /***************************确定d_dstE的取值*********************************/
     always@(*)
     begin
-        case({4'b0,icode})
-            {`rrmovq,`irmovq,`addq}:
+        case(icode)
+            `Rrmovq:
                 begin
                     d_dstE<=srcB;
                 end
-            {`pushq,`popq,`call,`ret}:
+            `Irmovq:
+                begin
+                    d_dstE<=srcB;
+                end
+			`Addq:
+                begin
+                    d_dstE<=srcB;
+                end
+			`Pushq:
                 begin
                     d_dstE<=`rsp;
                 end
-            default:
+            `Popq:
+                begin
+                    d_dstE<=`rsp;
+                end
+			`Call:
+                begin
+                    d_dstE<=`rsp;
+                end
+			`Ret:
+                begin
+                    d_dstE<=`rsp;
+                end
+			default:
                 begin
                     d_dstE<=`NONE;
                 end
@@ -84,12 +124,16 @@ module setRegIO(
     /***************************确定d_srcM的取值*********************************/
     always@(*)
     begin
-        case({4'b0,icode})
-            {`mrmovq,`popq}:
+        case(icode)
+            `Mrmovq:
                 begin
                     d_dstM<=srcB;
                 end
-            default:
+            `Popq:
+                begin
+                    d_dstM<=srcB;
+                end
+			default:
                 begin
                     d_dstM<=`NONE;
                 end 

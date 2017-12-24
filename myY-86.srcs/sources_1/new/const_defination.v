@@ -42,6 +42,33 @@
 
 `define popq 8'hb0
 
+/********* y-86  icode代码 ***********/
+`define Halt 4'h0
+
+`define Nop 4'h1
+
+`define Rrmovq 4'h1
+`define Cmovle 4'h2
+
+`define Irmovq 4'h3
+
+`define Rmmovq 4'h4
+
+`define Mrmovq 4'h5
+
+`define Addq 4'h6
+
+`define Jmp 4'h7
+
+`define Call 4'h8
+
+`define Ret 4'h9
+
+`define Pushq 4'ha
+
+`define Popq 4'hb
+
+
 /******* 寄存器16进制代码  ********/
 `define rax 4'h0
 `define rcx 4'h1

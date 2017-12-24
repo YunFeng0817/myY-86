@@ -36,7 +36,11 @@ module decode(
     always@(*)
     begin
         case({icode,4'h0})
-            {`call,`jmp}:
+            `call:
+                begin
+                    valA<=valP;
+                end
+			`jmp:
                 begin
                     valA<=valP;
                 end

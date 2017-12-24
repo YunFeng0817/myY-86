@@ -30,19 +30,39 @@ module ALU_A(
     always@(*)
     begin
          case({icode,4'h0})
-            {`rrmovq,`addq}:
+            `rrmovq:
                 begin
                     ALUA<=valA;
                 end
-            {`irmovq,`rmmovq,`mrmovq}:
+            `addq:
+                begin
+                    ALUA<=valA;
+                end
+			`irmovq:
                 begin
                     ALUA<=valC;
                 end
-            {`pushq ,`call}:
+            `rmmovq:
+                begin
+                    ALUA<=valC;
+                end
+			`mrmovq:
+                begin
+                    ALUA<=valC;
+                end
+			`pushq :
                 begin
                     ALUA<=-8;
                 end
-            {`popq,`ret}:
+            `call:
+                begin
+                    ALUA<=-8;
+                end
+			`popq:
+                begin
+                    ALUA<=8;
+                end
+			`ret:
                 begin
                     ALUA<=8;
                 end

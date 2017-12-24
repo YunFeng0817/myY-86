@@ -48,6 +48,11 @@ module MREG(
             M_dstE<=dstE;
             M_dstM<=dstM;
         end
+        else
+        begin
+            M_dstE<=`NONE;
+            M_dstM<=`NONE;
+        end
     end
     
 endmodule

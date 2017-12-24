@@ -37,7 +37,11 @@ module alufun(
             `irmovq:   //需要判断具体的几种运算
                 begin
                     case(ifun)
-                        {4'h0,4'h1}:
+                        4'h0:
+                            begin
+                                fun<=`ADD;
+                            end
+						4'h1:
                             begin
                                 fun<=`ADD;
                             end
