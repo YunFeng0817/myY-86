@@ -33,5 +33,9 @@ module predPC(
         begin
             pc<=predPC;
         end
+        else
+        begin
+            pc<=0;
+        end
     end   
 endmodule

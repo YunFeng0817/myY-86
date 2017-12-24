@@ -3,8 +3,8 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: D:/vivado/Vivado/2017.1/bin/unwrapped/win64.o/xelab.exe -wto faed395e163b40ef9111ccf36136e1ad --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port W_stat [E:/vivado project/myY-86/myY-86.srcs/sim_1/new/test.v:44]
-WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port W_stat_1 [E:/vivado project/myY-86/myY-86.srcs/sim_1/new/test.v:45]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port W_stat [E:/vivado project/myY-86/myY-86.srcs/sim_1/new/test.v:45]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port W_stat_1 [E:/vivado project/myY-86/myY-86.srcs/sim_1/new/test.v:46]
 WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 65 for port ALUB [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:103]
 WARNING: [VRFC 10-278] actual bit length 65 differs from formal bit length 64 for port ALUB [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/ip/contructure_ALU_0_0/sim/contructure_ALU_0_0.v:71]
 WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 64 for port valE [E:/vivado project/myY-86/myY-86.ip_user_files/bd/contructure/hdl/contructure.v:184]

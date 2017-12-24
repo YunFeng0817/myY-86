@@ -28,7 +28,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="23"/>
+    <Option Name="WTXSimLaunchSim" Val="46"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -211,9 +211,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="contructure.bd" FileRelPathName="ip/contructure_predPC_0_0/contructure_predPC_0_0.xci">
-          <Proxy FileSetName="contructure_predPC_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="contructure.bd" FileRelPathName="ip/contructure_selectPC_0_0/contructure_selectPC_0_0.xci">
           <Proxy FileSetName="contructure_selectPC_0_0"/>
         </CompFileExtendedInfo>
@@ -317,12 +314,6 @@
     <FileSet Name="contructure_EReg_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/contructure_EReg_0_0">
       <Config>
         <Option Name="TopModule" Val="contructure_EReg_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="contructure_predPC_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/contructure_predPC_0_0">
-      <Config>
-        <Option Name="TopModule" Val="contructure_predPC_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -442,15 +433,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="contructure_EReg_0_0_synth_1" Type="Ft3:Synth" SrcSet="contructure_EReg_0_0" Part="xc7a15tcsg324-3" ConstrsSet="contructure_EReg_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/contructure_EReg_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="contructure_predPC_0_0_synth_1" Type="Ft3:Synth" SrcSet="contructure_predPC_0_0" Part="xc7a15tcsg324-3" ConstrsSet="contructure_predPC_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/contructure_predPC_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
@@ -609,22 +591,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="contructure_EReg_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcsg324-3" ConstrsSet="contructure_EReg_0_0" Description="Default settings for Implementation." SynthRun="contructure_EReg_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="contructure_predPC_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcsg324-3" ConstrsSet="contructure_predPC_0_0" Description="Default settings for Implementation." SynthRun="contructure_predPC_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>

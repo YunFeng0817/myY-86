@@ -31,7 +31,7 @@ module setRegIO(
     /***************************确定d_srcA的取值*********************************/
     always@(*)
     begin
-        case({icode,4'h0})
+        case({4'b0,icode})
             {`rmmovq,`rrmovq,`addq,`pushq}:
                 begin
                     d_srcA<=srcA;
@@ -50,7 +50,7 @@ module setRegIO(
     /***************************确定d_srcB的取值*********************************/
     always@(*)
     begin
-        case({icode,4'h0})
+        case({4'b0,icode})
             {`irmovq,`addq}:
                 begin
                     d_srcB<=srcB;
@@ -65,7 +65,7 @@ module setRegIO(
     /***************************确定d_dstE的取值*********************************/
     always@(*)
     begin
-        case({icode,4'h0})
+        case({4'b0,icode})
             {`rrmovq,`irmovq,`addq}:
                 begin
                     d_dstE<=srcB;
@@ -84,7 +84,7 @@ module setRegIO(
     /***************************确定d_srcM的取值*********************************/
     always@(*)
     begin
-        case({icode,4'h0})
+        case({4'b0,icode})
             {`mrmovq,`popq}:
                 begin
                     d_dstM<=srcB;

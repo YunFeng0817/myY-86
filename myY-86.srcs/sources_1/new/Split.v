@@ -62,6 +62,8 @@ module Split(
                     begin
                         reg1_read_src<=`NONE;
                         reg2_read_src<=`NONE;
+                        need_valc<=0;
+                        need_regids<=0;
                     end
                 `nop:
                     begin
@@ -82,7 +84,7 @@ module Split(
                         reg1_read_src<=`NONE;
                         reg2_read_src<=reg2;
                         need_valc<=1;
-                        need_regids<=0;
+                        need_regids<=1;
                     end
                 `rmmovq:
                     begin

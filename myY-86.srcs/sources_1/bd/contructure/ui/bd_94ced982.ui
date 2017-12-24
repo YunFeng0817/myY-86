@@ -16,12 +16,12 @@ preplace inst ALU_0 -pg 1 -lvl 9 -y -620 -defaultsOSRD
 preplace inst decodeReg_0 -pg 1 -lvl 5 -y -20 -defaultsOSRD
 preplace inst EReg_0 -pg 1 -lvl 7 -y -160 -defaultsOSRD
 preplace inst ALU_A_0 -pg 1 -lvl 8 -y -270 -defaultsOSRD
-preplace inst condition_0 -pg 1 -lvl 9 -y -220 -defaultsOSRD
 preplace inst cc_reg_0 -pg 1 -lvl 9 -y -20 -defaultsOSRD
+preplace inst condition_0 -pg 1 -lvl 9 -y -220 -defaultsOSRD
 preplace inst selectPC_0 -pg 1 -lvl 2 -y -270 -defaultsOSRD
+preplace inst predPC_0 -pg 1 -lvl 1 -y -280 -defaultsOSRD
 preplace inst data_memory_0 -pg 1 -lvl 11 -y 50 -defaultsOSRD
 preplace inst alufun_0 -pg 1 -lvl 9 -y -470 -defaultsOSRD
-preplace inst predPC_0 -pg 1 -lvl 1 -y -280 -defaultsOSRD
 preplace inst MREG_0 -pg 1 -lvl 10 -y -220 -defaultsOSRD
 preplace inst ALU_B_0 -pg 1 -lvl 8 -y -60 -defaultsOSRD
 preplace inst addPC_0 -pg 1 -lvl 3 -y -120 -defaultsOSRD

@@ -92,26 +92,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>W_stat</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-            <spirit:vector>
-              <spirit:left>2</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>m_stat</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-            <spirit:vector>
-              <spirit:left>2</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>W_stat_1</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
@@ -123,6 +103,26 @@
         </spirit:port>
         <spirit:port>
           <spirit:name>stat</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>W_stat</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>m_stat</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
             <spirit:vector>
@@ -147,17 +147,6 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_predictPC_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">predictPC</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>predPC_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="predPC" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_predPC_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">predPC</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -367,6 +356,17 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_CCreg_0_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">CCreg</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>predPC_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="predPC" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_predPC_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">predPC</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -677,7 +677,6 @@
       <spirit:adHocConnection>
         <spirit:name>clk_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="predPC_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="EReg_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="regFile_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="clk"/>
@@ -685,11 +684,11 @@
         <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="data_memory_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="predPC_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="rst"/>
-        <spirit:internalPortReference spirit:componentRef="predPC_0" spirit:portRef="rst"/>
         <spirit:internalPortReference spirit:componentRef="selectPC_0" spirit:portRef="rst"/>
         <spirit:internalPortReference spirit:componentRef="addPC_0" spirit:portRef="rst"/>
         <spirit:internalPortReference spirit:componentRef="Split_0" spirit:portRef="rst"/>
@@ -701,6 +700,7 @@
         <spirit:internalPortReference spirit:componentRef="regFile_0" spirit:portRef="rst"/>
         <spirit:internalPortReference spirit:componentRef="introduction_memory_0" spirit:portRef="rst"/>
         <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="predPC_0" spirit:portRef="rst"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>WREG_0_W_stat</spirit:name>
