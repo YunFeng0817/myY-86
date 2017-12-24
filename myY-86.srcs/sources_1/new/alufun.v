@@ -30,11 +30,35 @@ module alufun(
     always@(*)
     begin
         case({icode,4'h0})
-            {`rrmovq,`rmmovq,`mrmovq,`call,`ret,`pushq,`popq}:
+            `rrmovq:
                 begin
                     fun<=`ADD;
                 end
-            `irmovq:   //需要判断具体的几种运算
+			`rmmovq:
+                begin
+                    fun<=`ADD;
+                end
+            `mrmovq:
+                begin
+                    fun<=`ADD;
+                end
+			`call:
+                begin
+                    fun<=`ADD;
+                end
+			`ret:
+                begin
+                    fun<=`ADD;
+                end
+            `pushq:
+                begin
+                    fun<=`ADD;
+                end
+			`popq:
+                begin
+                    fun<=`ADD;
+                end
+			`irmovq:   //需要判断具体的几种运算
                 begin
                     case(ifun)
                         4'h0:

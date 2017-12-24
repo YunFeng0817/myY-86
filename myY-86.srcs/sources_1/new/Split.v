@@ -141,7 +141,7 @@ module Split(
                 `pushq:
                     begin
                         reg1_read_src<=reg1;
-                        reg2_read_src<=`NONE;
+                        reg2_read_src<=`rsp;
                         need_valc<=0;
                         need_regids<=1; 
 						valc<=0;
@@ -149,7 +149,7 @@ module Split(
                 `popq:
                     begin
                         reg1_read_src<=reg1;
-                        reg2_read_src<=`NONE;
+                        reg2_read_src<=`rsp;
                         need_valc<=0;
                         need_regids<=1;  
 						valc<=0;

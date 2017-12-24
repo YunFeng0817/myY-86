@@ -71,10 +71,22 @@ module setRegIO(
                 begin
                     d_srcB<=srcB;
                 end
+			`Rmmovq:
+                begin
+                    d_srcB<=srcB;
+                end
 			`Addq:
                 begin
                     d_srcB<=srcB;
                 end
+			`Pushq:
+				begin
+					d_srcB<=srcB;
+				end
+			`Popq:
+				begin
+					d_srcB<=srcB;
+				end
             default:
             begin
                 d_srcB<=`NONE;

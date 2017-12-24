@@ -115,5 +115,5 @@
 
 /************内存定义大小的宏*************/
 `define data_memory_size 69:0
-`define introduction_memory_size 59:0
+`define introduction_memory_size 89:0
 `define data_memory_length 70

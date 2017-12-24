@@ -2,8 +2,8 @@
 # Webtalk v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Sun Dec 24 19:40:27 2017
-# Process ID: 5008
+# Start of session at: Sun Dec 24 23:10:16 2017
+# Process ID: 2912
 # Current directory: E:/vivado project/myY-86/myY-86.sim/sim_1/behav
 # Command line: wbtcv.exe -mode batch -source E:/vivado project/myY-86/myY-86.sim/sim_1/behav/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: E:/vivado project/myY-86/myY-86.sim/sim_1/behav/webtalk.log
