@@ -96,11 +96,11 @@
 `define dstEBus 3:0
 `define regBus 3:0
 `define dstMBus 63:0
-`define icodeRange 3:0
-`define ifunRange 7:4
-`define reg1Range 11:8
-`define reg2Range 15:12
-`define valcRange 79:16 
+`define icodeRange 79:76
+`define ifunRange 75:72
+`define reg1Range 71:68
+`define reg2Range 67:64
+`define valcRange 63:0 
 `define cndBus 2:0
 
 /************处理器的操作类型*************/

@@ -55,7 +55,6 @@ module Split(
             ifun<=intd[`ifunRange];
             reg1<=intd[`reg1Range];
             reg2<=intd[`reg2Range];
-            valc<=intd[`valcRange];
             
             case({icode,4'h0})
                 `halt:
@@ -64,6 +63,7 @@ module Split(
                         reg2_read_src<=`NONE;
                         need_valc<=0;
                         need_regids<=0;
+						valc<=0;
                     end
                 `nop:
                     begin
@@ -71,6 +71,7 @@ module Split(
                         reg2_read_src<=`NONE;
                         need_valc<=0;
                         need_regids<=0;
+						valc<=0;
                     end
                 `rrmovq:
                     begin
@@ -78,6 +79,7 @@ module Split(
                         reg2_read_src<=reg2;
                         need_valc<=0;
                         need_regids<=1;
+						valc<=0;
                     end
                 `irmovq:
                     begin
@@ -85,6 +87,8 @@ module Split(
                         reg2_read_src<=reg2;
                         need_valc<=1;
                         need_regids<=1;
+						valc<=intd[`valcRange];
+						valc<=intd[`valcRange];
                     end
                 `rmmovq:
                     begin
@@ -92,58 +96,71 @@ module Split(
                         reg2_read_src<=reg2;
                         need_valc<=1;
                         need_regids<=1;
+						valc<=intd[`valcRange];
                     end
                 `mrmovq:
                     begin
                         reg1_read_src<=reg1;
                         reg2_read_src<=reg2;
                         need_valc<=1;
-                        need_regids<=1;                      
+                        need_regids<=1;
+						valc<=intd[`valcRange];
                     end
                 `addq:
                     begin
                         reg1_read_src<=reg1;
                         reg2_read_src<=reg2;
                         need_valc<=0;
-                        need_regids<=1;                      
+                        need_regids<=1;  
+						valc<=0;
                     end
                 `jmp:
                     begin
                         reg1_read_src<=`NONE;
                         reg2_read_src<=`NONE;
                         need_valc<=1;
-                        need_regids<=0;                       
+                        need_regids<=0;    
+						valc<=intd[`valcRange];
                     end
                 `call:
                     begin
                         reg1_read_src<=`NONE;
                         reg2_read_src<=`NONE;
                         need_valc<=1;
-                        need_regids<=0;    
+                        need_regids<=0;
+						valc<=intd[`valcRange];
                     end
                 `ret:
                     begin
                         reg1_read_src<=`NONE;
                         reg2_read_src<=`NONE;
                         need_valc<=0;
-                        need_regids<=0;                       
+                        need_regids<=0;
+						valc<=0;
                     end
                 `pushq:
                     begin
                         reg1_read_src<=reg1;
                         reg2_read_src<=`NONE;
                         need_valc<=0;
-                        need_regids<=1;                     
+                        need_regids<=1; 
+						valc<=0;
                     end
                 `popq:
                     begin
                         reg1_read_src<=reg1;
                         reg2_read_src<=`NONE;
                         need_valc<=0;
-                        need_regids<=1;                         
+                        need_regids<=1;  
+						valc<=0;
                     end
                 default:
                     begin
+						reg1_read_src<=`NONE;
+                        reg2_read_src<=`NONE;
+                        need_valc<=0;
+                        need_regids<=0;
+						valc<=0;
                     end
             endcase
         end
