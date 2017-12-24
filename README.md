@@ -7,4 +7,4 @@
 我使用的开发语言是verilog HDL ,使用的开发环境是 VIVADO
 
 Y-86结构图
-![Hardware structure of PIPE](https://github.com/Fitz5264/myY-86/PIPE_structure.png)
+![Hardware structure of PIPE](https://github.com/Fitz5264/myY-86/blob/master/PIPE_structure.png)
