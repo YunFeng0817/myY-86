@@ -6,4 +6,6 @@ irmovq f 4 c
 pushq 5
 popq 7
 iaddq f 5 3
-jmp 0x2c            70 00 00 00 00 00 00 00 2c
+#jmp 0x2c            70 00 00 00 00 00 00 00 2c
+isubq f 5 9
+cmovl 7 3

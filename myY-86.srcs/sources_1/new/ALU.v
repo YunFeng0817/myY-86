@@ -51,7 +51,7 @@ module ALU(
             `SUB:
                 begin
                     temp=tempin-ALUA;
-                    valE=temp;
+                    valE=temp[63:0];
                     if(temp[64]==1)
                     begin
                         cc[1]=1'b1;

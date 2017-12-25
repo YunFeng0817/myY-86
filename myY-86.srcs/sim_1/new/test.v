@@ -24,7 +24,7 @@ module test;
 
     reg clock;
     reg rs;
-    wire cons=0;
+    wire[2:0] cons=3'b0;
     reg[2:0] sta=0;
     
     initial

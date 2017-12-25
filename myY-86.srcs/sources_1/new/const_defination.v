@@ -112,7 +112,7 @@
 `define NO 4
 
 /************流水线状态值的宏*************/
-`define OK 0
+`define OK 3'b0
 
 /************内存定义大小的宏*************/
 `define data_memory_size 69:0
