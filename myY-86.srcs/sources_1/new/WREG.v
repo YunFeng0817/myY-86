@@ -45,6 +45,10 @@ module WREG(
             W_dstE<=dstE;
             W_dstM<=dstM;
         end
+		else
+		begin
+			
+		end
     end
     
 endmodule

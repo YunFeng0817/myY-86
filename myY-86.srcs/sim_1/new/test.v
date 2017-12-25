@@ -37,7 +37,6 @@ module test;
     begin
         rs=1'b1;
         #20 rs=1'b0;
-        #195 rs=1'b1;
         #1000 $stop;
     end
         

@@ -50,7 +50,7 @@ module setRegIO(
                 end
             `Popq:
                 begin
-                    d_srcA<=srcA;
+                    d_srcA<=srcB;
                 end
 			`Ret:
                 begin
@@ -143,7 +143,7 @@ module setRegIO(
                 end
             `Popq:
                 begin
-                    d_dstM<=srcB;
+                    d_dstM<=srcA;
                 end
 			default:
                 begin

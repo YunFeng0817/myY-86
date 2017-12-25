@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec 24 22:58:39 2017" VIVADOVERSION="2017.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 25 18:57:51 2017" VIVADOVERSION="2017.1">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a15t" NAME="contructure" PACKAGE="csg324" SPEEDGRADE="-3"/>
 
@@ -10,10 +10,10 @@
         <CONNECTION INSTANCE="decodeReg_0" PORT="clk"/>
         <CONNECTION INSTANCE="regFile_0" PORT="clk"/>
         <CONNECTION INSTANCE="EReg_0" PORT="clk"/>
+        <CONNECTION INSTANCE="MREG_0" PORT="clk"/>
         <CONNECTION INSTANCE="WREG_0" PORT="clk"/>
         <CONNECTION INSTANCE="data_memory_0" PORT="clk"/>
         <CONNECTION INSTANCE="cc_reg_0" PORT="clk"/>
-        <CONNECTION INSTANCE="MREG_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
@@ -26,10 +26,10 @@
         <CONNECTION INSTANCE="regFile_0" PORT="rst"/>
         <CONNECTION INSTANCE="addPC_0" PORT="rst"/>
         <CONNECTION INSTANCE="EReg_0" PORT="rst"/>
+        <CONNECTION INSTANCE="MREG_0" PORT="rst"/>
         <CONNECTION INSTANCE="WREG_0" PORT="rst"/>
         <CONNECTION INSTANCE="memOperation_0" PORT="rst"/>
         <CONNECTION INSTANCE="data_memory_0" PORT="rst"/>
-        <CONNECTION INSTANCE="MREG_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="2" NAME="W_stat_1" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_stat">
@@ -215,8 +215,8 @@
             <CONNECTION INSTANCE="ALU_A_0" PORT="icode"/>
             <CONNECTION INSTANCE="ALU_B_0" PORT="icode"/>
             <CONNECTION INSTANCE="alufun_0" PORT="icode"/>
-            <CONNECTION INSTANCE="condition_0" PORT="icode"/>
             <CONNECTION INSTANCE="MREG_0" PORT="icode"/>
+            <CONNECTION INSTANCE="condition_0" PORT="icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="E_ifun" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_ifun">

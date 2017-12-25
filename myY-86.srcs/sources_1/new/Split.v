@@ -120,7 +120,7 @@ module Split(
                         reg2_read_src<=`NONE;
                         need_valc<=1;
                         need_regids<=0;    
-						valc<=intd[`valcRange];
+						valc<=intd[`noRegValcRange];
                     end
                 `call:
                     begin
@@ -128,7 +128,7 @@ module Split(
                         reg2_read_src<=`NONE;
                         need_valc<=1;
                         need_regids<=0;
-						valc<=intd[`valcRange];
+						valc<=intd[`noRegValcRange];
                     end
                 `ret:
                     begin

@@ -1,0 +1,9 @@
+irmovq f 3 0xf0ffffffffffffff
+rrmovq 3 4
+irmovq f 5 1
+rmmovq 3 5 1
+irmovq f 4 c
+pushq 5
+popq 7
+iaddq f 5 3
+jmp 0x2c            70 00 00 00 00 00 00 00 2c

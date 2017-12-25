@@ -101,6 +101,7 @@
 `define reg1Range 71:68
 `define reg2Range 67:64
 `define valcRange 63:0 
+`define noRegValcRange 71:8    //由于有些指令比如call ,jmp 没有rA,rB指令的部分，在截取指令的时候需要跳过rA和rB的部分
 `define cndBus 2:0
 
 /************处理器的操作类型*************/

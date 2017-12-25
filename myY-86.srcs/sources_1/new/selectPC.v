@@ -35,10 +35,14 @@ module selectPC(
     begin
         if({M_icode,4'h0}==`jmp)
         begin
-            if(M_Cnd==0)
+            if(M_Cnd==0)    //这是执行阶段结束后得到的cnd， 为0 表示跳转预测的是正确的，如果是1，则预测错误，需要将pc设置为不跳转的地方，存在了M_valA中
             begin
-                pc<=M_valA;
+                pc<=predPC;
             end
+			else
+			begin
+				pc<=M_valA;
+			end
         end
         else if({W_icode,4'h0}==`ret)
         begin

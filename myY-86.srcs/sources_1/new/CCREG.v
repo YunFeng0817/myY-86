@@ -37,5 +37,21 @@ module CCreg(
             sf<=cc[2];
         end
     end
+	
+	always@(posedge clk)
+	begin
+		if(cc[0]===1'bx)   //三个等号 是按位比较值是否相等，两个等号表示判断整体的值是否相等
+		begin
+			zf<=0;
+		end
+		if(cc[1]===1'bx)
+		begin
+			of<=0;
+		end
+		if(cc[2]===1'bx)
+		begin
+			sf<=0;
+		end
+	end
     
 endmodule
