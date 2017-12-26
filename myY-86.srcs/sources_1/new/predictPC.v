@@ -39,6 +39,10 @@ module predictPC(
                 begin
                     pc<=valC;
                 end
+			`halt:
+				begin
+					pc<=valP-1;
+				end
             default:
                 begin
                     pc<=valP;

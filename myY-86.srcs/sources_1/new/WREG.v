@@ -22,7 +22,6 @@
 
 
 module WREG(
-    input wire rst,
     input wire clk,
     input wire[2:0]  stat,
     input wire[`icodeBus] icode,
@@ -36,7 +35,16 @@ module WREG(
     
     always@(posedge clk)
     begin
-        if(rst==0)
+        if(stat==`stop||stat==`inst_invalid||stat==`dmem_error)
+		begin
+			W_stat<=stat;
+            W_icode<=0;
+            W_valE<=0;
+            W_valM<=0;
+            W_dstE<=`NONE;
+            W_dstM<=`NONE;
+		end
+		else
         begin
             W_stat<=stat;
             W_icode<=icode;
@@ -45,10 +53,6 @@ module WREG(
             W_dstE<=dstE;
             W_dstM<=dstM;
         end
-		else
-		begin
-			
-		end
     end
     
 endmodule

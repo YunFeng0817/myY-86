@@ -24,7 +24,8 @@
 module introduction_memory(
     input wire rst,
     input wire[`digitsBus] pc,
-    output reg[`MaxIntroduction] intd
+    output reg[`MaxIntroduction] intd,
+	output reg imem_error
     );
     
     reg[7:0] intds[`introduction_memory_size];   //一行一个字节，有800个字节
@@ -32,13 +33,18 @@ module introduction_memory(
     
     always@(*)
     begin
-        if(rst==0)
+        if(rst==0&&pc<`introduction_memory_length)
         begin
             intd<={intds[pc][7:0],intds[pc+1][7:0],intds[pc+2][7:0],intds[pc+3][7:0],intds[pc+4][7:0],intds[pc+5][7:0],intds[pc+6][7:0],intds[pc+7][7:0],intds[pc+8][7:0],intds[pc+9][7:0]};
-        end
-        else
+			imem_error=0;
+		end
+        else if(pc>`introduction_memory_length)
+		begin
+			imem_error=1;
+		end
         begin
             intd<=0;
+			imem_error=0;
         end
     end
     

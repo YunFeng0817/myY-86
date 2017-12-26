@@ -22,7 +22,7 @@
 
 
 module EReg(
-    input wire rst,
+    input wire cnd,
     input wire clk,
     input wire[`icodeBus] icode,
     input wire[`ifunBus] ifun,
@@ -38,8 +38,16 @@ module EReg(
     
     always@(posedge clk)
     begin
-        if(rst==1)
+        if(cnd==1||stat==`stop||stat==`inst_invalid)
         begin
+			E_stat<=`stop;
+			E_icode<=0;
+            E_ifun<=0;
+            E_valC<=0;
+            E_valA<=0;
+            E_valB<=0;
+            E_dstE<=`NONE;
+            E_dstM<=`NONE;
         end
         else
         begin

@@ -103,6 +103,7 @@
 `define valcRange 63:0 
 `define noRegValcRange 71:8    //由于有些指令比如call ,jmp 没有rA,rB指令的部分，在截取指令的时候需要跳过rA和rB的部分
 `define cndBus 2:0
+`define statBus 2:0
 
 /************处理器的操作类型*************/
 `define ADD 0
@@ -113,8 +114,12 @@
 
 /************流水线状态值的宏*************/
 `define OK 3'b0
+`define stop 3'b1
+`define inst_invalid 3'b10
+`define dmem_error 3'b11
 
 /************内存定义大小的宏*************/
 `define data_memory_size 69:0
 `define introduction_memory_size 89:0
 `define data_memory_length 70
+`define introduction_memory_length 90

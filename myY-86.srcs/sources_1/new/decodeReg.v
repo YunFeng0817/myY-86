@@ -22,7 +22,6 @@
 
 
 module decodeReg(
-    input wire clk, 
     input wire[`icodeBus] icode,
     input wire[`ifunBus] ifun,
     input wire[`icodeBus] reg1_read_src,reg2_read_src,
@@ -41,7 +40,7 @@ module decodeReg(
     );
     always@(posedge clk)
     begin
-        if(rst==1)
+        if(stat==`stop||stat==`inst_invalid)
         begin
             D_icode<=0;
             D_ifun<=0;
@@ -50,7 +49,7 @@ module decodeReg(
             D_reg2_read_src<=`NONE;
             D_valP<=0;
             D_valC<=0;
-            D_stat<=0;
+            D_stat<=stat;
         end
         else 
         begin

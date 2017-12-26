@@ -23,7 +23,6 @@
 
 module data_memory(
     input clk,
-    input wire rst,
     input wire enabler,enablew,
     input wire[`digitsBus] dstM,
     input wire [`digitsBus] data,
@@ -34,42 +33,32 @@ module data_memory(
     
     always@(posedge clk)
     begin
-        if(rst==1)
-        begin end
-        else if(enablew==1)
+        if(enablew==1)
         begin
             memory_data[dstM]<=data;
-        end
-        else
-        begin
         end
     end
     
     always@(*)
     begin
-        if(rst==1)
-        begin end
-        else
-        begin
-            if(enabler==1&&enablew==1)
-            begin
-                valM<=data;
-            end
-            else if(enabler==1)
+		if(enabler==1&&enablew==1)
+		begin
+			valM<=data;
+		end
+		else if(enabler==1)
+		begin
+			if(dstM>`data_memory_length-1)
 			begin
-				if(dstM>`data_memory_length-1)
-				begin
-					valM<=0;
-				end
-				else
-				begin
-					valM<=memory_data[dstM];
-				end
+				valM<=0;
 			end
-            else
-            begin
-                valM<=0;
-            end
-        end
+			else
+			begin
+				valM<=memory_data[dstM];
+			end
+		end
+		else
+		begin
+			valM<=0;
+		end
     end
 endmodule

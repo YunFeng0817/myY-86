@@ -22,7 +22,6 @@
 
 
 module memOperation(
-    input wire rst,
     input wire[`digitsBus] valE,valA,
     input wire[`icodeBus] icode,
     output reg[`digitsBus] dstM,

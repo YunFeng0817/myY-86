@@ -22,7 +22,6 @@
 
 
 module MREG(
-    input wire rst,
     input wire clk,
     input wire[2:0]  stat,
     input wire[`icodeBus] icode,
@@ -38,7 +37,17 @@ module MREG(
     
     always@(posedge clk)
     begin
-        if(rst==0)
+		if(stat==`stop||stat==`inst_invalid)
+		begin
+			M_stat<=stat;
+			M_icode<=0;
+			M_cnd<=cnd;
+            M_valE<=0;
+            M_valA<=0;
+			M_dstE<=`NONE;
+            M_dstM<=`NONE;
+		end
+        else
         begin
             M_stat<=stat;
             M_icode<=icode;
@@ -47,11 +56,6 @@ module MREG(
             M_valA<=valA;
             M_dstE<=dstE;
             M_dstM<=dstM;
-        end
-        else
-        begin
-            M_dstE<=`NONE;
-            M_dstM<=`NONE;
         end
     end
     

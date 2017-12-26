@@ -22,7 +22,6 @@
 
 
 module regFile(
-    input wire rst,
     input wire clk,
     input wire[3:0] dstE,dstM,  //写入的地址
     input wire[`digitsBus] M,E,  //写的数据
@@ -35,48 +34,36 @@ module regFile(
     //E阶段 得到的结果写入寄存器
     always@(posedge clk)
     begin
-        if(rst==0)
-        begin
-            if(dstM!=`NONE)
-            begin
-                regs[dstM]=M;
-            end
-        end
+		if(dstM!=`NONE)
+		begin
+			regs[dstM]=M;
+		end
     end
     
     //M阶段 得到的结果写回寄存器
     always@(posedge clk)
     begin
-        if(rst==0)
-        begin
-            if(dstE!=`NONE)
-            begin
-                regs[dstE]=E;
-            end
-        end
+		if(dstE!=`NONE)
+		begin
+			regs[dstE]=E;
+		end
     end   
     
     //读取数据,组合逻辑
     always@(*)
     begin
-        if(rst==0)
-        begin
-            if(srcA!=`NONE)
-            begin
-                d_rvalA<=regs[srcA];
-            end
-        end 
+		if(srcA!=`NONE)
+		begin
+			d_rvalA<=regs[srcA];
+		end
     end
     
     
     always@(*)
     begin
-        if(rst==0)
-        begin
-            if(srcB!=`NONE)
-            begin
-                d_rvalB<=regs[srcB];
-            end
-        end 
+		if(srcB!=`NONE)
+		begin
+			d_rvalB<=regs[srcB];
+		end
     end    
 endmodule
