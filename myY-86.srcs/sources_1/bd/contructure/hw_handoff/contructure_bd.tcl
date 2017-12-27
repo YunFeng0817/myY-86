@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ALU, ALU_A, ALU_B, EReg, MREG, Split, WREG, addPC, alufun, CCreg, cond, data_memory, decodeReg, decode, introduction_memory, memOperation, predPC, predictPC, regFile, selectPC, setRegIO
+# ALU, ALU_A, ALU_B, EReg, MREG, Split, WREG, addPC, alufun, CCreg, cond, control, d_stat, data_memory, decodeReg, decode, introduction_memory, m_stat, memOperation, predPC, predictPC, regFile, selectPC, setRegIO
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -162,12 +162,8 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set W_stat [ create_bd_port -dir I -from 2 -to 0 W_stat ]
   set W_stat_1 [ create_bd_port -dir O -from 2 -to 0 W_stat_1 ]
   set clk [ create_bd_port -dir I -type clk clk ]
-  set m_stat [ create_bd_port -dir I -from 2 -to 0 m_stat ]
-  set rst [ create_bd_port -dir I rst ]
-  set stat [ create_bd_port -dir I -from 2 -to 0 stat ]
 
   # Create instance: ALU_0, and set properties
   set block_name ALU
@@ -290,6 +286,28 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: control_0, and set properties
+  set block_name control
+  set block_cell_name control_0
+  if { [catch {set control_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $control_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: d_stat_0, and set properties
+  set block_name d_stat
+  set block_cell_name d_stat_0
+  if { [catch {set d_stat_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $d_stat_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: data_memory_0, and set properties
   set block_name data_memory
   set block_cell_name data_memory_0
@@ -330,6 +348,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $introduction_memory_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: m_stat_0, and set properties
+  set block_name m_stat
+  set block_cell_name m_stat_0
+  if { [catch {set m_stat_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $m_stat_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -409,8 +438,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net CCreg_0_sf [get_bd_pins cc_reg_0/sf] [get_bd_pins condition_0/sf]
   connect_bd_net -net CCreg_0_zf [get_bd_pins cc_reg_0/zf] [get_bd_pins condition_0/zf]
   connect_bd_net -net EReg_0_E_dstE [get_bd_pins EReg_0/E_dstE] [get_bd_pins condition_0/dstE]
-  connect_bd_net -net EReg_0_E_dstM [get_bd_pins EReg_0/E_dstM] [get_bd_pins MREG_0/dstM]
-  connect_bd_net -net EReg_0_E_icode [get_bd_pins ALU_A_0/icode] [get_bd_pins ALU_B_0/icode] [get_bd_pins EReg_0/E_icode] [get_bd_pins MREG_0/icode] [get_bd_pins alufun_0/icode] [get_bd_pins condition_0/icode]
+  connect_bd_net -net EReg_0_E_dstM [get_bd_pins EReg_0/E_dstM] [get_bd_pins MREG_0/dstM] [get_bd_pins control_0/E_dstM]
+  connect_bd_net -net EReg_0_E_icode [get_bd_pins ALU_A_0/icode] [get_bd_pins ALU_B_0/icode] [get_bd_pins EReg_0/E_icode] [get_bd_pins MREG_0/icode] [get_bd_pins alufun_0/icode] [get_bd_pins condition_0/icode] [get_bd_pins control_0/E_icode]
   connect_bd_net -net EReg_0_E_ifun [get_bd_pins ALU_B_0/ifun] [get_bd_pins EReg_0/E_ifun] [get_bd_pins alufun_0/ifun] [get_bd_pins condition_0/ifun]
   connect_bd_net -net EReg_0_E_stat [get_bd_pins EReg_0/E_stat] [get_bd_pins MREG_0/stat]
   connect_bd_net -net EReg_0_E_valA [get_bd_pins ALU_A_0/valA] [get_bd_pins EReg_0/E_valA] [get_bd_pins MREG_0/valA]
@@ -420,10 +449,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net MREG_0_M_dstE [get_bd_pins MREG_0/M_dstE] [get_bd_pins WREG_0/dstE] [get_bd_pins decode_0/M_dstE]
   connect_bd_net -net MREG_0_M_dstM [get_bd_pins MREG_0/M_dstM] [get_bd_pins WREG_0/dstM] [get_bd_pins decode_0/M_dstM]
   connect_bd_net -net MREG_0_M_icode [get_bd_pins MREG_0/M_icode] [get_bd_pins WREG_0/icode] [get_bd_pins memOperation_0/icode] [get_bd_pins selectPC_0/M_icode]
-  connect_bd_net -net MREG_0_M_stat [get_bd_pins MREG_0/M_stat] [get_bd_pins WREG_0/stat]
+  connect_bd_net -net MREG_0_M_stat [get_bd_pins MREG_0/M_stat] [get_bd_pins control_0/M_icode] [get_bd_pins m_stat_0/stat]
   connect_bd_net -net MREG_0_M_valA [get_bd_pins MREG_0/M_valA] [get_bd_pins data_memory_0/data] [get_bd_pins memOperation_0/valA] [get_bd_pins selectPC_0/M_valA]
   connect_bd_net -net MREG_0_M_valE [get_bd_pins MREG_0/M_valE] [get_bd_pins WREG_0/valE] [get_bd_pins decode_0/M_valE] [get_bd_pins memOperation_0/valE]
-  connect_bd_net -net Split_0_icode [get_bd_pins Split_0/icode] [get_bd_pins decodeReg_0/icode] [get_bd_pins predictPC_0/icode]
+  connect_bd_net -net Split_0_icode [get_bd_pins Split_0/icode] [get_bd_pins d_stat_0/icode] [get_bd_pins decodeReg_0/icode] [get_bd_pins predictPC_0/icode]
   connect_bd_net -net Split_0_ifun [get_bd_pins Split_0/ifun] [get_bd_pins decodeReg_0/ifun]
   connect_bd_net -net Split_0_need_regids [get_bd_pins Split_0/need_regids] [get_bd_pins addPC_0/need_regids]
   connect_bd_net -net Split_0_need_valc [get_bd_pins Split_0/need_valc] [get_bd_pins addPC_0/need_valc]
@@ -433,17 +462,23 @@ proc create_root_design { parentCell } {
   connect_bd_net -net WREG_0_W_dstE [get_bd_pins WREG_0/W_dstE] [get_bd_pins decode_0/W_dstE] [get_bd_pins regFile_0/dstE]
   connect_bd_net -net WREG_0_W_dstM [get_bd_pins WREG_0/W_dstM] [get_bd_pins decode_0/W_dstM] [get_bd_pins regFile_0/dstM]
   connect_bd_net -net WREG_0_W_icode [get_bd_pins WREG_0/W_icode] [get_bd_pins selectPC_0/W_icode]
-  connect_bd_net -net WREG_0_W_stat [get_bd_ports W_stat_1] [get_bd_pins WREG_0/W_stat]
+  connect_bd_net -net WREG_0_W_stat [get_bd_ports W_stat_1] [get_bd_pins WREG_0/W_stat] [get_bd_pins cc_reg_0/W_stat]
   connect_bd_net -net WREG_0_W_valE [get_bd_pins WREG_0/W_valE] [get_bd_pins decode_0/W_valE] [get_bd_pins regFile_0/E]
   connect_bd_net -net WREG_0_W_valM [get_bd_pins WREG_0/W_valM] [get_bd_pins decode_0/W_valM] [get_bd_pins regFile_0/M] [get_bd_pins selectPC_0/W_valM]
-  connect_bd_net -net W_stat_2 [get_bd_ports W_stat] [get_bd_pins cc_reg_0/W_stat]
   connect_bd_net -net addPC_0_valPC [get_bd_pins addPC_0/valPC] [get_bd_pins decodeReg_0/valP] [get_bd_pins predictPC_0/valP]
   connect_bd_net -net alufun_0_fun [get_bd_pins ALU_0/fun] [get_bd_pins alufun_0/fun]
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins EReg_0/clk] [get_bd_pins MREG_0/clk] [get_bd_pins WREG_0/clk] [get_bd_pins cc_reg_0/clk] [get_bd_pins data_memory_0/clk] [get_bd_pins decodeReg_0/clk] [get_bd_pins predPC_0/clk] [get_bd_pins regFile_0/clk]
-  connect_bd_net -net cond_0_e_cnd [get_bd_pins MREG_0/cnd] [get_bd_pins condition_0/e_cnd]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins EReg_0/clk] [get_bd_pins MREG_0/clk] [get_bd_pins WREG_0/clk] [get_bd_pins cc_reg_0/clk] [get_bd_pins data_memory_0/clk] [get_bd_pins predPC_0/clk] [get_bd_pins regFile_0/clk]
+  connect_bd_net -net cond_0_e_cnd [get_bd_pins EReg_0/cnd] [get_bd_pins MREG_0/cnd] [get_bd_pins condition_0/e_cnd] [get_bd_pins control_0/e_cnd] [get_bd_pins d_stat_0/cnd]
   connect_bd_net -net cond_0_e_dstE [get_bd_pins MREG_0/dstE] [get_bd_pins condition_0/e_dstE] [get_bd_pins decode_0/e_dstE]
+  connect_bd_net -net control_0_D_bubble [get_bd_pins control_0/D_bubble] [get_bd_pins decodeReg_0/bubble]
+  connect_bd_net -net control_0_D_stall [get_bd_pins control_0/D_stall] [get_bd_pins decodeReg_0/stall]
+  connect_bd_net -net control_0_E_bubble [get_bd_pins EReg_0/bubble] [get_bd_pins control_0/E_bubble]
+  connect_bd_net -net control_0_F_stall [get_bd_pins control_0/F_stall] [get_bd_pins predPC_0/F_stall]
+  connect_bd_net -net control_0_M_bubble [get_bd_pins MREG_0/bubble] [get_bd_pins control_0/M_bubble]
+  connect_bd_net -net d_stat_0_d_stat [get_bd_pins d_stat_0/d_stat] [get_bd_pins decodeReg_0/stat]
+  connect_bd_net -net data_memory_0_dmem_error [get_bd_pins data_memory_0/dmem_error] [get_bd_pins m_stat_0/dmem_error]
   connect_bd_net -net data_memory_0_valM [get_bd_pins WREG_0/valM] [get_bd_pins data_memory_0/valM] [get_bd_pins decode_0/m_valM]
-  connect_bd_net -net decodeReg_0_D_icode [get_bd_pins EReg_0/icode] [get_bd_pins decodeReg_0/D_icode] [get_bd_pins decode_0/icode] [get_bd_pins setRegIO_0/icode]
+  connect_bd_net -net decodeReg_0_D_icode [get_bd_pins EReg_0/icode] [get_bd_pins control_0/D_icode] [get_bd_pins decodeReg_0/D_icode] [get_bd_pins decode_0/icode] [get_bd_pins setRegIO_0/icode]
   connect_bd_net -net decodeReg_0_D_ifun [get_bd_pins EReg_0/ifun] [get_bd_pins decodeReg_0/D_ifun]
   connect_bd_net -net decodeReg_0_D_reg1_read_src [get_bd_pins decodeReg_0/D_reg1_read_src] [get_bd_pins setRegIO_0/srcA]
   connect_bd_net -net decodeReg_0_D_reg2_read_src [get_bd_pins decodeReg_0/D_reg2_read_src] [get_bd_pins setRegIO_0/srcB]
@@ -452,8 +487,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net decodeReg_0_D_valP [get_bd_pins decodeReg_0/D_valP] [get_bd_pins decode_0/valP]
   connect_bd_net -net decode_0_valA [get_bd_pins EReg_0/valA] [get_bd_pins decode_0/valA]
   connect_bd_net -net decode_0_valB [get_bd_pins EReg_0/valB] [get_bd_pins decode_0/valB]
+  connect_bd_net -net introduction_memory_0_imem_error [get_bd_pins d_stat_0/imem_error] [get_bd_pins introduction_memory_0/imem_error]
   connect_bd_net -net introduction_memory_0_intd [get_bd_pins Split_0/intd] [get_bd_pins introduction_memory_0/intd]
-  connect_bd_net -net m_stat_1 [get_bd_ports m_stat] [get_bd_pins cc_reg_0/m_stat]
+  connect_bd_net -net m_stat_0_m_stat [get_bd_pins WREG_0/stat] [get_bd_pins cc_reg_0/m_stat] [get_bd_pins control_0/m_stat] [get_bd_pins m_stat_0/m_stat]
   connect_bd_net -net memOperation_0_dstM [get_bd_pins data_memory_0/dstM] [get_bd_pins memOperation_0/dstM]
   connect_bd_net -net memOperation_0_enabler [get_bd_pins data_memory_0/enabler] [get_bd_pins memOperation_0/enabler]
   connect_bd_net -net memOperation_0_enablew [get_bd_pins data_memory_0/enablew] [get_bd_pins memOperation_0/enablew]
@@ -461,13 +497,11 @@ proc create_root_design { parentCell } {
   connect_bd_net -net predictPC_0_pc [get_bd_pins predPC_0/predPC] [get_bd_pins predictPC_0/pc]
   connect_bd_net -net regFile_0_d_rvalA [get_bd_pins decode_0/d_rvalA] [get_bd_pins regFile_0/d_rvalA]
   connect_bd_net -net regFile_0_d_rvalB [get_bd_pins decode_0/d_rvalB] [get_bd_pins regFile_0/d_rvalB]
-  connect_bd_net -net rst_1 [get_bd_ports rst] [get_bd_pins EReg_0/rst] [get_bd_pins MREG_0/rst] [get_bd_pins Split_0/rst] [get_bd_pins WREG_0/rst] [get_bd_pins addPC_0/rst] [get_bd_pins data_memory_0/rst] [get_bd_pins decodeReg_0/rst] [get_bd_pins introduction_memory_0/rst] [get_bd_pins memOperation_0/rst] [get_bd_pins predPC_0/rst] [get_bd_pins regFile_0/rst] [get_bd_pins selectPC_0/rst]
   connect_bd_net -net selectPC_0_pc [get_bd_pins addPC_0/f_pc] [get_bd_pins introduction_memory_0/pc] [get_bd_pins selectPC_0/pc]
   connect_bd_net -net setRegIO_0_d_dstE [get_bd_pins EReg_0/dstE] [get_bd_pins setRegIO_0/d_dstE]
   connect_bd_net -net setRegIO_0_d_dstM [get_bd_pins EReg_0/dstM] [get_bd_pins setRegIO_0/d_dstM]
-  connect_bd_net -net setRegIO_0_d_srcA [get_bd_pins decode_0/srcA] [get_bd_pins regFile_0/srcA] [get_bd_pins setRegIO_0/d_srcA]
-  connect_bd_net -net setRegIO_0_d_srcB [get_bd_pins decode_0/srcB] [get_bd_pins regFile_0/srcB] [get_bd_pins setRegIO_0/d_srcB]
-  connect_bd_net -net stat_1 [get_bd_ports stat] [get_bd_pins decodeReg_0/stat]
+  connect_bd_net -net setRegIO_0_d_srcA [get_bd_pins control_0/d_srcA] [get_bd_pins decode_0/srcA] [get_bd_pins regFile_0/srcA] [get_bd_pins setRegIO_0/d_srcA]
+  connect_bd_net -net setRegIO_0_d_srcB [get_bd_pins control_0/d_srcB] [get_bd_pins decode_0/srcB] [get_bd_pins regFile_0/srcB] [get_bd_pins setRegIO_0/d_srcB]
 
   # Create address segments
 

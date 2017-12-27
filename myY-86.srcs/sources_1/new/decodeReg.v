@@ -22,6 +22,7 @@
 
 
 module decodeReg(
+	input clk,
     input wire[`icodeBus] icode,
     input wire[`ifunBus] ifun,
     input wire[`icodeBus] reg1_read_src,reg2_read_src,

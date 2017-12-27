@@ -1,55 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 25 23:54:39 2017" VIVADOVERSION="2017.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 27 20:28:21 2017" VIVADOVERSION="2017.1">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a15t" NAME="contructure" PACKAGE="csg324" SPEEDGRADE="-3"/>
 
   <EXTERNALPORTS>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="predPC_0" PORT="clk"/>
-        <CONNECTION INSTANCE="decodeReg_0" PORT="clk"/>
+        <CONNECTION INSTANCE="cc_reg_0" PORT="clk"/>
         <CONNECTION INSTANCE="regFile_0" PORT="clk"/>
+        <CONNECTION INSTANCE="data_memory_0" PORT="clk"/>
+        <CONNECTION INSTANCE="predPC_0" PORT="clk"/>
+        <CONNECTION INSTANCE="WREG_0" PORT="clk"/>
         <CONNECTION INSTANCE="EReg_0" PORT="clk"/>
         <CONNECTION INSTANCE="MREG_0" PORT="clk"/>
-        <CONNECTION INSTANCE="WREG_0" PORT="clk"/>
-        <CONNECTION INSTANCE="data_memory_0" PORT="clk"/>
-        <CONNECTION INSTANCE="cc_reg_0" PORT="clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="predPC_0" PORT="rst"/>
-        <CONNECTION INSTANCE="selectPC_0" PORT="rst"/>
-        <CONNECTION INSTANCE="introduction_memory_0" PORT="rst"/>
-        <CONNECTION INSTANCE="Split_0" PORT="rst"/>
-        <CONNECTION INSTANCE="decodeReg_0" PORT="rst"/>
-        <CONNECTION INSTANCE="regFile_0" PORT="rst"/>
-        <CONNECTION INSTANCE="addPC_0" PORT="rst"/>
-        <CONNECTION INSTANCE="EReg_0" PORT="rst"/>
-        <CONNECTION INSTANCE="MREG_0" PORT="rst"/>
-        <CONNECTION INSTANCE="WREG_0" PORT="rst"/>
-        <CONNECTION INSTANCE="memOperation_0" PORT="rst"/>
-        <CONNECTION INSTANCE="data_memory_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="2" NAME="W_stat_1" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_stat">
       <CONNECTIONS>
         <CONNECTION INSTANCE="WREG_0" PORT="W_stat"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_stat">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="decodeReg_0" PORT="stat"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="2" NAME="W_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_W_stat">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="cc_reg_0" PORT="W_stat"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="2" NAME="m_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_m_stat">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="cc_reg_0" PORT="m_stat"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -160,9 +128,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="cnd" SIGIS="undef" SIGNAME="condition_0_e_cnd">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="condition_0" PORT="e_cnd"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
@@ -210,13 +178,19 @@
             <CONNECTION INSTANCE="decodeReg_0" PORT="D_stat"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="bubble" SIGIS="undef" SIGNAME="control_0_E_bubble">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="E_bubble"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="3" NAME="E_icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ALU_A_0" PORT="icode"/>
             <CONNECTION INSTANCE="ALU_B_0" PORT="icode"/>
             <CONNECTION INSTANCE="alufun_0" PORT="icode"/>
-            <CONNECTION INSTANCE="MREG_0" PORT="icode"/>
             <CONNECTION INSTANCE="condition_0" PORT="icode"/>
+            <CONNECTION INSTANCE="MREG_0" PORT="icode"/>
+            <CONNECTION INSTANCE="control_0" PORT="E_icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="E_ifun" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_ifun">
@@ -255,6 +229,7 @@
         <PORT DIR="O" LEFT="3" NAME="E_dstM" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_dstM">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MREG_0" PORT="dstM"/>
+            <CONNECTION INSTANCE="control_0" PORT="E_dstM"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -267,11 +242,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
@@ -312,16 +282,22 @@
             <CONNECTION INSTANCE="EReg_0" PORT="E_dstM"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="bubble" SIGIS="undef" SIGNAME="control_0_M_bubble">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="M_bubble"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="2" NAME="M_stat" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="WREG_0" PORT="stat"/>
+            <CONNECTION INSTANCE="m_stat_0" PORT="stat"/>
+            <CONNECTION INSTANCE="control_0" PORT="M_icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="M_icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="selectPC_0" PORT="M_icode"/>
-            <CONNECTION INSTANCE="WREG_0" PORT="icode"/>
             <CONNECTION INSTANCE="memOperation_0" PORT="icode"/>
+            <CONNECTION INSTANCE="WREG_0" PORT="icode"/>
+            <CONNECTION INSTANCE="selectPC_0" PORT="M_icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M_cnd" SIGIS="undef" SIGNAME="MREG_0_M_cnd">
@@ -332,15 +308,15 @@
         <PORT DIR="O" LEFT="63" NAME="M_valE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valE">
           <CONNECTIONS>
             <CONNECTION INSTANCE="decode_0" PORT="M_valE"/>
-            <CONNECTION INSTANCE="WREG_0" PORT="valE"/>
             <CONNECTION INSTANCE="memOperation_0" PORT="valE"/>
+            <CONNECTION INSTANCE="WREG_0" PORT="valE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="M_valA" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="selectPC_0" PORT="M_valA"/>
             <CONNECTION INSTANCE="memOperation_0" PORT="valA"/>
             <CONNECTION INSTANCE="data_memory_0" PORT="data"/>
+            <CONNECTION INSTANCE="selectPC_0" PORT="M_valA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="M_dstE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_dstE">
@@ -365,11 +341,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="79" NAME="intd" RIGHT="0" SIGIS="undef" SIGNAME="introduction_memory_0_intd">
           <CONNECTIONS>
             <CONNECTION INSTANCE="introduction_memory_0" PORT="intd"/>
@@ -388,6 +359,7 @@
         <PORT DIR="O" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_icode">
           <CONNECTIONS>
             <CONNECTION INSTANCE="predictPC_0" PORT="icode"/>
+            <CONNECTION INSTANCE="d_stat_0" PORT="icode"/>
             <CONNECTION INSTANCE="decodeReg_0" PORT="icode"/>
           </CONNECTIONS>
         </PORT>
@@ -422,19 +394,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
+        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="m_stat_0_m_stat">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="MREG_0" PORT="M_stat"/>
+            <CONNECTION INSTANCE="m_stat_0" PORT="m_stat"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
@@ -465,6 +432,7 @@
         <PORT DIR="O" LEFT="2" NAME="W_stat" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_stat">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="W_stat_1"/>
+            <CONNECTION INSTANCE="cc_reg_0" PORT="W_stat"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="W_icode" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_icode">
@@ -474,27 +442,27 @@
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="W_valE" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="regFile_0" PORT="E"/>
             <CONNECTION INSTANCE="decode_0" PORT="W_valE"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="E"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="W_valM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_valM">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="selectPC_0" PORT="W_valM"/>
-            <CONNECTION INSTANCE="regFile_0" PORT="M"/>
             <CONNECTION INSTANCE="decode_0" PORT="W_valM"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="M"/>
+            <CONNECTION INSTANCE="selectPC_0" PORT="W_valM"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="W_dstE" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="regFile_0" PORT="dstE"/>
             <CONNECTION INSTANCE="decode_0" PORT="W_dstE"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="dstE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="W_dstM" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_dstM">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="regFile_0" PORT="dstM"/>
             <CONNECTION INSTANCE="decode_0" PORT="W_dstM"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="dstM"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -510,11 +478,6 @@
         <PORT DIR="I" LEFT="63" NAME="f_pc" RIGHT="0" SIGIS="undef" SIGNAME="selectPC_0_pc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="selectPC_0" PORT="pc"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="need_regids" SIGIS="undef" SIGNAME="Split_0_need_regids">
@@ -578,14 +541,14 @@
             <CONNECTION INSTANCE="ALU_0" PORT="cc"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="W_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_W_stat">
+        <PORT DIR="I" LEFT="2" NAME="W_stat" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_stat">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="W_stat"/>
+            <CONNECTION INSTANCE="WREG_0" PORT="W_stat"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="m_stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_m_stat">
+        <PORT DIR="I" LEFT="2" NAME="m_stat" RIGHT="0" SIGIS="undef" SIGNAME="m_stat_0_m_stat">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="m_stat"/>
+            <CONNECTION INSTANCE="m_stat_0" PORT="m_stat"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="zf" SIGIS="undef" SIGNAME="cc_reg_0_zf">
@@ -651,7 +614,115 @@
         </PORT>
         <PORT DIR="O" NAME="e_cnd" SIGIS="undef" SIGNAME="condition_0_e_cnd">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="d_stat_0" PORT="cnd"/>
+            <CONNECTION INSTANCE="EReg_0" PORT="cnd"/>
             <CONNECTION INSTANCE="MREG_0" PORT="cnd"/>
+            <CONNECTION INSTANCE="control_0" PORT="e_cnd"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/control_0" HWVERSION="1.0" INSTANCE="control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="control" VLNV="xilinx.com:module_ref:control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="D_icode" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="D_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="E_icode" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="M_icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="d_srcA" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_srcA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="d_srcB" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="d_srcB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="E_dstM" RIGHT="0" SIGIS="undef" SIGNAME="EReg_0_E_dstM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="E_dstM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="e_cnd" SIGIS="undef" SIGNAME="condition_0_e_cnd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="condition_0" PORT="e_cnd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_stat" SIGIS="undef" SIGNAME="m_stat_0_m_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m_stat_0" PORT="m_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="F_stall" SIGIS="undef" SIGNAME="control_0_F_stall">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="predPC_0" PORT="F_stall"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="D_stall" SIGIS="undef" SIGNAME="control_0_D_stall">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="stall"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="D_bubble" SIGIS="undef" SIGNAME="control_0_D_bubble">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="bubble"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="E_bubble" SIGIS="undef" SIGNAME="control_0_E_bubble">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EReg_0" PORT="bubble"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_bubble" SIGIS="undef" SIGNAME="control_0_M_bubble">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="bubble"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/d_stat_0" HWVERSION="1.0" INSTANCE="d_stat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="d_stat" VLNV="xilinx.com:module_ref:d_stat:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_d_stat_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_icode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Split_0" PORT="icode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cnd" SIGIS="undef" SIGNAME="condition_0_e_cnd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="condition_0" PORT="e_cnd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="imem_error" SIGIS="undef" SIGNAME="introduction_memory_0_imem_error">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="introduction_memory_0" PORT="imem_error"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="d_stat" RIGHT="0" SIGIS="undef" SIGNAME="d_stat_0_d_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeReg_0" PORT="stat"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -667,11 +738,6 @@
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enabler" SIGIS="undef" SIGNAME="memOperation_0_enabler">
@@ -694,6 +760,11 @@
             <CONNECTION INSTANCE="MREG_0" PORT="M_valA"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="dmem_error" SIGIS="undef" SIGNAME="data_memory_0_dmem_error">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m_stat_0" PORT="dmem_error"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="63" NAME="valM" RIGHT="0" SIGIS="undef" SIGNAME="data_memory_0_valM">
           <CONNECTIONS>
             <CONNECTION INSTANCE="decode_0" PORT="m_valM"/>
@@ -710,11 +781,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_icode">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Split_0" PORT="icode"/>
@@ -745,21 +811,27 @@
             <CONNECTION INSTANCE="addPC_0" PORT="valPC"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="d_stat_0_d_stat">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="d_stat_0" PORT="d_stat"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_stat">
+        <PORT DIR="I" NAME="bubble" SIGIS="undef" SIGNAME="control_0_D_bubble">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="stat"/>
+            <CONNECTION INSTANCE="control_0" PORT="D_bubble"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="stall" SIGIS="undef" SIGNAME="control_0_D_stall">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="D_stall"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="D_icode" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_icode">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="setRegIO_0" PORT="icode"/>
             <CONNECTION INSTANCE="decode_0" PORT="icode"/>
+            <CONNECTION INSTANCE="setRegIO_0" PORT="icode"/>
             <CONNECTION INSTANCE="EReg_0" PORT="icode"/>
+            <CONNECTION INSTANCE="control_0" PORT="D_icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="D_ifun" RIGHT="0" SIGIS="undef" SIGNAME="decodeReg_0_D_ifun">
@@ -902,11 +974,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="63" NAME="pc" RIGHT="0" SIGIS="undef" SIGNAME="selectPC_0_pc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="selectPC_0" PORT="pc"/>
@@ -915,6 +982,38 @@
         <PORT DIR="O" LEFT="79" NAME="intd" RIGHT="0" SIGIS="undef" SIGNAME="introduction_memory_0_intd">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Split_0" PORT="intd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="imem_error" SIGIS="undef" SIGNAME="introduction_memory_0_imem_error">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="d_stat_0" PORT="imem_error"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/m_stat_0" HWVERSION="1.0" INSTANCE="m_stat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="m_stat" VLNV="xilinx.com:module_ref:m_stat:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="contructure_m_stat_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="dmem_error" SIGIS="undef" SIGNAME="data_memory_0_dmem_error">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_memory_0" PORT="dmem_error"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="stat" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_stat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_stat" RIGHT="0" SIGIS="undef" SIGNAME="m_stat_0_m_stat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cc_reg_0" PORT="m_stat"/>
+            <CONNECTION INSTANCE="WREG_0" PORT="stat"/>
+            <CONNECTION INSTANCE="control_0" PORT="m_stat"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -927,11 +1026,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="63" NAME="valE" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_valE">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MREG_0" PORT="M_valE"/>
@@ -977,9 +1071,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="F_stall" SIGIS="undef" SIGNAME="control_0_F_stall">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="control_0" PORT="F_stall"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="63" NAME="predPC" RIGHT="0" SIGIS="undef" SIGNAME="predictPC_0_pc">
@@ -1032,11 +1126,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
@@ -1092,11 +1181,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="63" NAME="predPC" RIGHT="0" SIGIS="undef" SIGNAME="predPC_0_pc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="predPC_0" PORT="pc"/>
@@ -1129,8 +1213,8 @@
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="pc" RIGHT="0" SIGIS="undef" SIGNAME="selectPC_0_pc">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="introduction_memory_0" PORT="pc"/>
             <CONNECTION INSTANCE="addPC_0" PORT="f_pc"/>
+            <CONNECTION INSTANCE="introduction_memory_0" PORT="pc"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1160,14 +1244,16 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="d_srcA" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="regFile_0" PORT="srcA"/>
             <CONNECTION INSTANCE="decode_0" PORT="srcA"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="srcA"/>
+            <CONNECTION INSTANCE="control_0" PORT="d_srcA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="d_srcB" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="regFile_0" PORT="srcB"/>
             <CONNECTION INSTANCE="decode_0" PORT="srcB"/>
+            <CONNECTION INSTANCE="regFile_0" PORT="srcB"/>
+            <CONNECTION INSTANCE="control_0" PORT="d_srcB"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="d_dstE" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_dstE">

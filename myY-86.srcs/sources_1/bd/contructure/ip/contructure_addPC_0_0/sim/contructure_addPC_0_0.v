@@ -55,22 +55,18 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_addPC_0_0 (
   f_pc,
-  rst,
   need_regids,
   need_valc,
   valPC
 );
 
 input wire [63 : 0] f_pc;
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire need_regids;
 input wire need_valc;
 output wire [63 : 0] valPC;
 
   addPC inst (
     .f_pc(f_pc),
-    .rst(rst),
     .need_regids(need_regids),
     .need_valc(need_valc),
     .valPC(valPC)

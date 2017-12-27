@@ -47,37 +47,28 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:selectPC:1.0
+// IP VLNV: xilinx.com:module_ref:d_stat:1.0
 // IP Revision: 1
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module contructure_selectPC_0_0 (
-  predPC,
-  M_icode,
-  M_Cnd,
-  M_valA,
-  W_icode,
-  W_valM,
-  pc
+module contructure_d_stat_0_0 (
+  icode,
+  cnd,
+  imem_error,
+  d_stat
 );
 
-input wire [63 : 0] predPC;
-input wire [3 : 0] M_icode;
-input wire [2 : 0] M_Cnd;
-input wire [63 : 0] M_valA;
-input wire [3 : 0] W_icode;
-input wire [63 : 0] W_valM;
-output wire [63 : 0] pc;
+input wire [3 : 0] icode;
+input wire cnd;
+input wire imem_error;
+output wire [2 : 0] d_stat;
 
-  selectPC inst (
-    .predPC(predPC),
-    .M_icode(M_icode),
-    .M_Cnd(M_Cnd),
-    .M_valA(M_valA),
-    .W_icode(W_icode),
-    .W_valM(W_valM),
-    .pc(pc)
+  d_stat inst (
+    .icode(icode),
+    .cnd(cnd),
+    .imem_error(imem_error),
+    .d_stat(d_stat)
   );
 endmodule

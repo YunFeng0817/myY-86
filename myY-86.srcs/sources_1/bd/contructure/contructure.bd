@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x1264FB87592A3536" bd:device="xc7a15tcsg324-3" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.1" bd:top="contructure" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x1264FB87592A3536" bd:device="xc7a15tcsg324-3" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.1" bd:top="contructure" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -30,35 +30,7 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>FREQ_HZ</spirit:name>
-            <spirit:value>100000000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>PHASE</spirit:name>
-            <spirit:value>0.000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CLK_DOMAIN</spirit:name>
-            <spirit:value>contructure_clk</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
+        <spirit:parameters/>
       </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
@@ -273,17 +245,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>decodeReg_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="decodeReg" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_decodeReg_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">decodeReg</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>EReg_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="EReg" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -355,6 +316,17 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_introduction_memory_0_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">introduction_memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>decodeReg_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="decodeReg" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_decodeReg_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">decodeReg</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -589,6 +561,7 @@
         <spirit:internalPortReference spirit:componentRef="memOperation_0" spirit:portRef="icode"/>
         <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="icode"/>
         <spirit:internalPortReference spirit:componentRef="selectPC_0" spirit:portRef="M_icode"/>
+        <spirit:internalPortReference spirit:componentRef="control_0" spirit:portRef="M_icode"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>MREG_0_M_valE</spirit:name>
@@ -676,6 +649,7 @@
         <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="EReg_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>WREG_0_W_stat</spirit:name>
@@ -730,12 +704,6 @@
         <spirit:internalPortReference spirit:componentRef="d_stat_0" spirit:portRef="imem_error"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>MREG_0_M_stat</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="M_stat"/>
-        <spirit:internalPortReference spirit:componentRef="m_stat_0" spirit:portRef="stat"/>
-        <spirit:internalPortReference spirit:componentRef="control_0" spirit:portRef="M_icode"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>m_stat_0_m_stat</spirit:name>
         <spirit:internalPortReference spirit:componentRef="m_stat_0" spirit:portRef="m_stat"/>
         <spirit:internalPortReference spirit:componentRef="cc_reg_0" spirit:portRef="m_stat"/>
@@ -771,6 +739,11 @@
         <spirit:name>control_0_M_bubble</spirit:name>
         <spirit:internalPortReference spirit:componentRef="control_0" spirit:portRef="M_bubble"/>
         <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="bubble"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>MREG_0_M_stat</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="M_stat"/>
+        <spirit:internalPortReference spirit:componentRef="m_stat_0" spirit:portRef="stat"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

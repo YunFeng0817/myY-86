@@ -47,37 +47,55 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:selectPC:1.0
+// IP VLNV: xilinx.com:module_ref:control:1.0
 // IP Revision: 1
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module contructure_selectPC_0_0 (
-  predPC,
+module contructure_control_0_0 (
+  D_icode,
+  E_icode,
   M_icode,
-  M_Cnd,
-  M_valA,
-  W_icode,
-  W_valM,
-  pc
+  d_srcA,
+  d_srcB,
+  E_dstM,
+  e_cnd,
+  m_stat,
+  F_stall,
+  D_stall,
+  D_bubble,
+  E_bubble,
+  M_bubble
 );
 
-input wire [63 : 0] predPC;
+input wire [3 : 0] D_icode;
+input wire [3 : 0] E_icode;
 input wire [3 : 0] M_icode;
-input wire [2 : 0] M_Cnd;
-input wire [63 : 0] M_valA;
-input wire [3 : 0] W_icode;
-input wire [63 : 0] W_valM;
-output wire [63 : 0] pc;
+input wire [3 : 0] d_srcA;
+input wire [3 : 0] d_srcB;
+input wire [3 : 0] E_dstM;
+input wire e_cnd;
+input wire m_stat;
+output wire F_stall;
+output wire D_stall;
+output wire D_bubble;
+output wire E_bubble;
+output wire M_bubble;
 
-  selectPC inst (
-    .predPC(predPC),
+  control inst (
+    .D_icode(D_icode),
+    .E_icode(E_icode),
     .M_icode(M_icode),
-    .M_Cnd(M_Cnd),
-    .M_valA(M_valA),
-    .W_icode(W_icode),
-    .W_valM(W_valM),
-    .pc(pc)
+    .d_srcA(d_srcA),
+    .d_srcB(d_srcB),
+    .E_dstM(E_dstM),
+    .e_cnd(e_cnd),
+    .m_stat(m_stat),
+    .F_stall(F_stall),
+    .D_stall(D_stall),
+    .D_bubble(D_bubble),
+    .E_bubble(E_bubble),
+    .M_bubble(M_bubble)
   );
 endmodule

@@ -32,7 +32,7 @@ module introduction_memory(
     
     always@(*)
     begin
-        if(rst==0&&pc<`introduction_memory_length)
+        if(pc<`introduction_memory_length)
         begin
             intd={intds[pc][7:0],intds[pc+1][7:0],intds[pc+2][7:0],intds[pc+3][7:0],intds[pc+4][7:0],intds[pc+5][7:0],intds[pc+6][7:0],intds[pc+7][7:0],intds[pc+8][7:0],intds[pc+9][7:0]};
 			imem_error=0;

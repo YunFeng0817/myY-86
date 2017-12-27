@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_regFile_0_1 (
-  rst,
   clk,
   dstE,
   dstM,
@@ -66,8 +65,6 @@ module contructure_regFile_0_1 (
   d_rvalB
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [3 : 0] dstE;
@@ -80,7 +77,6 @@ output wire [63 : 0] d_rvalA;
 output wire [63 : 0] d_rvalB;
 
   regFile inst (
-    .rst(rst),
     .clk(clk),
     .dstE(dstE),
     .dstM(dstM),

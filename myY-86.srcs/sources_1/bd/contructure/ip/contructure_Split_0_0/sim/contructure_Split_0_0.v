@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_Split_0_0 (
-  rst,
   intd,
   reg1_read_src,
   reg2_read_src,
@@ -65,8 +64,6 @@ module contructure_Split_0_0 (
   need_regids
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire [79 : 0] intd;
 output wire [3 : 0] reg1_read_src;
 output wire [3 : 0] reg2_read_src;
@@ -77,7 +74,6 @@ output wire need_valc;
 output wire need_regids;
 
   Split inst (
-    .rst(rst),
     .intd(intd),
     .reg1_read_src(reg1_read_src),
     .reg2_read_src(reg2_read_src),

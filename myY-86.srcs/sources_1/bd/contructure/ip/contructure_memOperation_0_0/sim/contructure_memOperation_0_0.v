@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_memOperation_0_0 (
-  rst,
   valE,
   valA,
   icode,
@@ -63,8 +62,6 @@ module contructure_memOperation_0_0 (
   enablew
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire [63 : 0] valE;
 input wire [63 : 0] valA;
 input wire [3 : 0] icode;
@@ -73,7 +70,6 @@ output wire enabler;
 output wire enablew;
 
   memOperation inst (
-    .rst(rst),
     .valE(valE),
     .valA(valA),
     .icode(icode),

@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_WREG_0_0 (
-  rst,
   clk,
   stat,
   icode,
@@ -70,8 +69,6 @@ module contructure_WREG_0_0 (
   W_dstM
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [2 : 0] stat;
@@ -88,7 +85,6 @@ output wire [3 : 0] W_dstE;
 output wire [3 : 0] W_dstM;
 
   WREG inst (
-    .rst(rst),
     .clk(clk),
     .stat(stat),
     .icode(icode),
