@@ -54,18 +54,14 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_introduction_memory_0_1 (
-  rst,
   pc,
   intd
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire [63 : 0] pc;
 output wire [79 : 0] intd;
 
   introduction_memory inst (
-    .rst(rst),
     .pc(pc),
     .intd(intd)
   );

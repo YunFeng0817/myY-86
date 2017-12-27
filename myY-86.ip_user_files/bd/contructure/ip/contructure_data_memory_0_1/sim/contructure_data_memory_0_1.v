@@ -55,7 +55,6 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_data_memory_0_1 (
   clk,
-  rst,
   enabler,
   enablew,
   dstM,
@@ -75,7 +74,6 @@ output wire [63 : 0] valM;
 
   data_memory inst (
     .clk(clk),
-    .rst(rst),
     .enabler(enabler),
     .enablew(enablew),
     .dstM(dstM),

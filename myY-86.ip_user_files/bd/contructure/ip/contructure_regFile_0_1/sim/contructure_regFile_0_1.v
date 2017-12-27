@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_regFile_0_1 (
-  rst,
   clk,
   dstE,
   dstM,
@@ -80,7 +79,6 @@ output wire [63 : 0] d_rvalA;
 output wire [63 : 0] d_rvalB;
 
   regFile inst (
-    .rst(rst),
     .clk(clk),
     .dstE(dstE),
     .dstM(dstM),

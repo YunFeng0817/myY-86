@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_selectPC_0_0 (
-  rst,
   predPC,
   M_icode,
   M_Cnd,
@@ -75,7 +74,6 @@ input wire [63 : 0] W_valM;
 output wire [63 : 0] pc;
 
   selectPC inst (
-    .rst(rst),
     .predPC(predPC),
     .M_icode(M_icode),
     .M_Cnd(M_Cnd),

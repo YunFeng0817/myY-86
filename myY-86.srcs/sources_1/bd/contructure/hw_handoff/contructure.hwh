@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 27 20:28:21 2017" VIVADOVERSION="2017.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 27 21:17:44 2017" VIVADOVERSION="2017.1">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a15t" NAME="contructure" PACKAGE="csg324" SPEEDGRADE="-3"/>
 
@@ -13,6 +13,7 @@
         <CONNECTION INSTANCE="WREG_0" PORT="clk"/>
         <CONNECTION INSTANCE="EReg_0" PORT="clk"/>
         <CONNECTION INSTANCE="MREG_0" PORT="clk"/>
+        <CONNECTION INSTANCE="decodeReg_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="2" NAME="W_stat_1" RIGHT="0" SIGIS="undef" SIGNAME="WREG_0_W_stat">
@@ -290,7 +291,6 @@
         <PORT DIR="O" LEFT="2" NAME="M_stat" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
           <CONNECTIONS>
             <CONNECTION INSTANCE="m_stat_0" PORT="stat"/>
-            <CONNECTION INSTANCE="control_0" PORT="M_icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="M_icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
@@ -298,6 +298,7 @@
             <CONNECTION INSTANCE="memOperation_0" PORT="icode"/>
             <CONNECTION INSTANCE="WREG_0" PORT="icode"/>
             <CONNECTION INSTANCE="selectPC_0" PORT="M_icode"/>
+            <CONNECTION INSTANCE="control_0" PORT="M_icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M_cnd" SIGIS="undef" SIGNAME="MREG_0_M_cnd">
@@ -640,9 +641,9 @@
             <CONNECTION INSTANCE="EReg_0" PORT="E_icode"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="M_icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_stat">
+        <PORT DIR="I" LEFT="3" NAME="M_icode" RIGHT="0" SIGIS="undef" SIGNAME="MREG_0_M_icode">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="MREG_0" PORT="M_stat"/>
+            <CONNECTION INSTANCE="MREG_0" PORT="M_icode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="d_srcA" RIGHT="0" SIGIS="undef" SIGNAME="setRegIO_0_d_srcA">
@@ -781,6 +782,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="3" NAME="icode" RIGHT="0" SIGIS="undef" SIGNAME="Split_0_icode">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Split_0" PORT="icode"/>

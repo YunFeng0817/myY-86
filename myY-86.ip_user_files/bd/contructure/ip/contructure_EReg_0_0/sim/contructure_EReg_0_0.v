@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_EReg_0_0 (
-  rst,
   clk,
   icode,
   ifun,
@@ -74,8 +73,6 @@ module contructure_EReg_0_0 (
   E_dstM
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [3 : 0] icode;
@@ -96,7 +93,6 @@ output wire [3 : 0] E_dstE;
 output wire [3 : 0] E_dstM;
 
   EReg inst (
-    .rst(rst),
     .clk(clk),
     .icode(icode),
     .ifun(ifun),

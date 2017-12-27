@@ -99,7 +99,6 @@ output wire [2 : 0] D_stat;
     .reg2_read_src(reg2_read_src),
     .valC(valC),
     .valP(valP),
-    .rst(rst),
     .stat(stat),
     .D_icode(D_icode),
     .D_ifun(D_ifun),

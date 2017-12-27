@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_memOperation_0_0 (
-  rst,
   valE,
   valA,
   icode,
@@ -73,7 +72,6 @@ output wire enabler;
 output wire enablew;
 
   memOperation inst (
-    .rst(rst),
     .valE(valE),
     .valA(valA),
     .icode(icode),

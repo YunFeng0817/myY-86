@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_MREG_0_0 (
-  rst,
   clk,
   stat,
   icode,
@@ -92,7 +91,6 @@ output wire [3 : 0] M_dstE;
 output wire [3 : 0] M_dstM;
 
   MREG inst (
-    .rst(rst),
     .clk(clk),
     .stat(stat),
     .icode(icode),

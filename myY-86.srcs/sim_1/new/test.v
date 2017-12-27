@@ -23,7 +23,7 @@
 module test;
 
     reg clock;
-    reg stat[2:0];
+    reg[2:0] stat;
     
     initial
     begin

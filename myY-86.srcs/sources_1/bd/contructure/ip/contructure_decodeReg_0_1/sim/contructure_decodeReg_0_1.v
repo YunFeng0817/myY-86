@@ -54,6 +54,7 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_decodeReg_0_1 (
+  clk,
   icode,
   ifun,
   reg1_read_src,
@@ -72,6 +73,8 @@ module contructure_decodeReg_0_1 (
   D_stat
 );
 
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
+input wire clk;
 input wire [3 : 0] icode;
 input wire [3 : 0] ifun;
 input wire [3 : 0] reg1_read_src;
@@ -90,6 +93,7 @@ output wire [63 : 0] D_valP;
 output wire [2 : 0] D_stat;
 
   decodeReg inst (
+    .clk(clk),
     .icode(icode),
     .ifun(ifun),
     .reg1_read_src(reg1_read_src),

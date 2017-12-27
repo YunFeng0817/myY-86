@@ -55,7 +55,6 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_predPC_0_0 (
   clk,
-  rst,
   predPC,
   pc
 );
@@ -69,7 +68,6 @@ output wire [63 : 0] pc;
 
   predPC inst (
     .clk(clk),
-    .rst(rst),
     .predPC(predPC),
     .pc(pc)
   );
