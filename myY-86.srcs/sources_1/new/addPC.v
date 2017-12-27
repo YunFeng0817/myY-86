@@ -23,7 +23,6 @@
 
 module addPC(
     input wire[`digitsBus] f_pc,
-    input wire rst,
     input wire need_regids,
     input wire need_valc,
     output reg[`digitsBus] valPC

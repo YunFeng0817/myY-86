@@ -23,9 +23,6 @@
 module test;
 
     reg clock;
-    reg rs;
-    wire[2:0] cons=3'b0;
-    reg[2:0] sta=0;
     
     initial
     begin
@@ -35,20 +32,10 @@ module test;
     
     initial
     begin
-        rs=1'b1;
-        #20 rs=1'b0;
         #1000 $stop;
     end
         
         contructure_wrapper tes(
-                .W_stat(cons),
-                .W_stat_1(cons),
-                .clk(clock),
-                .m_stat(sta),
-                .rst(rs),
-                .stat(sta)
+                .clk(clock)
         );
-        
-
-    
 endmodule

@@ -26,7 +26,7 @@ module control(
 	input wire[`regBus] d_srcA,d_srcB,
 	input wire[`regBus] E_dstM,
 	input wire e_cnd,
-	input wire m_stat,W_stat,
+	input wire m_stat,
 	output reg F_stall,D_stall, //将F寄存器和D寄存器暂停的信号，如果为1，则暂停（保持输入和输出不变），否则执行其他的操作
 	output reg D_bubble,E_bubble,M_bubble
     );

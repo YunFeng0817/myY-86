@@ -22,7 +22,6 @@
 
 
 module selectPC(
-    input wire rst,
     input wire[`digitsBus] predPC,
     input wire[`icodeBus] M_icode,
     input wire[`cndBus] M_Cnd,
