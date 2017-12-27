@@ -55,19 +55,20 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_predPC_0_0 (
   clk,
+  F_stall,
   predPC,
   pc
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
+input wire F_stall;
 input wire [63 : 0] predPC;
 output wire [63 : 0] pc;
 
   predPC inst (
     .clk(clk),
+    .F_stall(F_stall),
     .predPC(predPC),
     .pc(pc)
   );

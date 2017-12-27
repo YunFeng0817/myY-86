@@ -63,8 +63,6 @@ module contructure_selectPC_0_0 (
   pc
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire [63 : 0] predPC;
 input wire [3 : 0] M_icode;
 input wire [2 : 0] M_Cnd;

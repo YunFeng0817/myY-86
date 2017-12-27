@@ -54,6 +54,7 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_EReg_0_0 (
+  cnd,
   clk,
   icode,
   ifun,
@@ -63,6 +64,7 @@ module contructure_EReg_0_0 (
   dstE,
   dstM,
   stat,
+  bubble,
   E_icode,
   E_ifun,
   E_valC,
@@ -73,6 +75,7 @@ module contructure_EReg_0_0 (
   E_dstM
 );
 
+input wire cnd;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [3 : 0] icode;
@@ -83,6 +86,7 @@ input wire [63 : 0] valB;
 input wire [3 : 0] dstE;
 input wire [3 : 0] dstM;
 input wire [2 : 0] stat;
+input wire bubble;
 output wire [3 : 0] E_icode;
 output wire [3 : 0] E_ifun;
 output wire [63 : 0] E_valC;
@@ -93,6 +97,7 @@ output wire [3 : 0] E_dstE;
 output wire [3 : 0] E_dstM;
 
   EReg inst (
+    .cnd(cnd),
     .clk(clk),
     .icode(icode),
     .ifun(ifun),
@@ -102,6 +107,7 @@ output wire [3 : 0] E_dstM;
     .dstE(dstE),
     .dstM(dstM),
     .stat(stat),
+    .bubble(bubble),
     .E_icode(E_icode),
     .E_ifun(E_ifun),
     .E_valC(E_valC),

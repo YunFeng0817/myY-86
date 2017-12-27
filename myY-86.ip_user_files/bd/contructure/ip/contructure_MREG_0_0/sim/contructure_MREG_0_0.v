@@ -62,6 +62,7 @@ module contructure_MREG_0_0 (
   valA,
   dstE,
   dstM,
+  bubble,
   M_stat,
   M_icode,
   M_cnd,
@@ -71,8 +72,6 @@ module contructure_MREG_0_0 (
   M_dstM
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [2 : 0] stat;
@@ -82,6 +81,7 @@ input wire [63 : 0] valE;
 input wire [63 : 0] valA;
 input wire [3 : 0] dstE;
 input wire [3 : 0] dstM;
+input wire bubble;
 output wire [2 : 0] M_stat;
 output wire [3 : 0] M_icode;
 output wire M_cnd;
@@ -99,6 +99,7 @@ output wire [3 : 0] M_dstM;
     .valA(valA),
     .dstE(dstE),
     .dstM(dstM),
+    .bubble(bubble),
     .M_stat(M_stat),
     .M_icode(M_icode),
     .M_cnd(M_cnd),

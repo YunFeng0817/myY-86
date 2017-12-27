@@ -59,17 +59,17 @@ module contructure_data_memory_0_1 (
   enablew,
   dstM,
   data,
+  dmem_error,
   valM
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire enabler;
 input wire enablew;
 input wire [63 : 0] dstM;
 input wire [63 : 0] data;
+output wire dmem_error;
 output wire [63 : 0] valM;
 
   data_memory inst (
@@ -78,6 +78,7 @@ output wire [63 : 0] valM;
     .enablew(enablew),
     .dstM(dstM),
     .data(data),
+    .dmem_error(dmem_error),
     .valM(valM)
   );
 endmodule

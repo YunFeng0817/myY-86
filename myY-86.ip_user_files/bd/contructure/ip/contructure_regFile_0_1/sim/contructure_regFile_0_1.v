@@ -65,8 +65,6 @@ module contructure_regFile_0_1 (
   d_rvalB
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [3 : 0] dstE;

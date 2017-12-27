@@ -55,14 +55,17 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module contructure_introduction_memory_0_1 (
   pc,
-  intd
+  intd,
+  imem_error
 );
 
 input wire [63 : 0] pc;
 output wire [79 : 0] intd;
+output wire imem_error;
 
   introduction_memory inst (
     .pc(pc),
-    .intd(intd)
+    .intd(intd),
+    .imem_error(imem_error)
   );
 endmodule

@@ -61,8 +61,9 @@ module contructure_decodeReg_0_1 (
   reg2_read_src,
   valC,
   valP,
-  rst,
   stat,
+  bubble,
+  stall,
   D_icode,
   D_ifun,
   D_reg1_read_src,
@@ -80,13 +81,13 @@ input wire [3 : 0] reg1_read_src;
 input wire [3 : 0] reg2_read_src;
 input wire [63 : 0] valC;
 input wire [63 : 0] valP;
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire [2 : 0] stat;
+input wire bubble;
+input wire stall;
 output wire [3 : 0] D_icode;
 output wire [3 : 0] D_ifun;
-output wire [63 : 0] D_reg1_read_src;
-output wire [63 : 0] D_reg2_read_src;
+output wire [3 : 0] D_reg1_read_src;
+output wire [3 : 0] D_reg2_read_src;
 output wire [63 : 0] D_valC;
 output wire [63 : 0] D_valP;
 output wire [2 : 0] D_stat;
@@ -100,6 +101,8 @@ output wire [2 : 0] D_stat;
     .valC(valC),
     .valP(valP),
     .stat(stat),
+    .bubble(bubble),
+    .stall(stall),
     .D_icode(D_icode),
     .D_ifun(D_ifun),
     .D_reg1_read_src(D_reg1_read_src),

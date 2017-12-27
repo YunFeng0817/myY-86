@@ -62,8 +62,6 @@ module contructure_memOperation_0_0 (
   enablew
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
-input wire rst;
 input wire [63 : 0] valE;
 input wire [63 : 0] valA;
 input wire [3 : 0] icode;

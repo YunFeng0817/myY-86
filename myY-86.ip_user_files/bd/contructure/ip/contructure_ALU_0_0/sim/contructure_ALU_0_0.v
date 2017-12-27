@@ -61,7 +61,7 @@ module contructure_ALU_0_0 (
   cc
 );
 
-input wire [64 : 0] ALUB;
+input wire [63 : 0] ALUB;
 input wire [63 : 0] ALUA;
 input wire [2 : 0] fun;
 output wire [63 : 0] valE;

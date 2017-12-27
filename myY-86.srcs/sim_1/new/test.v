@@ -37,7 +37,6 @@ module test;
     end
         
         contructure_wrapper tes(
-                .W_stat_1(stat),
                 .clk(clock)
         );
 endmodule
