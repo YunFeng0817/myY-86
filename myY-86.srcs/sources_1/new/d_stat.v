@@ -37,7 +37,7 @@ module d_stat(
 				end
 			`nop:
 				begin
-					d_stat=`stop;
+					d_stat=`OK;
 				end
 			`rrmovq:
 				begin

@@ -28,7 +28,7 @@ module test;
     initial
     begin
         clock=1'b0;
-        forever #10 clock=~clock;
+        forever #5 clock=~clock;
     end
     
     initial
