@@ -28,6 +28,8 @@ module MREG(
     input wire cnd,
     input wire[`digitsBus] valE,valA,
     input wire[`regBus] dstE,dstM,
+	input wire bubble,
+	
     output reg[2:0] M_stat,
     output reg[`ifunBus] M_icode,
     output reg M_cnd,
@@ -37,10 +39,10 @@ module MREG(
     
     always@(posedge clk)
     begin
-		if(stat==`stop||stat==`inst_invalid)
+		if(stat==`stop||stat==`inst_invalid||bubble==1)
 		begin
 			M_stat<=stat;
-			M_icode<=0;
+			M_icode<=`Nop;
 			M_cnd<=cnd;
             M_valE<=0;
             M_valA<=0;

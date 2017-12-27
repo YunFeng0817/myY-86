@@ -27,8 +27,8 @@ module decodeReg(
     input wire[`icodeBus] reg1_read_src,reg2_read_src,
     input wire[`digitsBus] valC,
     input wire[`digitsBus] valP,
-    input wire rst,
     input wire[2:0] stat,
+	input wire bubble,stall,  //前一个是插入气泡（相当于将指令变成nop），后一个是暂停(保持各种数值不更新)
     
     //这是decode 阶段的寄存器，输入与输出一样，只是起缓存作用
     output reg[`icodeBus] D_icode,
@@ -40,9 +40,11 @@ module decodeReg(
     );
     always@(posedge clk)
     begin
-        if(stat==`stop||stat==`inst_invalid)
+		if(stall==1)
+		begin end
+        else if(stat==`stop||stat==`inst_invalid||bubble==1)
         begin
-            D_icode<=0;
+            D_icode<=`Nop;
             D_ifun<=0;
             D_valP<=`readZero;
             D_reg1_read_src<=`NONE;

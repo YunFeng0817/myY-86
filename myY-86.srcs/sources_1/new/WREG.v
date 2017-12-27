@@ -38,11 +38,6 @@ module WREG(
         if(stat==`stop||stat==`inst_invalid||stat==`dmem_error)
 		begin
 			W_stat<=stat;
-            W_icode<=0;
-            W_valE<=0;
-            W_valM<=0;
-            W_dstE<=`NONE;
-            W_dstM<=`NONE;
 		end
 		else
         begin

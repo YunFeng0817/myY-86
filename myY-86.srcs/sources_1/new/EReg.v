@@ -29,6 +29,8 @@ module EReg(
     input wire[`digitsBus] valC,valA,valB,    //valA 和valB从decode.v module 中传来
     input wire[`regBus] dstE,dstM,
     input wire[2:0] stat,
+	input wire bubble,
+	
     output reg[`icodeBus] E_icode,
     output reg[`ifunBus] E_ifun,
     output reg[`digitsBus] E_valC,E_valA,E_valB,
@@ -38,10 +40,10 @@ module EReg(
     
     always@(posedge clk)
     begin
-        if(cnd==1||stat==`stop||stat==`inst_invalid)
+        if(stat==`stop||stat==`inst_invalid||bubble==1)
         begin
 			E_stat<=`stop;
-			E_icode<=0;
+			E_icode<=`Nop;
             E_ifun<=0;
             E_valC<=0;
             E_valA<=0;
