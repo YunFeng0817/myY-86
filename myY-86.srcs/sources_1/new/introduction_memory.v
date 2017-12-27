@@ -41,6 +41,7 @@ module introduction_memory(
 		begin
 			imem_error=1;
 		end
+		else
         begin
             intd=0;
 			imem_error=0;

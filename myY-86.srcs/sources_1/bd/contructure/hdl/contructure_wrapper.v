@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-//Date        : Wed Dec 27 21:24:42 2017
+//Date        : Wed Dec 27 21:57:11 2017
 //Host        : CodeFlash running 64-bit major release  (build 9200)
 //Command     : generate_target contructure_wrapper.bd
 //Design      : contructure_wrapper

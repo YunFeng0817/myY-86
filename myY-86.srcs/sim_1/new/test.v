@@ -23,7 +23,7 @@
 module test;
 
     reg clock;
-    reg[2:0] stat;
+    wire[2:0] stat;
     
     initial
     begin
@@ -37,6 +37,7 @@ module test;
     end
         
         contructure_wrapper tes(
+                .W_stat_1(stat),
                 .clk(clock)
         );
 endmodule
