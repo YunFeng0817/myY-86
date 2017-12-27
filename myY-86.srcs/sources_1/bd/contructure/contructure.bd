@@ -196,17 +196,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>data_memory_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="data_memory" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_data_memory_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">data_memory</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>decodeReg_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="decodeReg" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -305,6 +294,39 @@
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>d_stat_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="d_stat" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_d_stat_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">d_stat</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>data_memory_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="data_memory" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_data_memory_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">data_memory</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>m_stat_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="m_stat" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">contructure_m_stat_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">m_stat</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -343,6 +365,7 @@
         <spirit:internalPortReference spirit:componentRef="Split_0" spirit:portRef="icode"/>
         <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="icode"/>
         <spirit:internalPortReference spirit:componentRef="predictPC_0" spirit:portRef="icode"/>
+        <spirit:internalPortReference spirit:componentRef="d_stat_0" spirit:portRef="icode"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Split_0_ifun</spirit:name>
@@ -514,6 +537,7 @@
         <spirit:internalPortReference spirit:componentRef="condition_0" spirit:portRef="e_cnd"/>
         <spirit:internalPortReference spirit:componentRef="EReg_0" spirit:portRef="cnd"/>
         <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="cnd"/>
+        <spirit:internalPortReference spirit:componentRef="d_stat_0" spirit:portRef="cnd"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>EReg_0_E_dstM</spirit:name>
@@ -537,9 +561,9 @@
       <spirit:adHocConnection>
         <spirit:name>MREG_0_M_valA</spirit:name>
         <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="M_valA"/>
-        <spirit:internalPortReference spirit:componentRef="data_memory_0" spirit:portRef="data"/>
         <spirit:internalPortReference spirit:componentRef="memOperation_0" spirit:portRef="valA"/>
         <spirit:internalPortReference spirit:componentRef="selectPC_0" spirit:portRef="M_valA"/>
+        <spirit:internalPortReference spirit:componentRef="data_memory_0" spirit:portRef="data"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>memOperation_0_enabler</spirit:name>
@@ -567,11 +591,6 @@
         <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="M_dstM"/>
         <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="dstM"/>
         <spirit:internalPortReference spirit:componentRef="decode_0" spirit:portRef="M_dstM"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>MREG_0_M_stat</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="M_stat"/>
-        <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="stat"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>WREG_0_W_valE</spirit:name>
@@ -615,14 +634,15 @@
         <spirit:internalPortReference spirit:componentRef="EReg_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="data_memory_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="predPC_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="regFile_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="data_memory_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>WREG_0_W_stat</spirit:name>
         <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="W_stat"/>
         <spirit:externalPortReference spirit:portRef="W_stat_1"/>
+        <spirit:internalPortReference spirit:componentRef="cc_reg_0" spirit:portRef="W_stat"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>decodeReg_0_D_stat</spirit:name>
@@ -669,6 +689,32 @@
         <spirit:internalPortReference spirit:componentRef="introduction_memory_0" spirit:portRef="rst"/>
         <spirit:internalPortReference spirit:componentRef="predPC_0" spirit:portRef="rst"/>
         <spirit:internalPortReference spirit:componentRef="selectPC_0" spirit:portRef="rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>d_stat_0_d_stat</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="d_stat_0" spirit:portRef="d_stat"/>
+        <spirit:internalPortReference spirit:componentRef="decodeReg_0" spirit:portRef="stat"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>introduction_memory_0_imem_error</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="introduction_memory_0" spirit:portRef="imem_error"/>
+        <spirit:internalPortReference spirit:componentRef="d_stat_0" spirit:portRef="imem_error"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>MREG_0_M_stat</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="MREG_0" spirit:portRef="M_stat"/>
+        <spirit:internalPortReference spirit:componentRef="m_stat_0" spirit:portRef="stat"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>m_stat_0_m_stat</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="m_stat_0" spirit:portRef="m_stat"/>
+        <spirit:internalPortReference spirit:componentRef="WREG_0" spirit:portRef="stat"/>
+        <spirit:internalPortReference spirit:componentRef="cc_reg_0" spirit:portRef="m_stat"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>data_memory_0_dmem_error</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="data_memory_0" spirit:portRef="dmem_error"/>
+        <spirit:internalPortReference spirit:componentRef="m_stat_0" spirit:portRef="dmem_error"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

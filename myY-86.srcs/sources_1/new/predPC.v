@@ -23,19 +23,19 @@
 
 module predPC(
     input wire clk,
-    input wire rst,
+    input wire F_stall,
     input[`digitsBus] predPC,
     output reg[`digitsBus] pc
     );
     always@(posedge clk)
     begin
-        if(rst==0)
+        if(F_stall==0)
         begin
             pc<=predPC;
         end
-        else
-        begin
-            pc<=0;
-        end
+		if(pc===64'bx)   //如果pc的值编程不确定，就从0开始
+		begin
+			pc<=64'b0;
+		end
     end   
 endmodule

@@ -26,6 +26,7 @@ module data_memory(
     input wire enabler,enablew,
     input wire[`digitsBus] dstM,
     input wire [`digitsBus] data,
+	output reg dmem_error,
     output reg[`digitsBus ] valM
     );
     
@@ -35,7 +36,15 @@ module data_memory(
     begin
         if(enablew==1)
         begin
-            memory_data[dstM]<=data;
+			if(dstM>=`data_memory_length)
+			begin
+				dmem_error<=1;
+			end
+			else
+			begin
+				dmem_error<=0;
+				memory_data[dstM]<=data;
+			end
         end
     end
     
@@ -43,21 +52,33 @@ module data_memory(
     begin
 		if(enabler==1&&enablew==1)
 		begin
-			valM<=data;
+			if(dstM>=`data_memory_length)
+			begin
+				dmem_error<=1;
+				valM<=data;
+			end
+			else
+			begin
+				dmem_error<=0;
+				valM<=data;
+			end
 		end
 		else if(enabler==1)
 		begin
-			if(dstM>`data_memory_length-1)
+			if(dstM>=`data_memory_length)
 			begin
+				dmem_error<=1;
 				valM<=0;
 			end
 			else
 			begin
 				valM<=memory_data[dstM];
+				dmem_error<=0;
 			end
 		end
 		else
 		begin
+			dmem_error<=0;
 			valM<=0;
 		end
     end

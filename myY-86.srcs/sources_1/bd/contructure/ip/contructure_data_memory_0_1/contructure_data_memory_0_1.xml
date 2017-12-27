@@ -140,6 +140,18 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>dmem_error</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>valM</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
