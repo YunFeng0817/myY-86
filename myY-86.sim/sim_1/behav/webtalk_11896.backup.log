@@ -2,11 +2,13 @@
 # Webtalk v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Wed Dec 27 21:25:44 2017
-# Process ID: 7036
+# Start of session at: Thu Dec 28 02:30:31 2017
+# Process ID: 11896
 # Current directory: E:/vivado project/myY-86/myY-86.sim/sim_1/behav
 # Command line: wbtcv.exe -mode batch -source E:/vivado project/myY-86/myY-86.sim/sim_1/behav/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: E:/vivado project/myY-86/myY-86.sim/sim_1/behav/webtalk.log
 # Journal file: E:/vivado project/myY-86/myY-86.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
 source E:/vivado -notrace
+couldn't read file "E:/vivado": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 28 02:30:31 2017...

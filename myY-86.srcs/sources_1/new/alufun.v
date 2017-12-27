@@ -83,7 +83,7 @@ module alufun(
                             end
                     endcase
                 end
-            `iaddq:  //需要判断具体的几种运算
+            `addq:  //需要判断具体的几种运算
                 begin
                     case(ifun)
                         4'h0:

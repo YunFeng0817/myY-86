@@ -38,37 +38,40 @@ module decode(
         case({icode,4'h0})
             `call:
                 begin
-                    valA<=valP;
+                    valA=valP;
                 end
 			`jmp:
                 begin
-                    valA<=valP;
+                    valA=valP;
                 end
+			default:
+			begin
+				if(srcA==e_dstE)
+				begin
+					valA=e_valE;
+				end
+				else if(srcA==M_dstM)
+				begin
+					valA=m_valM;
+				end
+				else if(srcA==M_dstE)
+				begin
+					valA=M_valE;
+				end
+				else if(srcA==W_dstM)
+				begin
+					valA=W_valM;
+				end
+				else if(srcA==W_dstE)
+				begin
+					valA=W_valE;
+				end
+				else
+				begin
+					valA=d_rvalA;
+				end
+			end
         endcase
-        if(srcA==e_dstE)
-        begin
-            valA<=e_valE;
-        end
-        else if(srcA==M_dstM)
-        begin
-            valA<=m_valM;
-        end
-        else if(srcA==M_dstE)
-        begin
-            valA<=M_valE;
-        end
-        else if(srcA==W_dstM)
-        begin
-            valA<=W_valM;
-        end
-        else if(srcA==W_dstE)
-        begin
-            valA<=W_valE;
-        end
-        else
-        begin
-            valA<=d_rvalA;
-        end
     end
     
     //fwdB 根据指令和srcB的值  选择传送值和从寄存器中读出的valB值送入E寄存器的valA中
@@ -76,27 +79,27 @@ module decode(
         begin
             if(srcB==e_dstE)
             begin
-                valB<=e_valE;
+                valB=e_valE;
             end
             else if(srcB==M_dstM)
             begin
-                valB<=m_valM;
+                valB=m_valM;
             end
             else if(srcB==M_dstE)
             begin
-                valB<=M_valE;
+                valB=M_valE;
             end
             else if(srcB==W_dstM)
             begin
-                valB<=W_valM;
+                valB=W_valM;
             end
             else if(srcB==W_dstE)
             begin
-                valB<=W_valE;
+                valB=W_valE;
             end
             else
             begin
-                valB<=d_rvalB;
+                valB=d_rvalB;
             end
         end
     

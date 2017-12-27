@@ -28,23 +28,23 @@ module addPC(
     output reg[`digitsBus] valPC
     );
     
-    always@(f_pc or need_regids or need_valc)
+    always@(*)
     begin
         if(need_regids==1&&need_valc==1)
         begin
-            valPC<=f_pc+10;
+            valPC=f_pc+10;
         end
         else if(need_valc==1)
         begin
-            valPC<=valPC+9;
+            valPC=f_pc+9;
         end
         else if(need_regids==1)
         begin
-            valPC<=f_pc+2;
+            valPC=f_pc+2;
         end
         else
         begin
-            valPC<=f_pc+1;
+            valPC=f_pc+1;
         end
     end
     

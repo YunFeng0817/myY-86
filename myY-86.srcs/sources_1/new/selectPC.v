@@ -24,7 +24,7 @@
 module selectPC(
     input wire[`digitsBus] predPC,
     input wire[`icodeBus] M_icode,
-    input wire[`cndBus] M_Cnd,
+    input wire M_Cnd,
     input wire[`digitsBus] M_valA,
     input wire[`icodeBus] W_icode,
     input wire[`digitsBus] W_valM,
