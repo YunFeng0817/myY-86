@@ -1,25 +1,21 @@
-Unable to capture context for thread 12408 in process 12296, can not generate back trace
-Unable to capture context for thread 6100 in process 12296, can not generate back trace
-Unable to capture context for thread 10780 in process 12296, can not generate back trace
-Unable to capture context for thread 9556 in process 12296, can not generate back trace
-Unable to capture context for thread 12584 in process 12296, can not generate back trace
-Unable to capture context for thread 256 in process 12296, can not generate back trace
-Unable to capture context for thread 7968 in process 12296, can not generate back trace
 Exception at PC 0x00007FFA3F6D9D98
-Unable to capture context for thread 12008 in process 12296, can not generate back trace
-Unable to capture context for thread 2992 in process 12296, can not generate back trace
 Exception at PC 0x00007FFA3F6D9D98
-Unable to capture context for thread 12008 in process 12296, can not generate back trace
-Unable to capture context for thread 2992 in process 12296, can not generate back trace
-Unable to capture context for thread 11384 in process 12296, can not generate back trace
-Exception at PC 0x00007FF9C8AFBB93
+Unable to capture context for thread 32 in process 11956, can not generate back trace
+Unable to capture context for thread 3456 in process 11956, can not generate back trace
+Unable to capture context for thread 9488 in process 11956, can not generate back trace
+Unable to capture context for thread 3928 in process 11956, can not generate back trace
+Unable to capture context for thread 6736 in process 11956, can not generate back trace
+Exception at PC 0x00007FFA3F6D9D98
+Exception at PC 0x00007FFA3F6D9D98
+Exception at PC 0x00007FFA3F6D9D98
+Unable to capture context for thread 13176 in process 11956, can not generate back trace
+Unable to capture context for thread 6376 in process 11956, can not generate back trace
+Exception at PC 0x00007FF9D6E5BB93
 Printing stacktrace...
 
 Exception at PC 0x00007FFA3F6D9D98
 Exception at PC 0x00007FFA3F6D9D98
-Exception at PC 0x00007FFA3F6D9D98
-Exception at PC 0x00007FFA3F6D9D98
-Exception at PC 0x00007FFA3F6D9D98
+Unable to capture context for thread 8748 in process 11956, can not generate back trace
 Exception at PC 0x00007FFA3F6D9D98
 Exception at PC 0x00007FFA3F6D9D98
 Exception at PC 0x00007FFA3F6D9D98

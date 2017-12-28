@@ -80,10 +80,26 @@ module ALU(
             `AND:
                 begin
                     valE=ALUA&ALUB;
+					if(valE==0)]
+					begin
+						cc[0]=1;
+					end
+					else
+					begin
+						cc[0]=1;
+					end
                 end 
             `XOR:
                 begin
                     valE=ALUA^ALUB;
+					if(valE==0)]
+					begin
+						cc[0]=1;
+					end
+					else
+					begin
+						cc[0]=1;
+					end
                 end
             `NO:
                 begin

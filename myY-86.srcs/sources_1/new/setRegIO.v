@@ -87,6 +87,14 @@ module setRegIO(
 				begin
 					d_srcB<=srcB;
 				end
+			`Call:
+				begin
+					d_srcB=`rsp;
+				end
+			`Ret:
+				begin
+					d_srcB=`rsp;
+				end
             default:
             begin
                 d_srcB<=`NONE;
