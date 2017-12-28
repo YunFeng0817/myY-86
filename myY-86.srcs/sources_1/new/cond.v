@@ -66,22 +66,22 @@ module cond(
                             begin
                                 if(zf==0)
                                 begin
-                                    e_cnd=0;
+                                    e_cnd=1;
                                 end
                                 else
                                 begin
-                                    e_cnd=1;
+                                    e_cnd=0;
                                 end
                             end 
                         `jne:
                             begin
                                 if(zf==1)
                                 begin
-                                   e_cnd=0;
+                                   e_cnd=1;
                                 end
                                 else
                                 begin
-                                    e_cnd=1;
+                                    e_cnd=0;
                                 end
                             end
                         `jge:

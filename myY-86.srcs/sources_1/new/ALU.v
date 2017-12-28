@@ -33,7 +33,7 @@ module ALU(
     reg[64:0] tempin;
     always@(*)
     begin
-    tempin<=ALUB;
+    tempin=ALUB;
         case(fun)
             `ADD:
                 begin
@@ -46,6 +46,14 @@ module ALU(
                     else
                     begin
                         cc[1]=1'b0;
+                    end
+					if(valE==0)
+                    begin
+                        cc[0]=1;
+                    end
+                    else
+                    begin
+                        cc[0]=0;
                     end
                 end
             `SUB:
@@ -80,25 +88,25 @@ module ALU(
             `AND:
                 begin
                     valE=ALUA&ALUB;
-					if(valE==0)]
+					if(valE==0)
 					begin
 						cc[0]=1;
 					end
 					else
 					begin
-						cc[0]=1;
+						cc[0]=0;
 					end
                 end 
             `XOR:
                 begin
                     valE=ALUA^ALUB;
-					if(valE==0)]
+					if(valE==0)
 					begin
 						cc[0]=1;
 					end
 					else
 					begin
-						cc[0]=1;
+						cc[0]=0;
 					end
                 end
             `NO:
