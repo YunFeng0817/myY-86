@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-//Date        : Thu Dec 28 16:08:05 2017
+//Date        : Thu Dec 28 16:31:20 2017
 //Host        : CodeFlash running 64-bit major release  (build 9200)
 //Command     : generate_target contructure.bd
 //Design      : contructure
@@ -206,7 +206,7 @@ module contructure
         .d_srcA(setRegIO_0_d_srcA),
         .d_srcB(setRegIO_0_d_srcB),
         .e_cnd(cond_0_e_cnd),
-        .m_stat(m_stat_0_m_stat[0]));
+        .m_stat(m_stat_0_m_stat));
   contructure_d_stat_0_0 d_stat_0
        (.cnd(cond_0_e_cnd),
         .d_stat(d_stat_0_d_stat),
@@ -293,7 +293,7 @@ module contructure
         .srcA(setRegIO_0_d_srcA),
         .srcB(setRegIO_0_d_srcB));
   contructure_selectPC_0_0 selectPC_0
-       (.M_Cnd({MREG_0_M_cnd,MREG_0_M_cnd,MREG_0_M_cnd}),
+       (.M_Cnd(MREG_0_M_cnd),
         .M_icode(MREG_0_M_icode),
         .M_valA(MREG_0_M_valA),
         .W_icode(WREG_0_W_icode),

@@ -42,7 +42,7 @@ module EReg(
     begin
         if(stat==`stop||stat==`inst_invalid||bubble==1)
         begin
-			E_stat<=`stop;
+			E_stat<=stat;
 			E_icode<=`Nop;
             E_ifun<=0;
             E_valC<=0;

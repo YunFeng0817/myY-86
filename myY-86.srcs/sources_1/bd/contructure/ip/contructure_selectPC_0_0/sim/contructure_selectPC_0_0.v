@@ -65,7 +65,7 @@ module contructure_selectPC_0_0 (
 
 input wire [63 : 0] predPC;
 input wire [3 : 0] M_icode;
-input wire [2 : 0] M_Cnd;
+input wire M_Cnd;
 input wire [63 : 0] M_valA;
 input wire [3 : 0] W_icode;
 input wire [63 : 0] W_valM;

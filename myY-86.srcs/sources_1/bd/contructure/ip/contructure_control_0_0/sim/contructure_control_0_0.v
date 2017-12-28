@@ -76,7 +76,7 @@ input wire [3 : 0] d_srcA;
 input wire [3 : 0] d_srcB;
 input wire [3 : 0] E_dstM;
 input wire e_cnd;
-input wire m_stat;
+input wire [2 : 0] m_stat;
 output wire F_stall;
 output wire D_stall;
 output wire D_bubble;
