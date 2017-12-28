@@ -32,7 +32,7 @@ module setRegIO(
     always@(*)
     begin
         case(icode)
-           `Rmmovq:
+            `Rmmovq:
                 begin
                     d_srcA<=srcA;
                 end
@@ -42,23 +42,23 @@ module setRegIO(
                 end
             `Addq:
                 begin
-                    d_srcA<=srcA;
+                    d_srcA=srcA;
                 end
 			`Pushq:
                 begin
-                    d_srcA<=srcA;
+                    d_srcA=srcA;
                 end
             `Popq:
                 begin
-                    d_srcA<=srcB;
+                    d_srcA=srcB;
                 end
 			`Ret:
                 begin
-                    d_srcA<=srcA;
+                    d_srcA=`rsp;
                 end
             default:
             begin
-                d_srcA<=`NONE;
+                d_srcA=`NONE;
             end
         endcase
     end
@@ -69,23 +69,27 @@ module setRegIO(
         case(icode)
             `Irmovq:
                 begin
-                    d_srcB<=srcB;
+                    d_srcB=srcB;
                 end
 			`Rmmovq:
                 begin
-                    d_srcB<=srcB;
+                    d_srcB=srcB;
                 end
+			`Mrmovq:
+				begin
+					d_srcB=srcA;   //在E阶段需要将valB与valC相加
+				end
 			`Addq:
                 begin
-                    d_srcB<=srcB;
+                    d_srcB=srcB;
                 end
 			`Pushq:
 				begin
-					d_srcB<=srcB;
+					d_srcB=srcB;
 				end
 			`Popq:
 				begin
-					d_srcB<=srcB;
+					d_srcB=srcB;
 				end
 			`Call:
 				begin
@@ -97,7 +101,7 @@ module setRegIO(
 				end
             default:
             begin
-                d_srcB<=`NONE;
+                d_srcB=`NONE;
             end
         endcase
     end
@@ -108,35 +112,35 @@ module setRegIO(
         case(icode)
             `Rrmovq:
                 begin
-                    d_dstE<=srcB;
+                    d_dstE=srcB;
                 end
             `Irmovq:
                 begin
-                    d_dstE<=srcB;
+                    d_dstE=srcB;
                 end
 			`Addq:
                 begin
-                    d_dstE<=srcB;
+                    d_dstE=srcB;
                 end
 			`Pushq:
                 begin
-                    d_dstE<=`rsp;
+                    d_dstE=`rsp;
                 end
             `Popq:
                 begin
-                    d_dstE<=`rsp;
+                    d_dstE=`rsp;
                 end
 			`Call:
                 begin
-                    d_dstE<=`rsp;
+                    d_dstE=`rsp;
                 end
 			`Ret:
                 begin
-                    d_dstE<=`rsp;
+                    d_dstE=`rsp;
                 end
 			default:
                 begin
-                    d_dstE<=`NONE;
+                    d_dstE=`NONE;
                 end
         endcase
     end
@@ -147,15 +151,15 @@ module setRegIO(
         case(icode)
             `Mrmovq:
                 begin
-                    d_dstM<=srcB;
+                    d_dstM=srcB;
                 end
             `Popq:
                 begin
-                    d_dstM<=srcA;
+                    d_dstM=srcA;
                 end
 			default:
                 begin
-                    d_dstM<=`NONE;
+                    d_dstM=`NONE;
                 end 
         endcase
     end

@@ -43,7 +43,7 @@ module introduction_memory(
 		end
 		else
         begin
-            intd=80'h80000000000000000000;   //这个数值是为了使初始时的指令为nop
+            intd=80'h10000000000000000000;   //这个数值是为了使初始时的指令为nop
 			imem_error=0;
         end
     end

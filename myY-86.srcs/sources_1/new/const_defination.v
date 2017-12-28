@@ -119,7 +119,7 @@
 `define dmem_error 3'b11
 
 /************内存定义大小的宏*************/
-`define data_memory_size 69:0
+`define data_memory_size 599:0
 `define introduction_memory_size 249:0
-`define data_memory_length 70
+`define data_memory_length 600
 `define introduction_memory_length 250

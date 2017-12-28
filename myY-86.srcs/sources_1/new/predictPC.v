@@ -33,19 +33,23 @@ module predictPC(
         case({icode,4'h0})
             `jmp:
                 begin
-                    pc<=valC;
+                    pc=valC;
                 end
             `call:
                 begin
-                    pc<=valC;
+                    pc=valC;
                 end
 			`halt:
 				begin
-					pc<=valP-1;
+					pc=valP-1;
+				end
+			`ret:
+				begin
+					pc=valP-1;
 				end
             default:
                 begin
-                    pc<=valP;
+                    pc=valP;
                 end
         endcase
     end

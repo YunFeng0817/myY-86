@@ -112,6 +112,10 @@ module cond(
 						end
                     endcase
                 end
+			default:
+			begin
+				e_cnd=0;
+			end
         endcase
     end
     
